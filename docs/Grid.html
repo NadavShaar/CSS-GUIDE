@@ -1,0 +1,888 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/examples.css">
+</head>
+<body>
+
+	<div class="header">
+		<h1>CSS - Common used properties</h1>
+	  </div>
+	  <div class="page">
+        <div class="page_inner">
+            <ul class="side_nav card">
+                <li class="nav_item"><a href="./Box_model_and_Box_sizing.html">Box Model & Box Sizing</a></li>
+                <li class="nav_item"><a href="./Display.html">Display</a></li>
+                <li class="nav_item"><a href="./Flexbox.html">Flexbox</a></li>
+                <li class="nav_item active"><a href="./Grid.html">Grid</a></li>
+				<li class="nav_item"><a href="./Position.html">Position</a></li>
+				<li class="nav_item"><a href="./Transform.html">Transform</a></li>
+				<li class="nav_item"><a href="./Transition.html">Transition</a></li>
+                <li class="nav_item"><a href="./Selectors.html">Selectors</a></li>
+            </ul>
+            <div class="content">
+                <div class="fact">
+                <div>
+                    <h1 class="prop">Grid</h1>
+                    <h3 class="para">CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system.</h3>
+                    <h3 class="para">You work with Grid Layout by applying CSS rules both to a parent element (which becomes the Grid Container) and to that element's children (which become Grid Items).</h3>
+                </div>
+                    <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
+                </div>
+
+
+                <div class="flex_column section">
+                    <h1 class="text_center orange_color">Grid container properties</h1>
+                    <br/>
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Display: Grid / Inline-Grid
+                    </h2>
+                    <p class="para">This defines a grid container, inline or block depending on the given value. It enables a grid context for all of its direct children.</p>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block">
+                            <div class="grid grid_container_example_1">
+                                <div class="flex_item_example_1 font_600">1</div>
+                                <div class="flex_item_example_1 font_600">2</div>
+                                <div class="flex_item_example_1 font_600">3</div>
+                            </div>
+                            <div class="Box_Model_padding_desc text_center">
+                                <span></span>
+                                <span class="text_center font_600">display:</span>
+                                <span class="text_center color_red font_600"> grid</span>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block">
+                            <div class="inline_grid grid_container_example_1">
+                                <div class="flex_item_example_1 font_600">1</div>
+                                <div class="flex_item_example_1 font_600">2</div>
+                                <div class="flex_item_example_1 font_600">3</div>
+                            </div>
+                            <div class="Box_Model_padding_desc text_center">
+                                <span></span>
+                                <span class="text_center font_600">display:</span>
+                                <span class="text_center color_red font_600"> inline-grid</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <p class="para">display: inline-grid does not make grid items display inline. It makes the grid container display inline.</p>
+                </div>
+
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Template-Columns / Grid-Template-Rows
+                    </h2>
+                    <p class="para">Defines the columns and rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.</p>
+                    <div class="card inline_block width_full">
+                        <div class="grid grid_container_example_1 grid_container_template_example_1">
+                            <div class="grid_item_example_1 font_600 position_relative">1
+                                <span class="grid_col_guide">[first-col] <b class="color_red font_600">25%</b></span>
+                                <span class="grid_row_guide">[first-row] <b class="color_red font_600">1fr</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">2
+                                    <span class="grid_col_guide">[second-col] <b class="color_red font_600">150px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">3
+                                    <span class="grid_col_guide">[third-col] <b class="color_red font_600">auto</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">4
+                                    <span class="grid_col_guide">[fourth-col] <b class="color_red font_600">180px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">5
+                                    <span class="grid_row_guide">[second-row] <b class="color_red font_600">120px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">6</div>
+                            <div class="grid_item_example_1 font_600 position_relative">7</div>
+                            <div class="grid_item_example_1 font_600 position_relative">8</div>
+                            <div class="grid_item_example_1 font_600 position_relative">9
+                                    <span class="grid_row_guide">[third-row] <b class="color_red font_600">2fr</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">10</div>
+                            <div class="grid_item_example_1 font_600 position_relative">11</div>
+                            <div class="grid_item_example_1 font_600 position_relative">12</div>
+                        </div>
+                        <div class="Box_Model_padding_desc text_center">
+                            <span></span>
+                            <span class="text_center font_600">grid-template-columns:</span>
+                            <span class="text_center color_red font_600"> [first-col] 25% [second-col] 150px [third-col] auto [fourth-col] 180px</span>
+                        </div>
+                        <div class="Box_Model_padding_desc text_center">
+                            <span></span>
+                            <span class="text_center font_600">grid-template-rows:</span>
+                            <span class="text_center color_red font_600"> [first-row] 1fr [second-row] 120px [third-row] 2fr</span>
+                        </div>
+                    </div>
+                    <h2 class="color_red"><b>Naming rows and columns:</b></h2>
+                    <p class="para">You can name rows and columns like in the example above: 
+                        <br/><b>[first-col] 25% [second-col] 150px [third-col] auto [fourth-col] 180px</b> 
+                        <br/>This is optional, you can assign values only: 
+                        <br/><b>25% 150px auto 180px</b> 
+                        <br/>the results will be the same, but in this case by default the rows and columns will be indexed and named by numbers which will be beequivalent to:
+                        <br/><b>[1] 25% [2] 150px [3] auto [4] 180px</b>.
+                        It is recommended to give names for the row and columns because it will be easier and more declarative once you'll start positioning items in the grid (you can find examples in the grid-items properties).
+                    </p>
+                    <p class="para"><b>Values can be defined in the following units: </b><b class="color_red font_600">px</b><b> / </b><b class="color_red font_600">%</b><b> / </b><b class="color_red font_600">auto</b><b> / </b><b class="color_red font_600">fr</b> (fraction - will be calculated as a portion of the available space).</p>
+                
+                    <p class="para"><b>The </b><b class="color_red">minmax(min, max)</b><b> function:</b></p>
+                    <p class="para">Using this function, you can define a minimum and maximum for the specific column / row.</p>
+                    <div class="card inline_block width_full">
+                        <div class="grid grid_container_example_1 grid_container_template_example_2">
+                            <div class="grid_item_example_1 font_600 position_relative">1
+                                <span class="grid_col_guide">[first-col] <b class="color_red font_600">minmax(150px, 50%)</b></span>
+                                <span class="grid_row_guide">[first-row] <b class="color_red font_600">100px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">2
+                                    <span class="grid_col_guide">[second-col] <b class="color_red font_600">150px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">3
+                                    <span class="grid_col_guide">[third-col] <b class="color_red font_600">auto</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">4
+                                    <span class="grid_col_guide">[fourth-col] <b class="color_red font_600">180px</b></span>
+                            </div>
+                        </div>
+                        <div class="Box_Model_padding_desc text_center">
+                            <span></span>
+                            <span class="text_center font_600">grid-template-columns:</span>
+                            <span class="text_center color_red font_600"> [first-col] minmax(150px, 50%) [second-col] 150px [third-col] auto [fourth-col] 180px</span>
+                        </div>
+                        <div class="Box_Model_padding_desc text_center">
+                            <span></span>
+                            <span class="text_center font_600">grid-template-rows:</span>
+                            <span class="text_center color_red font_600"> [first-row] 100px</span>
+                        </div>
+                    </div>
+
+                    <p class="para"><b>The </b><b class="color_red">repeat(numberOfTimes, length)</b><b> function:</b></p>
+                    <p class="para">Using this function, you can define columns / rows that share the same length in a repeat method.</p>
+                    <div class="card inline_block width_full">
+                        <div class="grid grid_container_example_1 grid_container_template_example_3">
+                            <div class="grid_item_example_1 font_600 position_relative">1
+                                <span class="grid_col_guide">[col] <b class="color_red font_600">25%</b></span>
+                                <span class="grid_row_guide">[first-row] <b class="color_red font_600">100px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">2
+                                    <span class="grid_col_guide">[col] <b class="color_red font_600">25%</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">3
+                                    <span class="grid_col_guide">[col] <b class="color_red font_600">25%</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">4
+                                    <span class="grid_col_guide">[col] <b class="color_red font_600">25%</b></span>
+                            </div>
+                        </div>
+                        <div class="flex_row justify_center">
+                            <div class="Box_Model_padding_desc text_center margin_right_50">
+                                <span></span>
+                                <span class="text_center font_600">grid-template-columns:</span>
+                                <span class="text_center color_red font_600"> repeat(4, 25% [col])</span>
+                            </div>
+                            <div class="Box_Model_padding_desc text_center margin_right_50">
+                                <span></span>
+                                <span class="text_center font_600">grid-template-rows:</span>
+                                <span class="text_center color_red font_600"> [first-row] 100px</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Template-Areas
+                    </h2>
+                    <p class="para">Defines a grid template by referencing the names of the grid areas which are specified with the grid-area property. Repeating the name of a grid area causes the content to span those cells. A period signifies an empty cell. The syntax itself provides a visualization of the structure of the grid.</p>
+                    <div class="card inline_block width_full position_relative">
+                        <div class="grid grid_container_example_1 grid_template_areas_example_1">
+                            <div class="grid_item_example_1 font_600 position_relative grid_template_area_item_example_1">1</div>
+                            <div class="grid_item_example_1 font_600 position_relative grid_template_area_item_example_2">2</div>
+                            <div class="grid_item_example_1 font_600 position_relative grid_template_area_item_example_3">3</div>
+                            <div class="grid_item_example_1 font_600 position_relative grid_template_area_item_example_4">4</div>
+                        </div>
+                        <div class="text_center">
+                            <span class="text_center font_600">&nbsp;1 =></span>
+                            <span class="text_center font_600">grid-area:</span>
+                            <span class="text_center color_red font_600">header</span>
+                            <span class="text_center font_600">&nbsp;|</span>
+                            <span class="text_center font_600">&nbsp;2 =></span>
+                            <span class="text_center font_600">&nbsp;grid-area:</span>
+                            <span class="text_center color_red font_600">main</span>
+                            <span class="text_center font_600">&nbsp;|</span>
+                            <span class="text_center font_600">&nbsp;3 =></span>
+                            <span class="text_center font_600">&nbsp;grid-area:</span>
+                            <span class="text_center color_red font_600">sidebar</span>
+                            <span class="text_center font_600">&nbsp;4 =></span>
+                            <span class="text_center font_600">&nbsp;grid-area:</span>
+                            <span class="text_center color_red font_600">footer</span>
+                        </div>
+                        <div class="Box_Model_padding_desc text_center">
+                            <span></span>
+                            <span class="text_center font_600">grid-template-areas:</span>
+                            <span class="text_center color_red font_600"> "header header header header"
+                                "main main . sidebar"
+                                "footer footer footer footer"</span>
+                        </div>
+                        <div class="flex_row justify_center">
+                            <div class="Box_Model_padding_desc text_center margin_right_50">
+                                <span></span>
+                                <span class="text_center font_600">grid-template-columns:</span>
+                                <span class="text_center color_red font_600"> 25%</span>
+                            </div>
+                            <div class="Box_Model_padding_desc text_center margin_right_50">
+                                <span></span>
+                                <span class="text_center font_600">grid-template-rows:</span>
+                                <span class="text_center color_red font_600"> 100px</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Template: (shortend property)
+                    </h2>
+                    <p class="para">This property is a combination of the following properties in this order: <br/><b class="color_red font_600">grid-template-areas grid-template-rows</b> <b class="color_red font_600">/</b> <b class="color_red font_600">grid-template-columns</b>.</p>
+                </div>
+
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Row-Gap / Grid-Column-Gap
+                    </h2>
+                    <p class="para">This properties creates gutters between columns and rows. Grid gaps are only created in between columns and rows, and not along the edge of the grid container.</p>
+                    <div class="card inline_block width_full">
+                        <div class="grid grid_container_example_1 grid_container_template_example_1 grid_gap_example_1">
+                            <div class="grid_item_example_1 font_600 position_relative">1
+                                <span class="grid_col_guide">[first-col] <b class="color_red font_600">25%</b></span>
+                                <span class="grid_row_guide">[first-row] <b class="color_red font_600">1fr</b></span>
+                                <span class="grid_row_gap_guide"><b class="color_red font_600">3%</b></span>
+                                <span class="grid_col_gap_guide"><b class="color_red font_600">40px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">2
+                                <span class="grid_col_guide">[second-col] <b class="color_red font_600">150px</b></span>
+                                <span class="grid_row_gap_guide"><b class="color_red font_600">3%</b></span>
+                                <span class="grid_col_gap_guide"><b class="color_red font_600">40px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">3
+                                <span class="grid_col_guide">[third-col] <b class="color_red font_600">auto</b></span>
+                                <span class="grid_row_gap_guide"><b class="color_red font_600">3%</b></span>
+                                <span class="grid_col_gap_guide"><b class="color_red font_600">40px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">4
+                                <span class="grid_col_guide">[fourth-col] <b class="color_red font_600">180px</b></span>
+                                <span class="grid_col_gap_guide"><b class="color_red font_600">40px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">5
+                                <span class="grid_row_guide">[second-row] <b class="color_red font_600">120px</b></span>
+                                <span class="grid_row_gap_guide"><b class="color_red font_600">3%</b></span>
+                                <span class="grid_col_gap_guide"><b class="color_red font_600">40px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">6
+                                <span class="grid_row_gap_guide"><b class="color_red font_600">3%</b></span>
+                                <span class="grid_col_gap_guide"><b class="color_red font_600">40px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">7
+                                <span class="grid_row_gap_guide"><b class="color_red font_600">3%</b></span>
+                                <span class="grid_col_gap_guide"><b class="color_red font_600">40px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">8
+                                <span class="grid_col_gap_guide"><b class="color_red font_600">40px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">9
+                                <span class="grid_row_guide">[third-row] <b class="color_red font_600">2fr</b></span>
+                                <span class="grid_row_gap_guide"><b class="color_red font_600">3%</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">10
+                                <span class="grid_row_gap_guide"><b class="color_red font_600">3%</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">11
+                                <span class="grid_row_gap_guide"><b class="color_red font_600">3%</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative">12</div>
+                        </div>
+                        <div class="flex_row justify_center">
+                            <div class="Box_Model_padding_desc text_center margin_right_50">
+                                <span></span>
+                                <span class="text_center font_600">grid-row-gap:</span>
+                                <span class="text_center color_red font_600"> 40px</span>
+                            </div>
+                            <div class="Box_Model_padding_desc text_center margin_right_50">
+                                <span></span>
+                                <span class="text_center font_600">grid-column-gap:</span>
+                                <span class="text_center color_red font_600"> 3%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Gap: (shortend property)
+                    </h2>
+                    <p class="para">This property is a combination of the following properties in this order: <b class="color_red font_600">grid-row-gap</b> <b>|</b> <b class="color_red font_600">grid-column-gap</b>.</p>
+                </div>
+
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Justify-Items
+                    </h2>
+                    <p class="para">Aligns grid items along the inline (row) axis (as opposed to align-items which aligns along the block (column) axis). This value applies to all grid items inside the container.</p>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_3 justify_items_start">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 25%</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-items:</span>
+                                    <span class="text_center color_red font_600"> start</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_3 justify_items_end">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 25%</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-items:</span>
+                                    <span class="text_center color_red font_600"> end</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_3 justify_items_center">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 25%</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-items:</span>
+                                    <span class="text_center color_red font_600"> center</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_3 justify_items_strech">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 25%</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-items:</span>
+                                    <span class="text_center color_red font_600"> strech</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Align-Items
+                    </h2>
+                    <p class="para">Aligns grid items along the block (column) axis (as opposed to justify-items which aligns along the inline (row) axis). This value applies to all grid items inside the container.</p>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_3 align_items_start">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 25%</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">align-items:</span>
+                                    <span class="text_center color_red font_600"> start</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_3 align_items_end">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 25%</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">align-items:</span>
+                                    <span class="text_center color_red font_600"> end</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_3 align_items_center">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 25%</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">align-items:</span>
+                                    <span class="text_center color_red font_600"> center</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_3 align_items_strech">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 25%</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">align-items:</span>
+                                    <span class="text_center color_red font_600"> strech</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Place-Items: (shortend property)
+                    </h2>
+                    <p class="para">This property is a combination of the following properties in this order: <b class="color_red font_600">align-items</b> <b>|</b> <b class="color_red font_600">justify-items</b>.</p>
+                </div>
+
+
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Justify-Content
+                    </h2>
+                    <p class="para">Sometimes the total size of your grid might be less than the size of its grid container. This could happen if all of your grid items are sized with non-flexible units like px. In this case you can set the alignment of the grid within the grid container. This property aligns the grid along the inline (row) axis.</p>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_4 justify_content_start">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 50px</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-content:</span>
+                                    <span class="text_center color_red font_600"> start</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_4 justify_content_end">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 50px</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-content:</span>
+                                    <span class="text_center color_red font_600"> end</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_4 justify_content_center">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 50px</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-content:</span>
+                                    <span class="text_center color_red font_600"> center</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_4 justify_content_strech">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 50px</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-content:</span>
+                                    <span class="text_center color_red font_600"> strech</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_4 justify_content_space_around">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 50px</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-content:</span>
+                                    <span class="text_center color_red font_600"> space-around</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_4 justify_content_space_between">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 50px</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-content:</span>
+                                    <span class="text_center color_red font_600"> space-between</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_4 justify_content_space_evenly">
+                                <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">grid-template-columns:</span>
+                                    <span class="text_center color_red font_600"> 50px</span>
+                                </div>
+                            </div>
+                            <div class="flex_row justify_center">
+                                <div class="Box_Model_padding_desc text_center margin_right_50">
+                                    <span></span>
+                                    <span class="text_center font_600">jusify-content:</span>
+                                    <span class="text_center color_red font_600"> space-evenly</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex_column section">
+                        <h2>
+                            <span class="main_color">#</span>&nbsp;Align-Content
+                        </h2>
+                        <p class="para">This property set the alignment of the grid rows within the grid container on the column axis if the grid items doesn't fill all the height of the grid container.</p>
+                        <div class="flex_between">
+                            <div class="card two_cards inline_block width_full">
+                                <div class="grid grid_container_example_1 grid_container_template_example_5 grid_align_content_start">
+                                    <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">4</div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">grid-template-columns:</span>
+                                        <span class="text_center color_red font_600"> 50%</span>
+                                    </div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">align-content:</span>
+                                        <span class="text_center color_red font_600"> start</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card two_cards inline_block width_full">
+                                <div class="grid grid_container_example_1 grid_container_template_example_5 grid_align_content_end">
+                                    <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">4</div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">grid-template-columns:</span>
+                                        <span class="text_center color_red font_600"> 50%</span>
+                                    </div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">align-content:</span>
+                                        <span class="text_center color_red font_600"> end</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex_between">
+                            <div class="card two_cards inline_block width_full">
+                                <div class="grid grid_container_example_1 grid_container_template_example_5 grid_align_content_center">
+                                    <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">4</div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">grid-template-columns:</span>
+                                        <span class="text_center color_red font_600"> 50%</span>
+                                    </div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">align-content:</span>
+                                        <span class="text_center color_red font_600"> center</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card two_cards inline_block width_full">
+                                <div class="grid grid_container_example_1 grid_container_template_example_5 grid_align_content_strech">
+                                    <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">4</div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">grid-template-columns:</span>
+                                        <span class="text_center color_red font_600"> 50%</span>
+                                    </div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">align-content:</span>
+                                        <span class="text_center color_red font_600"> strech</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex_between">
+                            <div class="card two_cards inline_block width_full">
+                                <div class="grid grid_container_example_1 grid_container_template_example_5 grid_align_content_space_around">
+                                    <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">4</div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">grid-template-columns:</span>
+                                        <span class="text_center color_red font_600"> 50%</span>
+                                    </div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">align-content:</span>
+                                        <span class="text_center color_red font_600"> space-around</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card two_cards inline_block width_full">
+                                <div class="grid grid_container_example_1 grid_container_template_example_5 grid_align_content_space_between">
+                                    <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">4</div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">grid-template-columns:</span>
+                                        <span class="text_center color_red font_600"> 50%</span>
+                                    </div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">align-content:</span>
+                                        <span class="text_center color_red font_600"> space-between</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex_between">
+                            <div class="card two_cards inline_block width_full">
+                                <div class="grid grid_container_example_1 grid_container_template_example_5 grid_align_content_space_evenly">
+                                    <div class="grid_item_example_1 font_600 position_relative">1</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">2</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">3</div>
+                                    <div class="grid_item_example_1 font_600 position_relative">4</div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">grid-template-columns:</span>
+                                        <span class="text_center color_red font_600"> 50%</span>
+                                    </div>
+                                </div>
+                                <div class="flex_row justify_center">
+                                    <div class="Box_Model_padding_desc text_center margin_right_50">
+                                        <span></span>
+                                        <span class="text_center font_600">align-content:</span>
+                                        <span class="text_center color_red font_600"> space-evenly</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex_column section">
+                        <h2>
+                            <span class="main_color">#</span>&nbsp;Place-Content: (shortend property)
+                        </h2>
+                        <p class="para">This property is a combination of the following properties in this order: <b class="color_red font_600">align-content</b> <b>|</b> <b class="color_red font_600">justify-content</b>.</p>
+                    </div>
+
+                    
+
+            </div>
+		</div>
+	</div>
+</body>
+</html>

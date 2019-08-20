@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/examples.css">
+</head>
+<body>
+
+	<div class="header">
+		<h1>CSS - Common used properties</h1>
+	  </div>
+	  <div class="page">
+		<div class="page_inner">
+			<ul class="side_nav card">
+				<li class="nav_item">
+					<input type="checkbox" id="boxModel">
+					<label for="boxModel" class="first">Box Model & Box Sizing</label>
+					<ul>
+						<li class="nav_item"><a href="./Box_model_and_Box_sizing.html#intro">Introduction</a></li>
+						<li class="nav_item"><a href="./Box_model_and_Box_sizing.html#theBoxModel">The Box Model</a></li>
+						<li class="nav_item"><a href="./Box_model_and_Box_sizing.html#boxSizing">Box-sizing</a></li>
+					</ul>
+				</li>
+				<li class="nav_item active"><a href="./Display.html">Display</a></li>
+				<li class="nav_item"><a href="./Flexbox.html">Flexbox</a></li>
+				<li class="nav_item"><a href="./Grid.html">Grid</a></li>
+				<li class="nav_item"><a href="./Position.html">Position</a></li>
+				<li class="nav_item"><a href="./Transform.html">Transform</a></li>
+				<li class="nav_item"><a href="./Transition.html">Transition</a></li>
+				<li class="nav_item"><a href="./Selectors.html">Selectors</a></li>
+			</ul>
+			<div class="content">
+				<div class="fact">
+				<div>
+					<h1 class="prop">Display</h1>
+					<h3 class="para">Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves. There are only a handful of values that are commonly used</h3>
+				</div>
+					<img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
+				</div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Inline
+					</h2>
+					<p class="para">An inline element will accept margin and padding, but the element still sits inline as you might expect. Margin and padding will only push other elements horizontally away, not vertically.</p>
+					
+					<div class="flex_column card">
+						<div>
+							<span class="inline_item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. There are only a handful of values that are commonly Lorem Ipsum has been the industry's standard dummy text of the printing and typesetting industry dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&nbsp;</span>
+							<span class="inline_item item_exmple_1">inline element with padding and margin&nbsp;</span>
+							<span class="inline_item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+						</div>
+					</div>
+				</div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Inline-block
+					</h2>
+					<p class="para">An element set to inline-block is very similar to inline in that it will set inline with the natural flow of text (on the "baseline"). The difference is that you are able to set a width and height which will be respected.</p>
+					
+					<div class="flex_column card">
+						<div>
+						<span class="inline_block_item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&nbsp;</span>
+						<span class="inline_block_item item_exmple_2">inline-block element with padding&nbsp;</span>
+						<span class="inline_block_item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+						</div>
+					</div>
+				</div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Block
+					</h2>
+					<p class="para">A number of elements are set to block by the browser UA stylesheet. They are usually container elements, like div, section, and ul. Also text "blocks" like p and h1. Block level elements do not sit inline but break past them. By default (without setting a width) they take up as much horizontal space as they can.</p>
+					
+					<div class="flex_column card">
+						<div>
+						<span class="inline_item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&nbsp;</span>
+						<span class="block_item item_exmple_2">block element with padding&nbsp;</span>
+						<span class="inline_item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

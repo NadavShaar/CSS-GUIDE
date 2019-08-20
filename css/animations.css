@@ -1,0 +1,20 @@
+@keyframes translateLoop1 {
+  from {transform: translate3d(0px, 100%, 0px);}
+  to {transform: translate3d(0px, 0px, 0px);}
+}
+@keyframes translateLoop2 {
+  from {transform: translate(0, -70%);}
+  to {transform: translate(0)}
+}
+@keyframes scaleLoop1 {
+  from {transform: scale(1);}
+  to {transform: scale(1.5, 2);}
+}
+@keyframes skewLoop1 {
+  from {transform: skew(0deg);}
+  to {transform: skew(30deg, 20deg);}
+}
+@keyframes rotateLoop1 {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(15deg);}
+}

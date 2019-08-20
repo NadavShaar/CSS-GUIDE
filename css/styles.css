@@ -1,0 +1,452 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: -system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 400;
+    background: #eee;
+    overflow: hidden;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  ::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #fbfbfb;
+  }
+
+  ::-webkit-scrollbar
+  {
+    width: 8px;
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    background-color: #b7b7b7;
+  }
+  ul li.bullet::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #7de2af; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */ 
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+  ul {
+    list-style: none; /* Remove default bullets */
+    margin: 0;
+    padding: 0;
+  }
+  ul.square_list {
+    list-style-type: square;
+  }
+  h1, h2, h3, h4, p {
+    margin: 0px;
+    padding: 0;
+  }
+  .header {
+    background-image: linear-gradient(to right,#ff8a00,#da1b60);
+    z-index: 1;
+    padding: 12px 24px;
+    font-weight: 800;
+    color: #fff;
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .page {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  .page_inner {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .content {
+    max-width: 910px;
+    min-width: 910px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .text_nowrap {
+    white-space: nowrap;
+  }
+  .width_full {
+    width: 100%;
+  }
+  .title_underlined {
+    text-decoration: underline;
+    text-decoration-color: #7de2af;
+  }
+  .para{
+    padding: 12px 0;
+  }
+  .position_relative {
+    position: relative;
+  }
+  .position_absolute{
+    position: absolute;
+  }
+  .position_fixed{
+    position: fixed;
+  }
+  .position_sticky{
+    position: sticky;
+  }
+  .flex_row {
+    display: flex;
+  }
+  .flex_inline_row{
+      display: inline-flex;
+  }
+  .flex_column {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex_wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .flex_no_wrap {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .flex_wrap_reverse {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  .flex_child {
+      flex: 1;
+  }
+  .flex_child_max_width {
+    max-width: 50px;
+  }
+  .flex_child_max_height {
+    max-height: 50px;
+  }
+  .justify_start {
+    justify-content: flex-start;
+  }
+  .justify_end {
+    justify-content: flex-end;
+  }
+  .justify_center {
+    justify-content: center;
+  }
+  .justify_space_between {
+    justify-content: space-between;
+  }
+  .justify_space_around {
+    justify-content: space-around;
+  }
+  .justify_space_evenly {
+    justify-content: space-evenly;
+  }
+  .align_start{
+    align-items: flex-start;
+  }
+  .align_end{
+    align-items: flex-end;
+  }
+  .align_center{
+    align-items: center;
+  }
+  .align_strech{
+    align-items: stretch;
+  }
+  .align_baseline{
+    align-items: baseline;
+  }
+  .align_content_start {
+    align-content: flex-start;
+  }
+  .align_content_end {
+    align-content: flex-end;
+  }
+  .align_content_center {
+    align-content: center;
+  }
+  .align_content_strech {
+    align-content: stretch;
+  }
+  .align_content_space_between {
+    align-content: space-between;
+  }
+  .align_content_space_around {
+    align-content: space-around;
+  }
+  .align_self_end{
+    align-self:  flex-end;
+  }
+  .align_self_center{
+    align-self:  center;
+  }
+  .align_self_start{
+    align-self:  flex-start;
+  }
+  .main_color {
+    color: #ff7640;
+  }
+  .flex_item_order_1{
+    order: 1;
+  }
+  .flex_item_order_2{
+    order: 2;
+  }
+  .flex_item_order_3{
+    order: 3;
+  }
+  .flex_item_order_4{
+    order: 4;
+  }
+  .flex_grow_1 {
+    flex-grow: 1
+  }
+  .flex_grow_2 {
+    flex-grow: 2
+  }
+  .flex_shrink_1 {
+    flex-shrink: 1;
+  }
+  .flex_shrink_2 {
+    flex-shrink: 2;
+  }
+  .orange_color{
+    color: #f05c28;
+  }
+  .dark_blue_color{
+    color: #1e324c;
+  }
+  .pink_color {
+    color: #db1c5f;
+}
+  .card {
+    padding: 18px;
+    box-shadow: 1px 2px 2px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    background: #fff;
+    margin: 18px 0;
+  }
+  
+  .section{
+    margin-top: 60px;
+  }
+  .prop {
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffac4c;
+    text-decoration: underline;
+    background: -webkit-linear-gradient(#ffac4c,#ff3e1f);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+  .fact {
+    background: #1e324c;
+    color: #ffffff;
+    display: flex;
+    align-items: flex-end;
+    padding: 36px;
+    border-radius: 3px;
+  }
+  .fact > img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .side_nav {
+      margin: 0 60px 0 0;
+      position: sticky;
+      min-width: 250px;
+      top: 60px;
+      display: inline-flex;
+      flex-direction: column;
+      height: fit-content;
+      padding: 18px 0;
+      list-style-type: none;
+  }
+  .nav_item > a,  .nav_item > label, .nav_item_inner{
+    text-decoration: none;
+    padding: 9px 18px 10px;
+    display: block;
+    color: #1e324c;
+    font-weight: 600;
+    background: #fff;
+    transition: background .2s ease;
+    cursor: pointer;
+}
+.nav_item > a:hover {
+    background: linear-gradient(to right,#ff8a00,#da1b60);
+    color: #fff;
+}
+
+.nav_item.active > a, .nav_item.active > label {
+    color: #fff;
+    background: linear-gradient(to right,#ff8a00,#da1b60);
+}
+
+.nav_item > ul > li > a {
+  padding-left: 36px;
+}
+
+.inner_nav{
+  position: sticky;
+  top: 60px;
+  margin-top: 50px;
+  background: #fff;
+  z-index: 3;
+}
+
+input[type="checkbox"]{
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"] ~ ul{
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+input[type="checkbox"]:checked ~ ul{
+  max-height: 200px;
+  overflow-y: auto;
+  transition: max-height .2s ease-in;
+}
+
+.flex_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.two_cards {
+    width: 100%;
+    max-width: 48%;
+    position: relative;
+}
+.card_bottom_element {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+  .text_center {
+      text-align: center;
+  }
+  .font_600{
+    font-weight: 600;
+  }
+  .color_orange{
+    color: #ffac4c;
+  }
+  .color_red{
+    color: #e63e42;
+  }
+  .inline_block {
+      display: inline-block;
+  }
+  .flex_row_reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .flex_column_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .guide_cover {
+    background: url(../resources/cover1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    display: block;
+  }
+
+.grid {
+  display: grid;
+}
+.inline_grid {
+  display: inline-grid;
+}
+.justify_items_start{
+  justify-items: start;
+}
+.justify_items_end{
+  justify-items: end;
+}
+.justify_items_center{
+  justify-items: center;
+}
+.justify_items_strech{
+  justify-items: stretch;
+}
+.align_items_start{
+  align-items: start;
+}
+.align_items_end{
+  align-items: end;
+}
+.align_items_center{
+  align-items: center;
+}
+.align_items_strech{
+  align-items: stretch;
+}
+.justify_content_start{
+  justify-content: start;
+}
+.justify_content_end{
+  justify-content: end;
+}
+.justify_content_center{
+  justify-content: center;
+}
+.justify_content_strech{
+  justify-content: strech;
+}
+.justify_content_space_around{
+  justify-content: space-around;
+}
+.justify_content_space_between{
+  justify-content: space-between;
+}
+.justify_content_space_evenly{
+  justify-content: space-evenly;
+}
+.grid_align_content_start{
+  align-content: start;
+}
+.grid_align_content_end{
+  align-content: end;
+}
+.grid_align_content_center{
+  align-content: center;
+}
+.grid_align_content_strech{
+  align-content: strech;
+}
+.grid_align_content_space_around{
+  align-content: space-around;
+}
+.grid_align_content_space_between{
+  align-content: space-between;
+}
+.grid_align_content_space_evenly{
+  align-content: space-evenly;
+}

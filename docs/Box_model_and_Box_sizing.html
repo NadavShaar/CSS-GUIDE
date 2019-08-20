@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/examples.css">
+</head>
+<body>
+
+	<div class="header">
+		<h1>CSS - Common used properties</h1>
+	  </div>
+	  <div class="page">
+        <div id="intro" class="page_inner">
+            <ul class="side_nav card">
+                <li class="nav_item active">
+                    <input type="checkbox" id="boxModel">
+                    <label for="boxModel" class="first">Box Model & Box Sizing</label>
+                    <ul>
+                        <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#intro">Introduction</a></li>
+                        <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#theBoxModel">The Box Model</a></li>
+                        <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#boxSizing">Box-sizing</a></li>
+                    </ul>
+                </li>
+                <li class="nav_item"><a href="./Display.html">Display</a></li>
+                <li class="nav_item"><a href="./Flexbox.html">Flexbox</a></li>
+                <li class="nav_item"><a href="./Grid.html">Grid</a></li>
+                <li class="nav_item"><a href="./Position.html">Position</a></li>
+                <li class="nav_item"><a href="./Transform.html">Transform</a></li>
+                <li class="nav_item"><a href="./Transition.html">Transition</a></li>
+                <li class="nav_item"><a href="./Selectors.html">Selectors</a></li>
+            </ul>
+            <div class="content">
+                <div class="fact">
+                    <div>
+                        <h1 class="prop">Box Model & Box Sizing</h1>
+                        <h3 class="para">Every box is composed of four parts (or areas), defined by their respective edges: the content edge, padding edge, border edge, and margin edge.</h3>
+                    </div>
+                    <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
+                </div>
+                
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Introduction: Inline VS Block elements
+                    </h2>
+                    <p class="para">Each HTML element rendered on the screen is a box, and they come in two flavors: “block” boxes and “inline“ boxes.</p>
+                    
+                    <div class="flex_between">
+                        <div class="flex_column card two_cards flex_between">
+                            <div>
+                                <div><div class="block_item_example_3"></div></div>
+                                <div><div class="block_item_example_3"></div></div>
+                                <div><div class="block_item_example_3"></div></div>
+                                <div><div class="block_item_example_3"></div></div>
+                                <div><div class="block_item_example_3"></div></div>
+                            </div>
+                            <span class="text_center color_red font_600">Block Elements</span>
+                        </div>
+                        <div class="flex_column card two_cards flex_between">
+                            <div>
+                                <div class="inline_block_item_example_3"></div>
+                                <div class="inline_block_item_example_3"></div>
+                                <div class="inline_block_item_example_3"></div>
+                                <div class="inline_block_item_example_3"></div>
+                                <div class="inline_block_item_example_3"></div>
+                            </div>
+                            <span class="text_center color_red font_600">Inline Elements</span>
+                        </div>
+                    </div>
+                    <p class="para">HTML is made up of various elements that act as the building blocks of web pages. For the purpose of styling, elements are divided into two categories: block-level elements and inline elements.
+                            In summary, a <span class="inline_item_example_4"><b>span</b></span> element is used as an inline element and a <div class="block_item_example_4"><b>div</b></div> element as a block level element.
+                            The difference between the two elements is a commonly misunderstood concept of web design but it does not have to be!
+                            Basically, an inline element does not cause a line break (start on a new line) and does not take up the full width of a page, only the space bounded by its opening and closing tag. It is usually used within other HTML elements.
+                    </p>
+                    <h3 class="para">Common used block elements:</h3>
+                    <ul class="square_list">
+                        <li><b class="color_red">div:</b> Used as a container</li>
+                        <li><b class="color_red">p:</b> Used as a text wrapper</li>
+                        <li><b class="color_red">h1-6:</b> Used for headlines</li>
+                        <li><b class="color_red">ul/ol:</b> Used for lists</li>
+                    </ul>
+                    <h3 class="para">Common used inline elements:</h3>
+                    <ul class="square_list">
+                        <li><b class="color_red">a:</b> Used as a hyper link</li>
+                        <li><b class="color_red">span:</b> Used as a text wrapper</li>
+                        <li><b class="color_red">img:</b> Used for images</li>
+                    </ul>
+                </div>
+                
+                <div id="theBoxModel" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;The Box Model
+                    </h2>
+                    <div class="flex_column card">
+                        <div class="Box_Model">
+                            <div class="Box_Model_margin">
+                                <div class="Box_Model_border">
+                                    <div class="Box_Model_padding">
+                                        <div class="Box_Model_content">
+                                            <span>Content</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex_row box_model_desc">
+                            <div class="Box_Model_padding_desc">
+                                <span></span>
+                                <span>Padding</span>
+                            </div>
+                            <div class="Box_Model_border_desc">
+                                <span></span>
+                                <span>Border</span>
+                            </div>
+                            <div class="Box_Model_margin_desc">
+                                <span></span>
+                                <span>Margin</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="para">By default the box sizing is content-box which means that the element's width and height only includes the "content" area and the padding, border and margin adds up to those values.</p>
+                </div>
+                
+                <div id="boxSizing" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Box-sizing
+                    </h2>
+                    <p class="para">Defines the box model sizing behavior.</p>
+                    <h3 class="para">Box-sizing: Values</h3>
+                    <ul class="square_list">
+                        <li><b class="color_red">content-box:</b> Width and height will include only the content area.</li>
+                        <li><b class="color_red">padding-box:</b> Width and height will include the content area and the padding area.</li>
+                        <li><b class="color_red">border-box:</b> Width and height will include the content area, the padding area and the border area.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/examples.css">
+</head>
+<body>
+
+	<div class="header">
+		<h1>CSS - Common used properties</h1>
+	  </div>
+	  <div class="page">
+		<div class="page_inner">
+			<ul class="side_nav card">
+				<li class="nav_item"><a href="./Box_model_and_Box_sizing.html">Box Model & Box Sizing</a></li>
+				<li class="nav_item"><a href="./Display.html">Display</a></li>
+                <li class="nav_item"><a href="./Flexbox.html">Flexbox</a></li>
+                <li class="nav_item"><a href="./Grid.html">Grid</a></li>
+				<li class="nav_item"><a href="./Position.html">Position</a></li>
+				<li class="nav_item"><a href="./Transform.html">Transform</a></li>
+				<li class="nav_item active"><a href="./Transition.html">Transition</a></li>
+				<li class="nav_item"><a href="./Selectors.html">Selectors</a></li>
+			</ul>
+			<div class="content">
+				<div class="fact">
+                    <div>
+                        <h1 class="prop">Transition</h1>
+                        <h3 class="para">The transition property allow elements to change values over a specified duration, animating the property changes, rather than having them occur immediately.</h3>
+                    </div>
+					<img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
+                </div>
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Transition: (shortend property)
+                    </h2>
+                    <p class="para">This property is a combination of the following properties in this order: <b class="color_red font_600">transition-property</b> | <b class="color_red font_600">transition-duration</b> | <b class="color_red font_600">transition-timing-function</b> | <b class="color_red font_600">transition-delay</b>.</p>
+                </div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Transition-Property
+					</h2>
+                    <p class="para">Used to define what property, or properties, you want to apply a transition effect to. <b class="color_red font_600">propertyName</b> / <b class="color_red font_600">all</b> / <b class="color_red font_600">none</b></p>
+                </div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Transition-Duration
+					</h2>
+                    <p class="para">Used to define the duration of a specified transition. That is, the length of time it will take for the targeted element to transition between two defined states. <b class="color_red font_600">s</b> <b>(seconds)</b>.</p>
+                </div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Transition-Timing-Function
+                    </h2>
+                    <h3 class="para">Supported Values:</h3>
+                    <ul class="square_list">
+                        <li><b class="color_red">linear:</b> Transitions at an even speed.</li>
+                        <li><b class="color_red">ease:</b> The default value, increases in velocity towards the middle of the transition, slowing back down at the end.</li>
+                        <li><b class="color_red">ease-in:</b> Starts off slowly, with the transition speed increasing until complete.</li>
+                        <li><b class="color_red">ease-out:</b> Starts transitioning quickly, slowing down the transition continues.</li>
+                        <li><b class="color_red">ease-in-out:</b> Starts transitioning slowly, speeds up, and then slows down again.</li>
+                        <li><b class="color_red">cubic-bezier(p1, p2, p3, p4):</b> User defined curve, where the p1 and p3 values must be in the range of 0 to 1.</li>
+                    </ul>
+                    <div class="flex_between">
+                        <div class="flex_column card two_cards inline_block">
+                            <div class="flex_column flex_container_example_1_container_height_x2">
+                                <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
+                                    <div class="transition_example_1 transition_linear_example_1"></div>
+                                </div>
+                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
+                                    <span></span>
+                                    <span class="text_center font_600">transition:</span>
+                                    <span class="text_center color_red font_600"> translate3d 2s linear</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex_column card two_cards inline_block">
+                            <div class="flex_column flex_container_example_1_container_height_x2">
+                                <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
+                                    <div class="transition_example_1 transition_ease_example_1"></div>
+                                </div>
+                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
+                                    <span></span>
+                                    <span class="text_center font_600">transition:</span>
+                                    <span class="text_center color_red font_600"> translate3d 2s ease</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex_between">
+                        <div class="flex_column card two_cards inline_block">
+                            <div class="flex_column flex_container_example_1_container_height_x2">
+                                <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
+                                    <div class="transition_example_1 transition_ease_in_example_1"></div>
+                                </div>
+                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
+                                    <span></span>
+                                    <span class="text_center font_600">transition:</span>
+                                    <span class="text_center color_red font_600"> translate3d 2s ease-in</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex_column card two_cards inline_block">
+                            <div class="flex_column flex_container_example_1_container_height_x2">
+                                <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
+                                    <div class="transition_example_1 transition_ease_out_example_1"></div>
+                                </div>
+                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
+                                    <span></span>
+                                    <span class="text_center font_600">transition:</span>
+                                    <span class="text_center color_red font_600"> translate3d 2s ease-out</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex_between">
+                        <div class="flex_column card two_cards inline_block">
+                            <div class="flex_column flex_container_example_1_container_height_x2">
+                                <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
+                                    <div class="transition_example_1 transition_ease_in_out_example_1"></div>
+                                </div>
+                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
+                                    <span></span>
+                                    <span class="text_center font_600">transition:</span>
+                                    <span class="text_center color_red font_600"> translate3d 2s ease-in-out</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex_column card two_cards inline_block">
+                            <div class="flex_column flex_container_example_1_container_height_x2">
+                                <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
+                                    <div class="transition_example_1 transition_cubic_example_1"></div>
+                                </div>
+                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
+                                    <span></span>
+                                    <span class="text_center font_600">transition:</span>
+                                    <span class="text_center color_red font_600"> translate3d 2s cubic-bezier(.4, 1.5, .7, -.3)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Transition-Delay
+                    </h2>
+                    <p class="para">Used to define a length of time to delay the start of a transition. <b class="color_red font_600">s</b> <b>(seconds)</b>.</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

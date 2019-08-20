@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/examples.css">
+</head>
+<body>
+
+	<div class="header">
+		<h1>CSS - Common used properties</h1>
+	  </div>
+	  <div class="page">
+		<div class="page_inner">
+			<ul class="side_nav card">
+				<li class="nav_item"><a href="./Box_model_and_Box_sizing.html">Box Model & Box Sizing</a></li>
+				<li class="nav_item"><a href="./Display.html">Display</a></li>
+                <li class="nav_item"><a href="./Flexbox.html">Flexbox</a></li>
+                <li class="nav_item"><a href="./Grid.html">Grid</a></li>
+				<li class="nav_item"><a href="./Position.html">Position</a></li>
+				<li class="nav_item active"><a href="./Transform.html">Transform</a></li>
+				<li class="nav_item"><a href="./Transition.html">Transition</a></li>
+				<li class="nav_item"><a href="./Selectors.html">Selectors</a></li>
+			</ul>
+			<div class="content">
+				<div class="fact">
+                    <div>
+                        <h1 class="prop">Transform</h1>
+                        <h3 class="para">The transform property allows you to visually manipulate an element by skewing, rotating, translating, or scaling.</h3>
+                        <h3 class="para">Transforming an element will change its position only visually, meaning its containing element will keep the original place and space of the transformed element.</h3>
+                    </div>
+					<img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
+				</div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Scale
+					</h2>
+					<div class="flex_column card">
+                        <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
+                            <div class="position_relative_example_4">
+                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_scale_example_1">1</div>
+                            </div>
+                        </div>
+                        <div class="flex_row justify_center">
+                            <div class="Box_Model_margin_desc margin_right_50">
+                                <span></span>
+                                <span class="font_600">Direct Parent</span>
+                            </div>
+                            <span class="font_600">1 =>&nbsp;</span>
+                            <span class="font_600">transform:</span>
+                            <span class="font_600 main_color">&nbsp;scale(1.5, 2)</span>
+                        </div>
+                    </div>
+                    <p class="para">Scale defines a transformation that resizes an element on the 2D plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at different scales <b>scale(x, y).</b></p>
+                    <p class="para"><b>Hardware Acceleration: </b>You can force the gpu to take control over the process, using the <b>scale3d()</b> function in order to achieve a smooth 60 frames per second animations without jittering or tearing. <b>scale3d(x, y, z).</b></p>
+                </div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Skew
+					</h2>
+					<div class="flex_column card">
+                        <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
+                            <div class="position_relative_example_4">
+                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_skew_example_1">1</div>
+                            </div>
+                        </div>
+                        <div class="flex_row justify_center">
+                            <div class="Box_Model_margin_desc margin_right_50">
+                                <span></span>
+                                <span class="font_600">Direct Parent</span>
+                            </div>
+                            <span class="font_600">1 =>&nbsp;</span>
+                            <span class="font_600">transform:</span>
+                            <span class="font_600 main_color">&nbsp;skew(30deg, 20deg)</span>
+                        </div>
+                    </div>
+                    <p class="para">The skew performs a shear transformation (also known as a shear mapping or a transvection), which displaces each point of an element by a given angle in each direction.
+                            Skewing an element is kind of like taking the points of an element, and pushing or pulling them in different directions, based on a given angle. <b>skew(x, y).</b></p>
+                </div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Translate
+					</h2>
+					<div class="flex_column card">
+                        <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
+                            <div class="position_relative_example_4">
+                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_translate_example_1">1</div>
+                            </div>
+                        </div>
+                        <div class="flex_row justify_center">
+                            <div class="Box_Model_margin_desc margin_right_50">
+                                <span></span>
+                                <span class="font_600">Direct Parent</span>
+                            </div>
+                            <span class="font_600">1 =>&nbsp;</span>
+                            <span class="font_600">transform:</span>
+                            <span class="font_600 main_color">&nbsp;translate(0, -70%)</span>
+                        </div>
+                    </div>
+                    <p class="para">This is probably the most useful property for animating the movement of elements. <b>translate(x, y).</b></p>
+                    <p class="para"><b>Hardware Acceleration: </b>You can force the gpu to take control over the process, using the <b>translate3d()</b> function in order to achieve a smooth 60 frames per second animations without jittering or tearing. <b>translate3d(x, y, z).</b></p>
+                </div>
+				<div class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;Rotate
+					</h2>
+					<div class="flex_column card">
+                        <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
+                            <div class="position_relative_example_4">
+                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_rotate_example_1">1</div>
+                            </div>
+                        </div>
+                        <div class="flex_row justify_center">
+                            <div class="Box_Model_margin_desc margin_right_50">
+                                <span></span>
+                                <span class="font_600">Direct Parent</span>
+                            </div>
+                            <span class="font_600">1 =>&nbsp;</span>
+                            <span class="font_600">transform:</span>
+                            <span class="font_600 main_color">&nbsp;rotate(15deg)</span>
+                        </div>
+                    </div>
+                    <p class="para">This will allow rotating of an element by a specified number of degrees. <b>rotate(deg).</b></p>
+                    <p class="para"><b>Hardware Acceleration: </b>You can force the gpu to take control over the process, using the <b>rotate3d()</b> function in order to achieve a smooth 60 frames per second animations without jittering or tearing. <b>rotate3d(x, y, z, a => angle).</b></p>
+                </div>
+                <div class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Transform-Origin
+                    </h2>
+                    <p class="para">This property is used in conjunction with CSS transforms and define the base point for the transformation. <br/>By default the transform-origin is set to <b>center</b>.</p>
+                    <div class="flex_column card">
+                        <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
+                            <div class="position_relative_example_4">
+                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_rotate_example_1 transform_origin_example_1">1</div>
+                            </div>
+                        </div>
+                        <div class="flex_row justify_center">
+                            <div class="Box_Model_margin_desc margin_right_50">
+                                <span></span>
+                                <span class="font_600">Direct Parent</span>
+                            </div>
+                            <span class="font_600">1 =>&nbsp;</span>
+                            <span class="font_600">transform:</span>
+                            <span class="font_600 main_color">&nbsp;rotate(15deg)</span>
+                            <span class="font_600">&nbsp;|&nbsp;</span>
+                            <span class="font_600">transform-origin:</span>
+                            <span class="font_600 main_color">&nbsp;top left</span>
+                        </div>
+                    </div>
+                    <p class="para">The property takes up to two values: <b class="color_red font_600">top</b> | <b class="color_red font_600">right</b> | <b class="color_red font_600">bottom</b> | <b class="color_red font_600">left</b> | <b class="color_red font_600">center</b>.</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
