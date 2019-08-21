@@ -40,6 +40,7 @@ html, body {
   }
   ul.square_list {
     list-style-type: square;
+    padding-left: 36px;
   }
   h1, h2, h3, h4, p {
     margin: 0px;
@@ -279,6 +280,11 @@ html, body {
       padding: 18px 0;
       list-style-type: none;
   }
+  .side_nav > ul {
+    max-height: 800px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
   .nav_item > a,  .nav_item > label, .nav_item_inner{
     text-decoration: none;
     padding: 9px 18px 10px;
@@ -312,21 +318,38 @@ html, body {
 }
 
 input[type="checkbox"]{
-  position: absolute;
-  left: -9999px;
+  /* position: absolute;
+  left: -9999px; */
+  display: none;
 }
 
 input[type="checkbox"] ~ ul{
   max-height: 0;
   transition: max-height .2s ease-out;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 input[type="checkbox"]:checked ~ ul{
-  max-height: 200px;
-  overflow-y: auto;
-  transition: max-height .2s ease-in;
+  max-height: 800px;
+  overflow: hidden;
+  transition: max-height .6s ease-in;
+}
+input[type="radio"]{
+  /* position: absolute;
+  left: -9999px; */
+  display: none;
+}
+
+input[type="radio"] ~ ul{
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  overflow: hidden;
+}
+
+input[type="radio"]:checked ~ ul{
+  max-height: 800px;
+  overflow: hidden;
+  transition: max-height .6s ease-in;
 }
 
 .flex_between {
