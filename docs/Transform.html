@@ -32,11 +32,14 @@
                         <h3 class="para">Transforming an element will change its position only visually, meaning its containing element will keep the original place and space of the transformed element.</h3>
                     </div>
 					<img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
-				</div>
+                </div>
+                
+
 				<div class="flex_column section">
 					<h2>
 						<span class="main_color">#</span>&nbsp;Scale
 					</h2>
+                    <p class="para">Scale defines a transformation that resizes an element on the 2D plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at different scales <b>scale(x, y).</b></p>
 					<div class="flex_column card">
                         <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
                             <div class="position_relative_example_4">
@@ -53,13 +56,16 @@
                             <span class="font_600 main_color">&nbsp;scale(1.5, 2)</span>
                         </div>
                     </div>
-                    <p class="para">Scale defines a transformation that resizes an element on the 2D plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at different scales <b>scale(x, y).</b></p>
                     <p class="para"><b>Hardware Acceleration: </b>You can force the gpu to take control over the process, using the <b>scale3d()</b> function in order to achieve a smooth 60 frames per second animations without jittering or tearing. <b>scale3d(x, y, z).</b></p>
                 </div>
+
+
 				<div class="flex_column section">
 					<h2>
 						<span class="main_color">#</span>&nbsp;Skew
-					</h2>
+                    </h2>
+                    <p class="para">The skew performs a shear transformation (also known as a shear mapping or a transvection), which displaces each point of an element by a given angle in each direction.
+                            Skewing an element is kind of like taking the points of an element, and pushing or pulling them in different directions, based on a given angle. <b>skew(x, y).</b></p>
 					<div class="flex_column card">
                         <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
                             <div class="position_relative_example_4">
@@ -76,13 +82,14 @@
                             <span class="font_600 main_color">&nbsp;skew(30deg, 20deg)</span>
                         </div>
                     </div>
-                    <p class="para">The skew performs a shear transformation (also known as a shear mapping or a transvection), which displaces each point of an element by a given angle in each direction.
-                            Skewing an element is kind of like taking the points of an element, and pushing or pulling them in different directions, based on a given angle. <b>skew(x, y).</b></p>
                 </div>
+
+
 				<div class="flex_column section">
 					<h2>
 						<span class="main_color">#</span>&nbsp;Translate
 					</h2>
+                    <p class="para">This is probably the most useful property for animating the movement of elements. <b>translate(x, y).</b></p>
 					<div class="flex_column card">
                         <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
                             <div class="position_relative_example_4">
@@ -99,13 +106,15 @@
                             <span class="font_600 main_color">&nbsp;translate(0, -70%)</span>
                         </div>
                     </div>
-                    <p class="para">This is probably the most useful property for animating the movement of elements. <b>translate(x, y).</b></p>
                     <p class="para"><b>Hardware Acceleration: </b>You can force the gpu to take control over the process, using the <b>translate3d()</b> function in order to achieve a smooth 60 frames per second animations without jittering or tearing. <b>translate3d(x, y, z).</b></p>
                 </div>
+
+
 				<div class="flex_column section">
 					<h2>
 						<span class="main_color">#</span>&nbsp;Rotate
 					</h2>
+                    <p class="para">This will allow rotating of an element by a specified number of degrees. <b>rotate(deg).</b></p>
 					<div class="flex_column card">
                         <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
                             <div class="position_relative_example_4">
@@ -122,9 +131,10 @@
                             <span class="font_600 main_color">&nbsp;rotate(15deg)</span>
                         </div>
                     </div>
-                    <p class="para">This will allow rotating of an element by a specified number of degrees. <b>rotate(deg).</b></p>
                     <p class="para"><b>Hardware Acceleration: </b>You can force the gpu to take control over the process, using the <b>rotate3d()</b> function in order to achieve a smooth 60 frames per second animations without jittering or tearing. <b>rotate3d(x, y, z, a => angle).</b></p>
                 </div>
+
+
                 <div class="flex_column section">
                     <h2>
                         <span class="main_color">#</span>&nbsp;Transform-Origin
@@ -151,6 +161,8 @@
                     </div>
                     <p class="para">The property takes up to two values: <b class="color_red font_600">top</b> | <b class="color_red font_600">right</b> | <b class="color_red font_600">bottom</b> | <b class="color_red font_600">left</b> | <b class="color_red font_600">center</b>.</p>
                 </div>
+
+                
 			</div>
 		</div>
 	</div>

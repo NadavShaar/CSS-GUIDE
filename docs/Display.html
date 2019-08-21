@@ -12,10 +12,29 @@
 		<h1>CSS - Common used properties</h1>
 	  </div>
 	  <div class="page">
-		<div class="page_inner">
+		<div  id="intro" class="page_inner">
 			<ul class="side_nav card">
-				<li class="nav_item"><a href="./Box_model_and_Box_sizing.html">Box Model & Box Sizing</a></li>
-				<li class="nav_item active"><a href="./Display.html">Display</a></li>
+				<li class="nav_item">
+						<input type="radio" id="boxModel" name="nav-collapse">
+						<label for="boxModel">Box Model & Box Sizing</label>
+						<ul>
+							<li class="nav_item"><a href="./Box_model_and_Box_sizing.html#intro">Introduction</a></li>
+							<li class="nav_item"><a href="./Box_model_and_Box_sizing.html#theBoxModel">The Box Model</a></li>
+							<li class="nav_item"><a href="./Box_model_and_Box_sizing.html#boxSizing">Box-sizing</a></li>
+						</ul>
+					</li>
+					<li class="nav_item active">
+						<input type="radio" id="display" name="nav-collapse">
+						<label for="display">Display</label>
+						<ul>
+							<li class="nav_item"><a href="./Display.html#intro">Introduction</a></li>
+							<li class="nav_item"><a href="./Display.html#inline">Inline</a></li>
+							<li class="nav_item"><a href="./Display.html#inlineBlock">Inline-Block</a></li>
+							<li class="nav_item"><a href="./Display.html#block">Block</a></li>
+						</ul>
+					</li>
+				<!-- <li class="nav_item"><a href="./Box_model_and_Box_sizing.html">Box Model & Box Sizing</a></li>
+				<li class="nav_item active"><a href="./Display.html">Display</a></li> -->
 				<li class="nav_item"><a href="./Flexbox.html">Flexbox</a></li>
 				<li class="nav_item"><a href="./Grid.html">Grid</a></li>
 				<li class="nav_item"><a href="./Position.html">Position</a></li>
@@ -31,7 +50,7 @@
 				</div>
 					<img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
 				</div>
-				<div class="flex_column section">
+				<div id="inline" class="flex_column section">
 					<h2>
 						<span class="main_color">#</span>&nbsp;Inline
 					</h2>
@@ -45,7 +64,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex_column section">
+				<div id="inlineBlock" class="flex_column section">
 					<h2>
 						<span class="main_color">#</span>&nbsp;Inline-block
 					</h2>
@@ -59,7 +78,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex_column section">
+				<div id="block" class="flex_column section">
 					<h2>
 						<span class="main_color">#</span>&nbsp;Block
 					</h2>

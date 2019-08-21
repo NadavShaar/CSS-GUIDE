@@ -289,9 +289,9 @@ html, body {
     text-decoration: none;
     padding: 9px 18px 10px;
     display: block;
-    color: #1e324c;
+    color: #000;
     font-weight: 600;
-    background: #fff;
+    /* background: #fff; */
     transition: background .2s ease;
     cursor: pointer;
 }
@@ -307,6 +307,7 @@ html, body {
 
 .nav_item > ul > li > a {
   padding-left: 36px;
+  color: #ffffff;
 }
 
 .inner_nav{
@@ -317,9 +318,7 @@ html, body {
   z-index: 3;
 }
 
-input[type="checkbox"]{
-  /* position: absolute;
-  left: -9999px; */
+/* input[type="checkbox"]{
   display: none;
 }
 
@@ -332,11 +331,9 @@ input[type="checkbox"] ~ ul{
 input[type="checkbox"]:checked ~ ul{
   max-height: 800px;
   overflow: hidden;
-  transition: max-height .6s ease-in;
-}
+  transition: max-height .8s ease-in;
+} */
 input[type="radio"]{
-  /* position: absolute;
-  left: -9999px; */
   display: none;
 }
 
@@ -344,12 +341,15 @@ input[type="radio"] ~ ul{
   max-height: 0;
   transition: max-height .2s ease-out;
   overflow: hidden;
+  box-shadow: inset 1px 1px 3px 0px #25252594;
+  background: #666;
 }
 
 input[type="radio"]:checked ~ ul{
-  max-height: 800px;
-  overflow: hidden;
-  transition: max-height .6s ease-in;
+  max-height: 160px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: max-height .4s ease-in;
 }
 
 .flex_between {
