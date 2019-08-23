@@ -343,14 +343,14 @@ input[type="radio"] ~ ul{
   transition: max-height .2s ease-out;
   overflow: hidden;
   box-shadow: inset 1px 1px 3px 0px #25252594;
-  background: #6d7783;
+  background: #646d77;
 }
 
 input[type="radio"]:checked ~ ul{
   max-height: 200px;
   overflow-x: hidden;
   overflow-y: auto;
-  transition: max-height .4s ease-in;
+  transition: max-height .2s ease-out;
 }
 
 .flex_between {

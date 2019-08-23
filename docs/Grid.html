@@ -71,6 +71,9 @@
                             <li class="nav_item"><a href="./Grid.html#justifyContent">Justify-Content</a></li>
                             <li class="nav_item"><a href="./Grid.html#alignContent">Align-Content</a></li>
                             <li class="nav_item"><a href="./Grid.html#placeContent">Place-Content</a></li>
+                            <li class="nav_item"><a href="./Grid.html#gridAutoColumnsRows">Grid-Auto-Columns & Grid-Auto-Rows</a></li>
+                            <li class="nav_item"><a href="./Grid.html#gridAutoFlow">Grid-Auto-Flow</a></li>
+                            <li class="nav_item"><a href="./Grid.html#grid">Grid</a></li>
                         </ul>
                     </li>
                     <li class="nav_item">
@@ -974,6 +977,153 @@
                     </h2>
                     <p class="para">This property is a combination of the following properties in this order: <b class="color_red font_600">align-content</b> <b>|</b> <b class="color_red font_600">justify-content</b>.</p>
                 </div>
+
+
+                <div id="gridAutoColumnsRows" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Auto-Columns / Grid-Auto-Rows
+                    </h2>
+                    <p class="para">This properties refers to auto created columns and rows when items were placed off the grid. this will let you set the size of those auto created columns and rows.</p>
+                    <div class="card inline_block">
+                        <div class="inline_grid grid_container_example_1 grid_container_template_example_6">
+                            <div class="grid_item_example_1 grid_item_example_2 font_600 position_relative">1</div>
+                            <div class="grid_item_example_1 grid_item_example_3 font_600 position_relative">2</div>
+                            <div class="grid_item_example_1 grid_item_example_4 font_600 position_relative">3</div>
+                            <div class="grid_item_example_1 grid_item_example_5 font_600 position_relative">4</div>
+                            <div class="grid_item_example_1 grid_item_example_6 font_600 position_relative">5</div>
+                        </div>
+                        <div class="text_center">
+                            <div class="Box_Model_padding_desc text_center">
+                                <span></span>
+                                <span class="text_center font_600">grid-template-columns:</span>
+                                <span class="text_center color_red font_600"> 300px 300px</span>
+                                <span class="text_center font_600"> | </span>
+                                <span class="text_center font_600">grid-template-rows:</span>
+                                <span class="text_center color_red font_600"> 150px 150px</span>
+                            </div>
+                        </div>
+                        <div class="text_center">
+                            <span class="text_center font_600">&nbsp;5 =></span>
+                            <span class="text_center font_600">grid-column:</span>
+                            <span class="text_center color_red font_600">4 / 5</span>
+                            <span class="text_center font_600">grid-row:</span>
+                            <span class="text_center color_red font_600">2 / 3</span>
+                        </div>
+                    </div>
+                    <p class="para">In this example, we have a 2X2 grid which creates 2 columns and 2 rows. Item 5 was placed in the second row (which exists) but in the fourth column (which does not exists), this creates two more columns, the columns that are created but not containing grid items (like column 3), will get 0px width, but the forth column that holds a grid item (item 5) will get an auto width size, which will be defined by its content.</p>
+                    <div class="card inline_block">
+                        <div class="inline_grid grid_container_example_1 grid_container_template_example_6 grid_container_template_example_7">
+                            <div class="grid_item_example_1 grid_item_example_2 font_600 position_relative">1</div>
+                            <div class="grid_item_example_1 grid_item_example_3 font_600 position_relative">2</div>
+                            <div class="grid_item_example_1 grid_item_example_4 font_600 position_relative">3</div>
+                            <div class="grid_item_example_1 grid_item_example_5 font_600 position_relative">4</div>
+                            <div class="grid_item_example_1 grid_item_example_6 font_600 position_relative">5</div>
+                        </div>
+                        <div class="text_center">
+                            <div class="Box_Model_padding_desc text_center">
+                                <span></span>
+                                <span class="text_center font_600">grid-template-columns:</span>
+                                <span class="text_center color_red font_600"> 300px 300px</span>
+                                <span class="text_center font_600"> | </span>
+                                <span class="text_center font_600">grid-template-rows:</span>
+                                <span class="text_center color_red font_600"> 150px 150px</span>
+                                <span class="text_center font_600"> | </span>
+                                <span class="text_center font_600">grid-auto-columns:</span>
+                                <span class="text_center color_red font_600"> 100px</span>
+                            </div>
+                        </div>
+                        <div class="text_center">
+                            <span class="text_center font_600">&nbsp;5 =></span>
+                            <span class="text_center font_600">grid-column:</span>
+                            <span class="text_center color_red font_600">4 / 5</span>
+                            <span class="text_center font_600">grid-row:</span>
+                            <span class="text_center color_red font_600">2 / 3</span>
+                        </div>
+                    </div>
+                    <p class="para">Using the same example, here we are defining a <b>grid-auto-columns</b> of <b>100px</b> which will set the third and the fourth auto created columns to that size.</p>
+                    <p class="para"><b>Note:</b> more about placing grid items in the grid items properties section.</p>
+                </div>
+
+
+                <div id="gridAutoFlow" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Auto-Flow
+                    </h2>
+                    <p class="para">If you have grid items that you don't explicitly place on the grid, the auto-placement algorithm kicks in to automatically place the items. This property controls how the auto-placement algorithm works.</p>
+                    <div class="card inline_block">
+                        <div class="grid grid_container_example_1 grid_container_template_example_8 grid_container_auto_flow_example_1">
+                            <div class="grid_item_example_1 font_600 position_relative grid_item_example_7">1</div>
+                            <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            <div class="grid_item_example_1 font_600 position_relative">3</div>
+                            <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            <div class="grid_item_example_1 font_600 position_relative">5</div>
+                            <div class="grid_item_example_1 font_600 position_relative grid_item_example_8">6</div>
+                        </div>
+                        <div class="text_center margin_right_50">
+                            <span class="text_center font_600">&nbsp;1 =></span>
+                            <span class="text_center font_600">grid-column:</span>
+                            <span class="text_center color_red font_600">1 / 2</span>
+                            <span class="text_center font_600">grid-row:</span>
+                            <span class="text_center color_red font_600">1 / 4</span>
+                            <span class="text_center font_600"> | </span>
+                            <span class="text_center font_600">&nbsp;6 =></span>
+                            <span class="text_center font_600">grid-column:</span>
+                            <span class="text_center color_red font_600">4 / 5</span>
+                            <span class="text_center font_600">grid-row:</span>
+                            <span class="text_center color_red font_600">1 / 4</span>
+                        </div>
+                        <div class="text_center">
+                            <div class="Box_Model_padding_desc text_center">
+                                <span></span>
+                                <span class="text_center font_600">grid-auto-flow:</span>
+                                <span class="text_center color_red font_600"> row</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="para">In the example above, items 1 and 6 are placed (explicitly) on the grid, and items 2 - 5 are placed in a row flow which is the default value.</p>
+                    <div class="card inline_block">
+                        <div class="grid grid_container_example_1 grid_container_template_example_8 grid_container_auto_flow_example_2">
+                            <div class="grid_item_example_1 font_600 position_relative grid_item_example_7">1</div>
+                            <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            <div class="grid_item_example_1 font_600 position_relative">3</div>
+                            <div class="grid_item_example_1 font_600 position_relative">4</div>
+                            <div class="grid_item_example_1 font_600 position_relative">5</div>
+                            <div class="grid_item_example_1 font_600 position_relative grid_item_example_8">6</div>
+                        </div>
+                        <div class="text_center margin_right_50">
+                            <span class="text_center font_600">&nbsp;1 =></span>
+                            <span class="text_center font_600">grid-column:</span>
+                            <span class="text_center color_red font_600">1 / 2</span>
+                            <span class="text_center font_600">grid-row:</span>
+                            <span class="text_center color_red font_600">1 / 4</span>
+                            <span class="text_center font_600"> | </span>
+                            <span class="text_center font_600">&nbsp;6 =></span>
+                            <span class="text_center font_600">grid-column:</span>
+                            <span class="text_center color_red font_600">4 / 5</span>
+                            <span class="text_center font_600">grid-row:</span>
+                            <span class="text_center color_red font_600">1 / 4</span>
+                        </div>
+                        <div class="text_center">
+                            <div class="Box_Model_padding_desc text_center">
+                                <span></span>
+                                <span class="text_center font_600">grid-auto-flow:</span>
+                                <span class="text_center color_red font_600"> column</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="para">Using the same example, here items 2 - 5 are placed on a column flow.</p>
+                </div>
+
+
+                <div id="grid" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid: (shortend property)
+                    </h2>
+                    <p class="para">A shorthand for setting all of the following properties in a single declaration: <b class="color_red font_600">grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and grid-auto-flow</b>.</p>
+                </div>
+
+                <br/><br/><br/>
+                <h1 class="text_center orange_color">Grid items properties</h1>
                  
 
             </div>
