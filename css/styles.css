@@ -246,7 +246,7 @@ html, body {
   }
   
   .section{
-    margin-top: 60px;
+    padding-top: 60px;
   }
   .prop {
     font-size: 36px;
