@@ -338,6 +338,16 @@
   grid-template-columns: repeat(4, 25% [col]);
   grid-template-rows: repeat(3, 100px [row]);
 }
+.grid_container_template_example_9{
+  min-height: 450px;
+  grid-template-columns: [first-col] 25% [second-col] 25% [third-col] 25% [fourth-col] 25%;
+  grid-template-rows: [first-row] 150px [second-row] 150px [third-row] 150px;
+}
+.grid_container_template_example_10{
+  /* min-height: 400px; */
+  grid-template-columns: repeat(2, 50% [col]);
+  grid-template-rows: [first-row] 100px;
+}
 .grid_gap_example_1 {
   grid-row-gap: 40px;
   grid-column-gap: 3%;
@@ -377,6 +387,12 @@
 .grid_item_example_8{
   grid-column: 4 / 5;
   grid-row: 1 / 4;
+}
+.grid_item_example_9{
+  grid-column-start: second-col;
+  grid-column-end: fourth-col;
+  grid-row-start: second-row;
+  grid-row-end: fourth-row;
 }
 .grid_col_guide{
   font-size: 12px;

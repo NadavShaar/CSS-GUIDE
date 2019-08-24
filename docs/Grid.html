@@ -74,6 +74,13 @@
                             <li class="nav_item"><a href="./Grid.html#gridAutoColumnsRows">Grid-Auto-Columns & Grid-Auto-Rows</a></li>
                             <li class="nav_item"><a href="./Grid.html#gridAutoFlow">Grid-Auto-Flow</a></li>
                             <li class="nav_item"><a href="./Grid.html#grid">Grid</a></li>
+                            <li class="nav_item"><a href="./Grid.html#gridColumnRowStartEnd">Grid-Column-Start, Grid-Column-End, Grid-Row-Start & Grid-Row-End</a></li>
+                            <li class="nav_item"><a href="./Grid.html#gridColumn">Grid-Column</a></li>
+                            <li class="nav_item"><a href="./Grid.html#gridRow">Grid-Row</a></li>
+                            <li class="nav_item"><a href="./Grid.html#gridArea">Grid-Area</a></li>
+                            <li class="nav_item"><a href="./Grid.html#justifySelf">Justify-Self</a></li>
+                            <li class="nav_item"><a href="./Grid.html#alignSelf">Align-Self</a></li>
+                            <li class="nav_item"><a href="./Grid.html#placeSelf">Place-Self</a></li>
                         </ul>
                     </li>
                     <li class="nav_item">
@@ -340,7 +347,7 @@
                     <h2>
                         <span class="main_color">#</span>&nbsp;Grid-Template: (shortend property)
                     </h2>
-                    <p class="para">This property is a combination of the following properties in this order: <br/><b class="color_red font_600">grid-template-areas grid-template-rows</b> <b class="color_red font_600">/</b> <b class="color_red font_600">grid-template-columns</b>.</p>
+                    <p class="para">A shorthand property for setting the following properties in a single declaration: <br/><b class="color_red font_600">grid-template-areas grid-template-rows</b> <b class="color_red font_600">/</b> <b class="color_red font_600">grid-template-columns</b>.</p>
                 </div>
 
 
@@ -419,7 +426,7 @@
                     <h2>
                         <span class="main_color">#</span>&nbsp;Grid-Gap: (shortend property)
                     </h2>
-                    <p class="para">This property is a combination of the following properties in this order: <b class="color_red font_600">grid-row-gap</b> <b>|</b> <b class="color_red font_600">grid-column-gap</b>.</p>
+                    <p class="para">A shorthand property for setting the following properties in a single declaration: <b class="color_red font_600">grid-row-gap</b> <b>|</b> <b class="color_red font_600">grid-column-gap</b>.</p>
                 </div>
 
 
@@ -627,7 +634,7 @@
                     <h2>
                         <span class="main_color">#</span>&nbsp;Place-Items: (shortend property)
                     </h2>
-                    <p class="para">This property is a combination of the following properties in this order: <b class="color_red font_600">align-items</b> <b>|</b> <b class="color_red font_600">justify-items</b>.</p>
+                    <p class="para">A shorthand property for setting the following properties in a single declaration: <b class="color_red font_600">align-items</b> <b>|</b> <b class="color_red font_600">justify-items</b>.</p>
                 </div>
 
 
@@ -975,7 +982,7 @@
                     <h2>
                         <span class="main_color">#</span>&nbsp;Place-Content: (shortend property)
                     </h2>
-                    <p class="para">This property is a combination of the following properties in this order: <b class="color_red font_600">align-content</b> <b>|</b> <b class="color_red font_600">justify-content</b>.</p>
+                    <p class="para">A shorthand property for setting the following properties in a single declaration: <b class="color_red font_600">align-content</b> <b>|</b> <b class="color_red font_600">justify-content</b>.</p>
                 </div>
 
 
@@ -1124,6 +1131,230 @@
 
                 <br/><br/><br/>
                 <h1 class="text_center orange_color">Grid items properties</h1>
+
+
+                <div id="gridColumnRowStartEnd" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Column-Start / Grid-Column-End / Grid-Row-Start / Grid-Row-End
+                    </h2>
+                    <p class="para">This properties defines the placement of the grid items on the grid itself using start and end points of the columns and rows. if you assigned names for your columns and rows you can refer to the start and end points by those names, otherwise you'll have to refer each row and column by their indexes (as numbers).</p>
+                    <div class="card inline_block width_full">
+                        <div class="grid grid_container_example_1 grid_container_template_example_9">
+                            <div class="grid_item_example_1 font_600 position_relative no_border">
+                                <span class="grid_col_guide">[first-col] <b class="color_red font_600">25%</b></span>
+                                <span class="grid_row_guide">[first-row] <b class="color_red font_600">150px</b></span>
+                            </div>
+                            
+                            <div class="grid_item_example_1 font_600 position_relative no_border">
+                                    <span class="grid_col_guide">[second-col] <b class="color_red font_600">25%</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative no_border">
+                                    <span class="grid_col_guide">[third-col] <b class="color_red font_600">25%</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative no_border">
+                                    <span class="grid_col_guide">[fourth-col] <b class="color_red font_600">25%</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative grid_item_example_9">1</div>
+                            <div class="grid_item_example_1 font_600 position_relative no_border">
+                                    <span class="grid_row_guide">[second-row] <b class="color_red font_600">150px</b></span>
+                            </div>
+                            <div class="grid_item_example_1 font_600 position_relative no_border"></div>
+                            <div class="grid_item_example_1 font_600 position_relative no_border">
+                                    <span class="grid_row_guide">[third-row] <b class="color_red font_600">150px</b></span>
+                            </div>
+                        </div>
+                        <div class="text_center margin_right_50">
+                            <span class="text_center font_600">&nbsp;1 =></span>
+                            <span class="text_center font_600">grid-column-start:</span>
+                            <span class="text_center color_red font_600">second-col</span>
+                            <span class="text_center font_600"> | </span>
+                            <span class="text_center font_600">grid-column-end:</span>
+                            <span class="text_center color_red font_600">fourth-col</span>
+                            <span class="text_center font_600"> | </span>
+                            <span class="text_center font_600">grid-row-start:</span>
+                            <span class="text_center color_red font_600">second-row</span>
+                            <span class="text_center font_600"> | </span><br/>
+                            <span class="text_center font_600">grid-row-end:</span>
+                            <span class="text_center color_red font_600">fourth-row</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="gridColumn" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-column (shortend property)
+                    </h2>
+                    <p class="para">A shorthand property for setting the following properties in a single declaration: <b class="color_red font_600">grid-column-start / grid-column-end</b>.</p>
+                </div>
+
+
+                <div id="gridRow" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Row: (shortend property)
+                    </h2>
+                    <p class="para">A shorthand property for setting the following properties in a single declaration: <b class="color_red font_600">grid-row-start / grid-row-end</b>.</p>
+                </div>
+
+
+                <div id="gridArea" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Grid-Area
+                    </h2>
+                    <p class="para">Gives an item a name so that it can be referenced by a template created with the grid-template-areas property.</p>
+                    <div class="card inline_block width_full position_relative">
+                        <div class="grid grid_container_example_1 grid_template_areas_example_1">
+                            <div class="grid_item_example_1 font_600 position_relative grid_template_area_item_example_1">1</div>
+                            <div class="grid_item_example_1 font_600 position_relative grid_template_area_item_example_2">2</div>
+                            <div class="grid_item_example_1 font_600 position_relative grid_template_area_item_example_3">3</div>
+                            <div class="grid_item_example_1 font_600 position_relative grid_template_area_item_example_4">4</div>
+                        </div>
+                        <div class="text_center">
+                            <span class="text_center font_600">&nbsp;1 =></span>
+                            <span class="text_center font_600">grid-area:</span>
+                            <span class="text_center color_red font_600">header</span>
+                            <span class="text_center font_600">&nbsp;|</span>
+                            <span class="text_center font_600">&nbsp;2 =></span>
+                            <span class="text_center font_600">&nbsp;grid-area:</span>
+                            <span class="text_center color_red font_600">main</span>
+                            <span class="text_center font_600">&nbsp;|</span>
+                            <span class="text_center font_600">&nbsp;3 =></span>
+                            <span class="text_center font_600">&nbsp;grid-area:</span>
+                            <span class="text_center color_red font_600">sidebar</span>
+                            <span class="text_center font_600">&nbsp;4 =></span>
+                            <span class="text_center font_600">&nbsp;grid-area:</span>
+                            <span class="text_center color_red font_600">footer</span>
+                        </div>
+                        <div class="Box_Model_padding_desc text_center">
+                            <span></span>
+                            <span class="text_center font_600">grid-template-areas:</span>
+                            <span class="text_center color_red font_600"> "header header header header"
+                                "main main . sidebar"
+                                "footer footer footer footer"</span>
+                        </div>
+                    </div>
+                    <p class="para"><b>Note: </b>this property can also be used as a shorthand property for setting the following properties in a single declaration: <b class="color_red font_600">grid-col-start / grid-col-end / grid-row-start / grid-row-end</b>.</p>
+                </div>
+
+
+                <div id="justifySelf" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Justify-Self
+                    </h2>
+                    <p class="para">Aligns a grid item inside a cell along the inline (row) axis.</p>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_10">
+                                <div class="grid_item_example_1 font_600 position_relative grid_justify_self_start">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            </div>
+                            <div class="text_center">
+                                <span class="text_center font_600">&nbsp;1 =></span>
+                                <span class="text_center font_600">justify-self:</span>
+                                <span class="text_center color_red font_600">start</span>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_10">
+                                <div class="grid_item_example_1 font_600 position_relative grid_justify_self_end">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            </div>
+                            <div class="text_center">
+                                <span class="text_center font_600">&nbsp;1 =></span>
+                                <span class="text_center font_600">justify-self:</span>
+                                <span class="text_center color_red font_600">end</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_10">
+                                <div class="grid_item_example_1 font_600 position_relative grid_justify_self_center">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            </div>
+                            <div class="text_center">
+                                <span class="text_center font_600">&nbsp;1 =></span>
+                                <span class="text_center font_600">justify-self:</span>
+                                <span class="text_center color_red font_600">center</span>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_10">
+                                <div class="grid_item_example_1 font_600 position_relative grid_justify_self_strech">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            </div>
+                            <div class="text_center">
+                                <span class="text_center font_600">&nbsp;1 =></span>
+                                <span class="text_center font_600">justify-self:</span>
+                                <span class="text_center color_red font_600">strech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="alignSelf" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Align-Self
+                    </h2>
+                    <p class="para">Aligns a grid item inside a cell along the block (column) axis.</p>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_10">
+                                <div class="grid_item_example_1 font_600 position_relative grid_align_self_start">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            </div>
+                            <div class="text_center">
+                                <span class="text_center font_600">&nbsp;1 =></span>
+                                <span class="text_center font_600">align-self:</span>
+                                <span class="text_center color_red font_600">start</span>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_10">
+                                <div class="grid_item_example_1 font_600 position_relative grid_align_self_end">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            </div>
+                            <div class="text_center">
+                                <span class="text_center font_600">&nbsp;1 =></span>
+                                <span class="text_center font_600">align-self:</span>
+                                <span class="text_center color_red font_600">end</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex_between">
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_10">
+                                <div class="grid_item_example_1 font_600 position_relative grid_align_self_center">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            </div>
+                            <div class="text_center">
+                                <span class="text_center font_600">&nbsp;1 =></span>
+                                <span class="text_center font_600">align-self:</span>
+                                <span class="text_center color_red font_600">center</span>
+                            </div>
+                        </div>
+                        <div class="card two_cards inline_block width_full">
+                            <div class="grid grid_container_example_1 grid_container_template_example_10">
+                                <div class="grid_item_example_1 font_600 position_relative grid_align_self_strech">1</div>
+                                <div class="grid_item_example_1 font_600 position_relative">2</div>
+                            </div>
+                            <div class="text_center">
+                                <span class="text_center font_600">&nbsp;1 =></span>
+                                <span class="text_center font_600">align-self:</span>
+                                <span class="text_center color_red font_600">strech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="placeSelf" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Place-Self: (shortend property)
+                    </h2>
+                    <p class="para">A shorthand property for setting the following properties in a single declaration: <b class="color_red font_600">align-self / justify-self</b>.</p>
+                </div>
                  
 
             </div>

@@ -474,3 +474,30 @@ input[type="radio"]:checked ~ ul{
 .grid_align_content_space_evenly{
   align-content: space-evenly;
 }
+.no_border{
+  border: none !important;
+}
+.grid_justify_self_start{
+  justify-self: start;
+}
+.grid_justify_self_end{
+  justify-self: end;
+}
+.grid_justify_self_center{
+  justify-self: center;
+}
+.grid_justify_self_strech{
+  justify-self: strech;
+}
+.grid_align_self_start{
+  align-self: start;
+}
+.grid_align_self_end{
+  align-self: end;
+}
+.grid_align_self_center{
+  align-self: center;
+}
+.grid_align_self_strech{
+  align-self: strech;
+}
