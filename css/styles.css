@@ -28,21 +28,23 @@ html, body {
   pre {
     margin: 0;
     display: block;
-    padding: 0px 18px;
+    padding: 0px 50px;
     line-height: 1.42857143;
     color: #333;
     word-break: break-all;
     word-wrap: break-word;
-    background-color: #f8f9fa;
-    border: 1px solid #dadada;
-    border-radius: 3px;
     font-size: 0;
   }
-  code{
+  /* code{
     font-size: 13px;
   }
   .code_block{
+    margin: 18px 0px;
     position: relative;
+    background-color: #f8f9fa;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    overflow: hidden;
   }
   .code_block_row_numbers{
     position: absolute;
@@ -51,7 +53,7 @@ html, body {
     top: 0;
     right: calc(100% - 36px);
     background: #dadada;
-    padding: 18px 0;
+    padding: 40px 0 18px;
   }
   .code_block_row_numbers > span{
     display: flex;
@@ -60,6 +62,65 @@ html, body {
     font-size: 13px;
     line-height: 18px;
     color: #333;
+  }
+  .code_block_title{
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #1e324c;
+    padding: 3px 32px;
+    display: block;
+    margin-left: 18px;
+  } */
+  code{
+    font-size: 13px;
+    color: #ffffff;
+  }
+  .code_block{
+    margin: 18px 0px;
+    position: relative;
+    background-color: #1e324c;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .code_block_row_numbers{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: calc(100% - 36px);
+    background: #dadada;
+    padding: 40px 0 18px;
+  }
+  .code_block_row_numbers > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+  }
+  .code_block_title{
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #9ba6b5;
+    padding: 3px 32px;
+    display: block;
+    margin-left: 18px
+  }
+  .selector_name {
+    color: #ff844a;
+  }
+  .property_name, .attribute_name {
+    color: #7de2af;
+  }
+  .property_value, .attribute_value {
+    color: #ffdf62;
+  }
+  .html_tag {
+    color: #ff844a;
   }
   ul li.bullet::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */

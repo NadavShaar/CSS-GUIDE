@@ -11,7 +11,7 @@
 	<div class="header">
 		<h1>CSS - Common used properties</h1>
 	  </div>
-	  <div class="page">
+	  <div class="page selectors">
 		<div id="intro" class="page_inner">
             <div class="side_nav card">
                 <ul>
@@ -122,7 +122,10 @@
                         <input type="radio" id="selectorsNav" name="nav-collapse">
                         <label for="selectorsNav">Selectors</label>
                         <ul>
-                            <li class="nav_item"><a href="./Position.html#intro">Introduction</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#intro">Introduction</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorElement">Element</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorClass">Class</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorID">ID</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -135,14 +138,200 @@
                     </div>
 					<img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
                 </div>
+
+
+                <br/><br/><br/>
+                <h1 class="text_center orange_color">Basic Selectors</h1>
                 
 
-				<div id="relative" class="flex_column section">
+				<div id="selectorElement" class="flex_column section">
 					<h2>
-						<span class="main_color">#</span>&nbsp;
+						<span class="main_color">#</span>&nbsp;Element
 					</h2>
-                    <p class="para"></p>
+                    <p class="para">Selects an element by its type.</p>
                     <div class="code_block">
+                        <span class="code_block_title">HTML</span>
+                        <div class="code_block_row_numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <pre>
+                            <code>
+<span class="html_tag">&lt;div&gt;</span>
+    <span class="html_tag">&lt;h1&gt;</span>Headline1<span class="html_tag">&lt;/h1&gt;</span>
+    <span class="html_tag">&lt;p&gt;</span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+    <span class="html_tag">&lt;p&gt;</span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+<span class="html_tag">&lt;/div&gt;</span>
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code_block">
+                        <span class="code_block_title">CSS</span>
+                        <div class="code_block_row_numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                        <pre>
+                            <code>
+<span class="selector_name">p</span> {
+    <span class="property_name">color:</span> <span class="property_value">red</span>;
+}
+                            </code>
+                        </pre>
+                    </div>
+			
+					<div class="flex_column card selector_element">
+                        <div>
+                            <h1>Headline1</h1>
+                            <p>Paragraph</p>
+                            <p>Paragraph</p>
+                        </div>
+					</div>
+                </div>
+
+
+				<div id="selectorClass" class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;.Class
+					</h2>
+                    <p class="para">Selects an element by the class attribute value, which may be reused multiple times per page.</p>
+                    <div class="code_block">
+                        <span class="code_block_title">HTML</span>
+                        <div class="code_block_row_numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <pre>
+                            <code>
+<span class="html_tag">&lt;div&gt;</span>
+    <span class="html_tag">&lt;h1</span> <span class="attribute_name">class</span>=<span class="attribute_value">"color_red"</span><span class="html_tag">&gt;</span></span>Headline1<span class="html_tag">&lt;/h1&gt;</span>
+    <span class="html_tag">&lt;p&gt;</span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+    <span class="html_tag">&lt;p</span> <span class="attribute_name">class</span>=<span class="attribute_value">"color_red"</span><span class="html_tag">&gt;</span></span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+<span class="html_tag">&lt;/div&gt;</span>
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code_block">
+                        <span class="code_block_title">CSS</span>
+                        <div class="code_block_row_numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                        <pre>
+                            <code>
+<span class="selector_name">.color_red</span> {
+    <span class="property_name">color:</span> <span class="property_value">red</span>;
+}
+                            </code>
+                        </pre>
+                    </div>
+			
+					<div class="flex_column card selector_class">
+                        <div>
+                            <h1 class="color_red">Headline1</h1>
+                            <p>Paragraph</p>
+                            <p class="color_red">Paragraph</p>
+                        </div>
+					</div>
+                </div>
+
+
+				<div id="selectorID" class="flex_column section">
+					<h2>
+						<span class="main_color">#</span>&nbsp;#ID
+					</h2>
+                    <p class="para">Selects an element by the id attribute value, which is unique and to only be used once per page.</p>
+                    <div class="code_block">
+                        <span class="code_block_title">HTML</span>
+                        <div class="code_block_row_numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <pre>
+                            <code>
+<span class="html_tag">&lt;div&gt;</span>
+    <span class="html_tag">&lt;h1&gt;</span>Headline1<span class="html_tag">&lt;/h1&gt;</span>
+    <span class="html_tag">&lt;p</span> <span class="attribute_name">id</span>=<span class="attribute_value">"paragraph"</span><span class="html_tag">&gt;</span></span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+    <span class="html_tag">&lt;p</span> <span class="attribute_name">id</span>=<span class="attribute_value">"paragraph"</span><span class="html_tag">&gt;</span></span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+<span class="html_tag">&lt;/div&gt;</span>
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code_block">
+                        <span class="code_block_title">CSS</span>
+                        <div class="code_block_row_numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                        <pre>
+                            <code>
+<span class="selector_name">#paragraph</span> {
+    <span class="property_name">color:</span> <span class="property_value">red</span>;
+}
+                            </code>
+                        </pre>
+                    </div>
+			
+					<div class="flex_column card selector_id">
+                        <div>
+                            <h1>Headline1</h1>
+                            <p id="paragraph">Paragraph</p>
+                            <p id="paragraph">Paragraph</p>
+                        </div>
+					</div>
+                </div>
+
+
+                <br/><br/><br/>
+                <h1 class="text_center orange_color">Child Selectors</h1>
+                
+
+                <div id="selectorDescendant" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Descendant Selector
+                    </h2>
+                    <p class="para">Selects an element that resides anywhere within an identified ancestor element.</p>
+                    <div class="code_block">
+                        <span class="code_block_title">HTML</span>
+                        <div class="code_block_row_numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                        </div>
+                        <pre>
+                            <code>
+<span class="html_tag">&lt;div&gt;</span>
+    <span class="html_tag">&lt;h1&gt;</span>Headline1<span class="html_tag">&lt;/h1&gt;</span>
+    <span class="html_tag">&lt;p</span><span class="html_tag">&gt;</span></span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+    <span class="html_tag">&lt;div </span><span class="attribute_name">class</span>=<span class="attribute_value">"container"</span><span class="html_tag">&gt;</span>Container
+        <span class="html_tag">&lt;p</span><span class="html_tag">&gt;</span></span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+        <span class="html_tag">&lt;div&gt;</span>
+            <span class="html_tag">&lt;p</span><span class="html_tag">&gt;</span></span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+        <span class="html_tag">&lt;/div&gt;</span>
+    <span class="html_tag">&lt;/div&gt;</span>
+<span class="html_tag">&lt;/div&gt;</span>
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code_block">
+                        <span class="code_block_title">CSS</span>
                         <div class="code_block_row_numbers">
                             <span>1</span>
                             <span>2</span>
@@ -151,22 +340,99 @@
                         </div>
                         <pre>
                             <code>
-    &lt;div&gt;
-        &lt;h1&gt;Headline&lt;/h1&gt;
-        &lt;p&gt;Paragraph&lt;/p&gt;
-    &lt;/div&gt;
+<span class="selector_name">.container p</span> {
+    <span class="property_name">color:</span> <span class="property_value">red</span>;
+    <span class="property_name">padding-left:</span> <span class="property_value">36px</span>;
+}
                             </code>
                         </pre>
                     </div>
-			
-					<div class="flex_column card">
+            
+                    <div class="flex_column card selector_descendant">
                         <div>
-                            <h1>Headline</h1>
+                            <h1>Headline1</h1>
                             <p>Paragraph</p>
+                            <div class="container">Container
+                                <p>Paragraph</p>
+                                <div>
+                                    <p>Paragraph</p>
+                                </div>
+                            </div>
                         </div>
-					</div>
+                    </div>
                 </div>
-                
+
+
+                <div id="selectorDirectChild" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Direct Child Selector
+                    </h2>
+                    <p class="para">Selects an element that resides immediately inside an identified parent element.</p>
+                    <div class="code_block">
+                        <span class="code_block_title">HTML</span>
+                        <div class="code_block_row_numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <pre>
+                            <code>
+<span class="html_tag">&lt;div&gt;</span>
+    <span class="html_tag">&lt;h1&gt;</span>Headline1<span class="html_tag">&lt;/h1&gt;</span>
+    <span class="html_tag">&lt;p</span><span class="html_tag">&gt;</span></span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+    <span class="html_tag">&lt;div </span><span class="attribute_name">class</span>=<span class="attribute_value">"container"</span><span class="html_tag">&gt;</span>Container
+        <span class="html_tag">&lt;p</span><span class="html_tag">&gt;</span></span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+        <span class="html_tag">&lt;div&gt;</span>
+            <span class="html_tag">&lt;p</span><span class="html_tag">&gt;</span></span>Paragraph<span class="html_tag">&lt;/p&gt;</span>
+        <span class="html_tag">&lt;/div&gt;</span>
+    <span class="html_tag">&lt;/div&gt;</span>
+<span class="html_tag">&lt;/div&gt;</span>
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code_block">
+                        <span class="code_block_title">CSS</span>
+                        <div class="code_block_row_numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                        <pre>
+                            <code>
+<span class="selector_name">.container > p</span> {
+    <span class="property_name">color:</span> <span class="property_value">red</span>;
+    <span class="property_name">padding-left:</span> <span class="property_value">36px</span>;
+}
+                            </code>
+                        </pre>
+                    </div>
+            
+                    <div class="flex_column card selector_direct_child">
+                        <div>
+                            <h1>Headline1</h1>
+                            <p>Paragraph</p>
+                            <div class="container">Container
+                                <p>Paragraph</p>
+                                <div>
+                                    <p>Paragraph</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br/><br/><br/>
+                <h1 class="text_center orange_color">Sibling Selectors</h1>
+
                 
 			</div>
 		</div>

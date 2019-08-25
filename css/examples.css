@@ -460,3 +460,20 @@
 .grid_container_auto_flow_example_2{
   grid-auto-flow: column;
 }
+.selector_element p {
+  color: red;
+}
+.selector_class .color_red {
+  color: red;
+}
+.selector_id #paragraph {
+  color: red;
+}
+.selector_descendant .container p {
+  color: red;
+  padding-left: 36px;
+}
+.selector_direct_child .container > p {
+  color: red;
+  padding-left: 36px;
+}
