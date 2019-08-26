@@ -130,10 +130,10 @@ function generateRows(html, output) {
 };
 
 let ids = [
-    // 'selectorElement',
-    // 'selectorClass',
-    // 'selectorID',
-    // 'selectorDescendant',
+    'selectorElement',
+    'selectorClass',
+    'selectorID',
+    'selectorDescendant',
     'selectorDirectChild'
 ];
 
