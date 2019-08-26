@@ -83,12 +83,38 @@ function compileHTML(html){
     let rowsNumbers = generateRows(html, output);
     
     return `<span class="code_block_title">HTML</span><div class="code_block_row_numbers">${rowsNumbers}</div><pre><code>${output}</code></pre>`;
-}
+};
+
+function compileCSS(css) {
+    let output = '';
+    let index = 0;
+
+    for (let i = 0; i < css.length; i++) {
+
+        const char = css[i];
+        
+        output += char;
+    }
+
+    let rowsNumbers = generateRows(css, output);
+
+    return `<span class="code_block_title">CSS</span><div class="code_block_row_numbers">${rowsNumbers}</div><pre><code>${output}</code></pre>`;
+};
 
 function generateHTML(id) {
-    let html = document.querySelector(`#${id} .code_block_example`).innerHTML;
+    let element = document.querySelector(`#${id} .code_block_example`);
+    if(!element) return;
+    let html = element.innerHTML;
     let compiledHTML = compileHTML(html);
     document.querySelector(`#${id} .code_block_html`).innerHTML = compiledHTML;
+};
+
+function generateCSS(id) {
+    let element = document.querySelector(`#${id} .code_block_css`);
+    if(!element) return;
+    let css = element.innerHTML;
+    let compiledCSS = compileCSS(css);
+    document.querySelector(`#${id} .code_block_css`).innerHTML = compiledCSS;
 };
 
 function generateRows(html, output) {
@@ -104,11 +130,12 @@ function generateRows(html, output) {
 };
 
 let ids = [
-    'selectorElement',
-    'selectorClass',
-    'selectorID',
-    'selectorDescendant',
+    // 'selectorElement',
+    // 'selectorClass',
+    // 'selectorID',
+    // 'selectorDescendant',
     'selectorDirectChild'
 ];
 
 ids.forEach(generateHTML);
+ids.forEach(generateCSS);
