@@ -339,9 +339,9 @@
   grid-template-rows: repeat(3, 100px [row]);
 }
 .grid_container_template_example_9{
-  min-height: 450px;
+  min-height: 360px;
   grid-template-columns: [first-col] 25% [second-col] 25% [third-col] 25% [fourth-col] 25%;
-  grid-template-rows: [first-row] 150px [second-row] 150px [third-row] 150px;
+  grid-template-rows: [first-row] 120px [second-row] 120px [third-row] 120px;
 }
 .grid_container_template_example_10{
   /* min-height: 400px; */
