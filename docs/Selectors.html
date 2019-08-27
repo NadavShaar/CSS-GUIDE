@@ -248,7 +248,7 @@ p {
 
                 <div id="selectorDirectChild" class="flex_column section">
                     <h2>
-                        <span class="main_color">#</span>&nbsp;Direct Child
+                        <span class="main_color">#</span>&nbsp;Direct > Child
                     </h2>
                     <p class="para">Selects an element that resides immediately inside an identified parent element.</p>
                     
@@ -281,7 +281,7 @@ p {
                 
                 <div id="selectorGeneralSibling" class="flex_column section">
                     <h2>
-                        <span class="main_color">#</span>&nbsp;General Sibling ~
+                        <span class="main_color">#</span>&nbsp;General ~ Sibling
                     </h2>
                     <p class="para">Selects an element that resides immediately inside an identified parent element.</p>
                     
@@ -308,7 +308,7 @@ h1 ~ p {
 
                 <div id="selectorAdjacentSibling" class="flex_column section">
                     <h2>
-                        <span class="main_color">#</span>&nbsp;Adjacent Sibling +
+                        <span class="main_color">#</span>&nbsp;Adjacent + Sibling
                     </h2>
                     <p class="para">Selects an element that follows directly after the prior element, in which both elements share the same parent.</p>
                     
@@ -335,6 +335,178 @@ h1 + p {
 
                 <br/><br/><br/>
                 <h1 class="text_center orange_color">Attribute Selectors</h1>
+
+
+                <div id="selectorAttributePresent" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;[Attribute Present]
+                    </h2>
+                    <p class="para">Selects an element if the given attribute is present.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+a[target] {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_attribute_present code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <a href="./Selectors.html#selectorAttributePresent" target="_self">Link</a>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorAttributeEquals" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;[Attribute="Equals"] 
+                    </h2>
+                    <p class="para">Selects an element if the given attribute value exactly matches the value stated.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+a[href="./Selectors.html#selectorAttributePresent"] {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_attribute_equals  code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <a href="./Selectors.html#selectorAttributeEquals" target="_self">Link</a>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorAttributeContains" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;[Attribute*="Contains"] 
+                    </h2>
+                    <p class="para">Selects an element if the given attribute value contains at least once instance of the value stated.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+a[href*="Attribute"] {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_attribute_contains  code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <a href="./Selectors.html#selectorAttributeContains" target="_self">Link</a>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorAttributeBeginsWith" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;[Attribute^="BeginsWith"] 
+                    </h2>
+                    <p class="para">Selects an element if the given attribute value begins with the value stated.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+a[href^="./Select"] {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_attribute_begins_with  code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <a href="./Selectors.html#selectorAttributeBeginsWith" target="_self">Link</a>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorAttributeEndsWith" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;[Attribute$="EndsWith"] 
+                    </h2>
+                    <p class="para">Selects an element if the given attribute value ends with the value stated.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+a[href$="EndsWith"] {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_attribute_ends_with  code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <a href="./Selectors.html#selectorAttributeEndsWith" target="_self">Link</a>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorAttributeSpaced" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;[Attribute~="Spaced Value"] 
+                    </h2>
+                    <p class="para">Selects an element if the given attribute value is whitespace-separated with one word being exactly as stated.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+a[name~="spaced"] {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_attribute_spaced  code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <a href="./Selectors.html#selectorAttributeSpaced" name="spaced value">Link</a>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorAttributeHyphenated" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;[Attribute|="Hyphenated-Value"] 
+                    </h2>
+                    <p class="para">Selects an element if the given attribute value is hyphen-separated and begins with the word stated.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+a[name|="hyphenated"] {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_attribute_Hyphenated  code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <a href="./Selectors.html#selectorAttributeHyphenated" name="hyphenated-value">Link</a>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <br/><br/><br/>
+                <h1 class="text_center orange_color">Pseudo Classes</h1>
 
 
 			</div>

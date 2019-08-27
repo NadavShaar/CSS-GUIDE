@@ -483,3 +483,24 @@
 .selector_adjacent_sibling h1 + p {
   color: red;
 }
+.selector_attribute_present a[target] {
+  color: red;
+}
+.selector_attribute_equals a[href="./Selectors.html#selectorAttributeEquals"] {
+  color: red;
+}
+.selector_attribute_contains a[href*="Attribute"] {
+  color: red;
+}
+.selector_attribute_begins_with a[href^="./Selectors"] {
+  color: red;
+}
+.selector_attribute_ends_with a[href$="EndsWith"] {
+  color: red;
+}
+.selector_attribute_spaced a[name~="spaced"] {
+  color: red;
+}
+.selector_attribute_Hyphenated a[name|="hyphenated"] {
+  color: red;
+}

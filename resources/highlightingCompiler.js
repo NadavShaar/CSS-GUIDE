@@ -58,7 +58,7 @@ function compileHTML(html){
 
                     // get attribute value
                     let attributeValue = '';
-                    while (i < closeCharIndex && html[i] !== ' ') {
+                    while (i < closeCharIndex && html[i - 1] + html[i] !== '" ') {
                         attributeValue += html[i];
                         i++;
                     }
@@ -201,7 +201,14 @@ let ids = [
     'selectorDescendant',
     'selectorDirectChild',
     'selectorGeneralSibling',
-    'selectorAdjacentSibling'
+    'selectorAdjacentSibling',
+    'selectorAttributePresent',
+    'selectorAttributeEquals',
+    'selectorAttributeContains',
+    'selectorAttributeBeginsWith',
+    'selectorAttributeEndsWith',
+    'selectorAttributeSpaced',
+    'selectorAttributeHyphenated'
 ];
 
 ids.forEach(generateHTML);
