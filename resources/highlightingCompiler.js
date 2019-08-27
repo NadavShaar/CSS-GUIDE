@@ -3,7 +3,6 @@ function compileHTML(html){
 
     for (let i = 0; i < html.length; i++) {
         const char = html[i];
-        let str = '';
 
         if(char === '<'){
             let closeCharIndex;
@@ -87,14 +86,80 @@ function compileHTML(html){
 
 function compileCSS(css) {
     let output = '';
-    let index = 0;
 
+    let selector = '';
     for (let i = 0; i < css.length; i++) {
-
         const char = css[i];
-        
-        output += char;
+
+        if(char === '{'){
+            output += `<span class="selector_name">${selector}</span>{`;
+            selector = '';
+
+            let closeCharIndex;
+            for (let j = i + 1; j < css.length; j++) {
+                if(css[j] === '}'){
+                    closeCharIndex = j;
+                    break;
+                }
+            }
+            if(!closeCharIndex) return output;
+
+            // inside opening/closing tag
+
+            i++;
+
+            let cssProperties = '';
+            while (i < closeCharIndex){
+
+                // skip spaces
+                while (i < closeCharIndex && css[i] === ' ') {
+                    cssProperties += css[i];
+                    i++;
+                }
+
+                if(i === closeCharIndex) break;
+    
+                // get property name
+                let cssPropertyName = '';
+                while (i < closeCharIndex && css[i] !== ':') {
+                    cssPropertyName += css[i]
+                    i++;
+                }
+
+                cssProperties += `<span class="property_name">${cssPropertyName}</span>`;
+
+                if(i === closeCharIndex) break;
+
+                // skip ":"
+                while (i < closeCharIndex && css[i] === ':') {
+                    cssProperties += css[i];
+                    i++;
+                }
+
+                // get property value
+                let propertyValue = '';
+                while (i < closeCharIndex && css[i] !== ';') {
+                    propertyValue += css[i];
+                    i++;
+                }
+
+                cssProperties += `<span class="property_value">${propertyValue}</span>;`;
+                i++;
+            }
+            output += cssProperties + `}`;
+
+            i = closeCharIndex;
+            continue;
+        }
+
+        selector += char;
+        if(css.charCodeAt(i) === 10) {
+            output += selector;
+            selector = '';
+        }
     }
+
+    output += selector;
 
     let rowsNumbers = generateRows(css, output);
 
