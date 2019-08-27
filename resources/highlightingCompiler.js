@@ -199,7 +199,9 @@ let ids = [
     'selectorClass',
     'selectorID',
     'selectorDescendant',
-    'selectorDirectChild'
+    'selectorDirectChild',
+    'selectorGeneralSibling',
+    'selectorAdjacentSibling'
 ];
 
 ids.forEach(generateHTML);

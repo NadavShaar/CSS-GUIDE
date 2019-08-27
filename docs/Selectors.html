@@ -9,7 +9,7 @@
 <body>
 
 	<div class="header">
-		<h1>CSS - Common used properties</h1>
+		<h1>CSS - Selectors</h1>
 	  </div>
 	  <div class="page selectors">
 		<div id="intro" class="page_inner">
@@ -128,6 +128,8 @@
                             <li class="nav_item"><a href="./Selectors.html#selectorID">ID</a></li>
                             <li class="nav_item"><a href="./Selectors.html#selectorDescendant">Descendant</a></li>
                             <li class="nav_item"><a href="./Selectors.html#selectorDirectChild">Direct Child</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorGeneralSibling">General Sibling</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorAdjacentSibling">Adjacent Sibling</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -262,7 +264,7 @@ p {
 <div>
     <h1>Headline1</h1>
     <p>Paragraph</p>
-    <div class="container" id="container">Container
+    <div class="container">Container
         <p>Paragraph</p>
         <div>
             <p>Paragraph</p>
@@ -275,6 +277,64 @@ p {
 
                 <br/><br/><br/>
                 <h1 class="text_center orange_color">Sibling Selectors</h1>
+
+                
+                <div id="selectorGeneralSibling" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;General Sibling ~
+                    </h2>
+                    <p class="para">Selects an element that resides immediately inside an identified parent element.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+h1 ~ p {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_general_sibling code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <p>Paragraph</p>
+    <div>
+        <p>Paragraph</p>
+    </div>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorAdjacentSibling" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Adjacent Sibling +
+                    </h2>
+                    <p class="para">Selects an element that follows directly after the prior element, in which both elements share the same parent.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+h1 + p {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_adjacent_sibling code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <p>Paragraph</p>
+    <div>
+        <p>Paragraph</p>
+    </div>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <br/><br/><br/>
+                <h1 class="text_center orange_color">Attribute Selectors</h1>
 
 
 			</div>

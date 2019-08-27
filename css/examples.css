@@ -477,3 +477,9 @@
   color: red;
   padding-left: 36px;
 }
+.selector_general_sibling h1 ~ p {
+  color: red;
+}
+.selector_adjacent_sibling h1 + p {
+  color: red;
+}
