@@ -514,7 +514,3 @@
 .selector_pseudo_class_focus input:focus {
   color: red;
 }
-.selector_pseudo_class_focus .container {
-  display: flex;
-  flex-direction: column;
-}
