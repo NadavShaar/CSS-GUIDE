@@ -118,7 +118,7 @@
                             <li class="nav_item"><a href="./Transition.html#transitionDelay">Transition-Delay</a></li>
                         </ul>
                     </li>
-                    <li class="nav_item active">
+                    <li class="nav_item focus">
                         <input type="radio" id="selectorsNav" name="nav-collapse">
                         <label for="selectorsNav">Selectors</label>
                         <ul>
@@ -507,6 +507,78 @@ a[name|="hyphenated"] {
 
                 <br/><br/><br/>
                 <h1 class="text_center orange_color">Pseudo Classes</h1>
+
+
+                <div id="selectorPseudoClassHover" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:hover
+                    </h2>
+                    <p class="para">Selects an element when a user has hovered their cursor over it.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+p:hover {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_hover  code_block_example">
+<div>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassActive" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:active
+                    </h2>
+                    <p class="para">Selects an element when a user has engaged it.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+h1:active {
+    color: red;
+    user-select: none;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_active  code_block_example">
+<div>
+    <h1>Headline1</h1>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassFocus" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:focus
+                    </h2>
+                    <p class="para">Selects an element when a user has engaged it.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+input:focus {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_focus  code_block_example">
+<div class="container">
+    <label for="selectorPseudoClassFocusExampleLabel">Click Inside</label>
+    <input type="text" value="This text will have a red color when the input is focused" name="selectorPseudoClassFocusExampleLabel" />
+</div>
+                    </div>
+                </div>
 
 
 			</div>

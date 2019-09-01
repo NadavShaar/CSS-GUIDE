@@ -208,7 +208,10 @@ let ids = [
     'selectorAttributeBeginsWith',
     'selectorAttributeEndsWith',
     'selectorAttributeSpaced',
-    'selectorAttributeHyphenated'
+    'selectorAttributeHyphenated',
+    'selectorPseudoClassHover',
+    'selectorPseudoClassActive',
+    'selectorPseudoClassFocus',
 ];
 
 ids.forEach(generateHTML);

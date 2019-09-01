@@ -504,3 +504,17 @@
 .selector_attribute_Hyphenated a[name|="hyphenated"] {
   color: red;
 }
+.selector_pseudo_class_hover p:hover {
+  color: red;
+}
+.selector_pseudo_class_active h1:active {
+  color: red;
+  user-select: none;
+}
+.selector_pseudo_class_focus input:focus {
+  color: red;
+}
+.selector_pseudo_class_focus .container {
+  display: flex;
+  flex-direction: column;
+}
