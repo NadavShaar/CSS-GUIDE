@@ -528,3 +528,47 @@
   color: red;
   margin-top: 8px;
 }
+.selector_pseudo_class_checked input:checked + label {
+  color: red;
+}
+.selector_pseudo_class_first_child .container :first-child {
+  color: red;
+}
+.selector_pseudo_class_last_child .container :last-child {
+  color: red;
+}
+.selector_pseudo_class_first_of_type .container :first-of-type {
+  color: red;
+}
+.selector_pseudo_class_last_of_type .container :last-of-type {
+  color: red;
+}
+.selector_pseudo_class_nth_child .container :nth-child(2n+1) {
+  color: red;
+}
+.selector_pseudo_class_nth_last_child .container :nth-last-child(2n+1) {
+  color: red;
+}
+.selector_pseudo_class_nth_of_type .container :nth-of-type(2) {
+  color: red;
+}
+.selector_pseudo_class_nth_last_of_type .container :nth-last-of-type(2) {
+  color: red;
+}
+.selector_pseudo_class_target h1:target {
+  color: red;
+}
+.selector_pseudo_class_not p:not(.not_example) {
+  color: red;
+}
+.selector_pseudo_element_before h1:before {
+  content: "*";
+  color: red;
+}
+.selector_pseudo_element_after h1:after {
+  content: "*";
+  color: red;
+}
+.selector_pseudo_element_selection p::selection {
+  color: red;
+}

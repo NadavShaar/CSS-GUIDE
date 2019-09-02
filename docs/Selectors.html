@@ -118,7 +118,7 @@
                             <li class="nav_item"><a href="./Transition.html#transitionDelay">Transition-Delay</a></li>
                         </ul>
                     </li>
-                    <li class="nav_item focus">
+                    <li class="nav_item active">
                         <input type="radio" id="selectorsNav" name="nav-collapse">
                         <label for="selectorsNav">Selectors</label>
                         <ul>
@@ -130,6 +130,32 @@
                             <li class="nav_item"><a href="./Selectors.html#selectorDirectChild">Direct Child</a></li>
                             <li class="nav_item"><a href="./Selectors.html#selectorGeneralSibling">General Sibling</a></li>
                             <li class="nav_item"><a href="./Selectors.html#selectorAdjacentSibling">Adjacent Sibling</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorAttributePresent">Attribute Present</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorAttributeEquals">Attribute Equals</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorAttributeContains">Attribute Contains</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorAttributeBeginsWith">Attribute Begins With</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorAttributeEndsWith">Attribute Ends With</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorAttributeSpaced">Attribute Spaced</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorAttributeHyphenated">Attribute Hyphenated</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassHover">Hover</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassActive">Active</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassFocus">Focus</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassEnabled">Enabled</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassDisabled">Disabled</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassChecked">Checked</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassFirstChild">First Child</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassLastChild">Last Child</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassFirstOfType">First Of Type</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassLastOfType">Last Of Type</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassNTHChild">nth Child</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassNTHLastChild">nth Last Child</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassNTHOfType">nth Of Type</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassNTHLastOfType">nth Last Of Type</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassTarget">Target</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoClassNot">Not</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoElementBefore">Before</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoElementAfter">After</a></li>
+                            <li class="nav_item"><a href="./Selectors.html#selectorPseudoElementSelection">Selection</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -617,6 +643,349 @@ input:disabled {
     <input type="text" value="Enabled Input" >
     <input type="text" value="Disabled Input" disabled="disabled" >
 </div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassChecked" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:checked
+                    </h2>
+                    <p class="para">Selects a checkbox or radio button that has been checked.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+input:checked + label {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_checked  code_block_example">
+<div>
+    <input type="checkbox" id="checked_example">
+    <label for="checked_example">Check me!</label>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassFirstChild" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:first-child
+                    </h2>
+                    <p class="para">Selects an element that is the first within a parent.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+.container :first-child {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_first_child  code_block_example">
+<div class="container">
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <h1>Headline1</h1>
+    <div>
+        <p>Paragraph</p>
+    </div>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassLastChild" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:last-child
+                    </h2>
+                    <p class="para">Selects an element that is the last within a parent.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+.container :last-child {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_last_child  code_block_example">
+<div class="container">
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <h1>Headline1</h1>
+    <div>
+        <p>Paragraph</p>
+    </div>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassFirstOfType" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:first-of-type
+                    </h2>
+                    <p class="para">Selects an element that is the first of its type within a parent.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+.container :first-of-type {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_first_of_type  code_block_example">
+<div class="container">
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <h1>Headline1</h1>
+    <div>
+        <p>Paragraph</p>
+    </div>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassLastOfType" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:last-of-type
+                    </h2>
+                    <p class="para">Selects an element that is the last of its type within a parent.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+.container :last-of-type {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_last_of_type  code_block_example">
+<div class="container">
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <h1>Headline1</h1>
+    <div>
+        <p>Paragraph</p>
+    </div>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassNTHChild" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:nth-child()
+                    </h2>
+                    <p class="para">Selects an element that matches the given number or expression, counting all elements from the beginning of the document tree.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+.container :nth-child(2n+1) {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_nth_child  code_block_example">
+<div class="container">
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <h1>Headline1</h1>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassNTHLastChild" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:nth-last-child()
+                    </h2>
+                    <p class="para">Selects an element that matches the given number or expression, counting all elements from the end of the document tree.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+.container :nth-last-child(2n+1) {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_nth_last_child  code_block_example">
+<div class="container">
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <h1>Headline1</h1>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassNTHOfType" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:nth-of-type()
+                    </h2>
+                    <p class="para">Selects an element that matches the given number or expression, counting only elements of its type from the beginning of the document tree.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+.container :nth-of-type(2) {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_nth_of_type  code_block_example">
+<div class="container">
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <h1>Headline1</h1>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassNTHLastOfType" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:nth-last-of-type()
+                    </h2>
+                    <p class="para">Selects an element that matches the given number or expression, counting only elements of its type from the end of the document tree.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+.container :nth-last-of-type(2) {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_nth_last_of_type  code_block_example">
+<div class="container">
+    <p>Paragraph</p>
+    <h1>Headline1</h1>
+    <h1>Headline1</h1>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassTarget" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:target
+                    </h2>
+                    <p class="para">Selects an element whose ID attribute value matches that of the URI fragment identifier.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+p:target {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_target code_block_example">
+<div>
+    <h1 id="target_example">Headline1</h1>
+    <a href="#target_example">Click me!</a>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassNot" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:not()
+                    </h2>
+                    <p class="para">Selects an element not represented by the stated argument.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+p:not(.not_example) {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_not code_block_example">
+<div>
+    <p>Paragraph</p>
+    <p class="not_example">Paragraph</p>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+</div>
+                    </div>
+                </div>
+
+
+                <br/><br/><br/>
+                <h1 class="text_center orange_color">Pseudo Elements</h1>
+
+
+                <div id="selectorPseudoElementBefore" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:before
+                    </h2>
+                    <p class="para">Creates a pseudo-element inside the selected element at the beginning.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+h1:before {
+    content: '*';
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_element_before code_block_example">
+<div>
+    <h1>Headline1</h1>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoElementAfter" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:after
+                    </h2>
+                    <p class="para">Creates a pseudo-element inside the selected element at the end.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+h1:after {
+    content: '*';
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_element_after code_block_example">
+<div>
+    <h1>Headline1</h1>
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoElementSelection" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;::selection
+                    </h2>
+                    <p class="para">Selects the part of a document which has been selected by the user.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+p::selection {
+    color: red;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_element_selection code_block_example">
+<p>Select This text</p>
                     </div>
                 </div>
 

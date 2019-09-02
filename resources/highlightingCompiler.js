@@ -213,7 +213,21 @@ let ids = [
     'selectorPseudoClassActive',
     'selectorPseudoClassFocus',
     'selectorPseudoClassEnabled',
-    'selectorPseudoClassDisabled'
+    'selectorPseudoClassDisabled',
+    'selectorPseudoClassChecked',
+    'selectorPseudoClassFirstChild',
+    'selectorPseudoClassLastChild',
+    'selectorPseudoClassFirstOfType',
+    'selectorPseudoClassLastOfType',
+    'selectorPseudoClassNTHChild',
+    'selectorPseudoClassNTHLastChild',
+    'selectorPseudoClassNTHOfType',
+    'selectorPseudoClassNTHLastOfType',
+    'selectorPseudoClassTarget',
+    'selectorPseudoClassNot',
+    'selectorPseudoElementBefore',
+    'selectorPseudoElementAfter',
+    'selectorPseudoElementSelection'
 ];
 
 ids.forEach(generateHTML);
