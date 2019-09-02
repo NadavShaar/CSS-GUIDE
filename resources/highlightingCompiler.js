@@ -47,7 +47,7 @@ function compileHTML(html){
                     }
     
                     tagAttributes += `<span class="attribute_name">${attributeName}</span>`;
-
+                    
                     if(i === closeCharIndex) break;
 
                     // skip "="
@@ -212,6 +212,8 @@ let ids = [
     'selectorPseudoClassHover',
     'selectorPseudoClassActive',
     'selectorPseudoClassFocus',
+    'selectorPseudoClassEnabled',
+    'selectorPseudoClassDisabled'
 ];
 
 ids.forEach(generateHTML);

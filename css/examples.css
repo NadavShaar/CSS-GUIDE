@@ -514,3 +514,17 @@
 .selector_pseudo_class_focus input:focus {
   color: red;
 }
+.selector_pseudo_class_enabled input {
+  display: block;
+}
+.selector_pseudo_class_enabled input:enabled {
+  color: red;
+  margin-bottom: 8px;
+}
+.selector_pseudo_class_disabled input {
+  display: block;
+}
+.selector_pseudo_class_disabled input:disabled {
+  color: red;
+  margin-top: 8px;
+}

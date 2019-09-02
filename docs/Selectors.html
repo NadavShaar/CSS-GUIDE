@@ -569,7 +569,53 @@ input:focus {
 
                     <div class="flex_column card selector_pseudo_class_focus  code_block_example">
 <div>
-    <input type="text" value="Red text when focused" />
+    <input type="text" value="Red text when focused" >
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassEnabled" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:enabled
+                    </h2>
+                    <p class="para">Selects an element in the default enabled state.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+input:enabled {
+    color: red;
+    margin-bottom: 8px;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_enabled  code_block_example">
+<div>
+    <input type="text" value="Enabled Input" >
+    <input type="text" value="Disabled Input" disabled="disabled" >
+</div>
+                    </div>
+                </div>
+
+
+                <div id="selectorPseudoClassDisabled" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;:disabled
+                    </h2>
+                    <p class="para">Selects an element in the disabled state, by way of the disabled attribute.</p>
+                    
+                    <div class="code_block code_block_html"></div>
+                    <div class="code_block code_block_css">
+input:disabled {
+    color: red;
+    margin-top: 8px;
+}
+                    </div>
+
+                    <div class="flex_column card selector_pseudo_class_disabled  code_block_example">
+<div>
+    <input type="text" value="Enabled Input" >
+    <input type="text" value="Disabled Input" disabled="disabled" >
 </div>
                     </div>
                 </div>
