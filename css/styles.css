@@ -498,6 +498,27 @@ input[type="radio"]:checked ~ ul{
     height: 100%;
     display: block;
   }
+  .guide_button {
+    display:inline-block;
+    padding:0.7em 1.4em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.15em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    text-transform:uppercase;
+    font-weight:400;
+    color:#FFFFFF;
+    background-color:#e63e42;
+    /* box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17); */
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17), 0 2px 6px 0px rgba(0,0,0,0.6);
+    text-align:center;
+    position: absolute;
+    bottom: 12px;
+    right: 48px;
+    transform: translatey(0px);
+    animation: floatLoop1 1.5s ease-in-out infinite;
+  }
 
 .grid {
   display: grid;
