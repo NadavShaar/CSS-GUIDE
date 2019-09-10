@@ -265,7 +265,7 @@ html, body {
   .align_center{
     align-items: center;
   }
-  .align_strech{
+  .align_stretch{
     align-items: stretch;
   }
   .align_baseline{
@@ -280,7 +280,7 @@ html, body {
   .align_content_center {
     align-content: center;
   }
-  .align_content_strech {
+  .align_content_stretch {
     align-content: stretch;
   }
   .align_content_space_between {
@@ -535,7 +535,7 @@ input[type="radio"]:checked ~ ul{
 .justify_items_center{
   justify-items: center;
 }
-.justify_items_strech{
+.justify_items_stretch{
   justify-items: stretch;
 }
 .align_items_start{
@@ -547,7 +547,7 @@ input[type="radio"]:checked ~ ul{
 .align_items_center{
   align-items: center;
 }
-.align_items_strech{
+.align_items_stretch{
   align-items: stretch;
 }
 .justify_content_start{
@@ -559,8 +559,8 @@ input[type="radio"]:checked ~ ul{
 .justify_content_center{
   justify-content: center;
 }
-.justify_content_strech{
-  justify-content: strech;
+.justify_content_stretch{
+  justify-content: stretch;
 }
 .justify_content_space_around{
   justify-content: space-around;
@@ -580,8 +580,8 @@ input[type="radio"]:checked ~ ul{
 .grid_align_content_center{
   align-content: center;
 }
-.grid_align_content_strech{
-  align-content: strech;
+.grid_align_content_stretch{
+  align-content: stretch;
 }
 .grid_align_content_space_around{
   align-content: space-around;
@@ -604,8 +604,8 @@ input[type="radio"]:checked ~ ul{
 .grid_justify_self_center{
   justify-self: center;
 }
-.grid_justify_self_strech{
-  justify-self: strech;
+.grid_justify_self_stretch{
+  justify-self: stretch;
 }
 .grid_align_self_start{
   align-self: start;
@@ -616,6 +616,6 @@ input[type="radio"]:checked ~ ul{
 .grid_align_self_center{
   align-self: center;
 }
-.grid_align_self_strech{
-  align-self: strech;
+.grid_align_self_stretch{
+  align-self: stretch;
 }

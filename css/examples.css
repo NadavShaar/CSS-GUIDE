@@ -321,9 +321,8 @@
   grid-template-rows: [first-row] 100px;
 }
 .grid_container_template_example_5{
-  min-height: 300px;
+  min-height: 200px;
   grid-template-columns: repeat(2, 50% [col]);
-  grid-template-rows: [first-row] 100px [second-row] 100px ;
 }
 .grid_container_template_example_6{
   min-height: 300px;
