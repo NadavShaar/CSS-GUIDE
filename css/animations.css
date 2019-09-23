@@ -3,12 +3,12 @@
   to {transform: translate3d(0px, 0px, 0px);}
 }
 @keyframes translateLoop2 {
-  from {transform: translate(0, -70%);}
-  to {transform: translate(0)}
+  from {transform: translate3d(0, 0, 0);}
+  to {transform: translate3d(0, -70%, 0);}
 }
 @keyframes scaleLoop1 {
-  from {transform: scale(1);}
-  to {transform: scale(1.5, 2);}
+  from {transform: scale3d(1, 1, 1);}
+  to {transform: scale3d(1.5, 2, 1);}
 }
 @keyframes skewLoop1 {
   from {transform: skew(0deg);}
