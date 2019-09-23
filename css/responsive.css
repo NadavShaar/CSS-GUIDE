@@ -7,7 +7,9 @@
     
     input[type="checkbox"]:checked ~ .side_nav{
         max-height: calc(100% - 60px);
-        overflow: hidden;
+        /* overflow: hidden; */
+        overflow-y: auto;
+        overflow-x: hidden;
         transition: max-height .4s ease-in;
     }
     .side_nav {
