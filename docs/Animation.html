@@ -5,13 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/examples.css">
   <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 
 	<div class="header">
-		<h1>CSS - Position</h1>
+		<h1>CSS - Transition</h1>
 	  </div>
 	  <div class="page">
 		<div id="intro" class="page_inner">
@@ -87,7 +88,7 @@
                             <li class="nav_item"><a href="./Grid.html#placeSelf">Place-Self</a></li>
                         </ul>
                     </li>
-                    <li class="nav_item active">
+                    <li class="nav_item">
                         <input type="radio" id="positionNav" name="nav-collapse">
                         <label for="positionNav">Position</label>
                         <ul>
@@ -122,7 +123,7 @@
                             <li class="nav_item"><a href="./Transition.html#transitionDelay">Transition-Delay</a></li>
                         </ul>
                     </li>
-                    <li class="nav_item">
+                    <li class="nav_item active">
                         <input type="radio" id="animationNav" name="nav-collapse">
                         <label for="animationNav">Animation</label>
                         <ul>
@@ -169,190 +170,28 @@
                             <li class="nav_item"><a href="./Selectors.html#selectorPseudoElementSelection">Selection</a></li>
                         </ul>
                     </li>
+                    <li class="nav_item">
+                        <input type="radio" id="howToNav" name="nav-collapse">
+                        <label for="howToNav">How To Do...</label>
+                        <ul>
+                            <li class="nav_item"><a href="./How_To.html#intro">Introduction</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 			<div class="content">
 				<div class="fact">
                     <div>
-                        <h1 class="prop">Position</h1>
-                        <h3 class="para">The position property sets how an element is positioned in a document. The top, right, bottom, and left (and <b>z-index</b>) properties determine the final location of positioned elements.</h3>
-                        <h3 class="para">The <b>containing block</b> is the element in which its positioned children are lives. By default the initial containing block is the <b>html</b> element which it's the root element.</h3>
+                        <h1 class="prop">Animation</h1>
+                        <h3 class="para">CSS animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation’s style, as well as possible intermediate waypoints.</h3>
                     </div>
 					<img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
                 </div>
+
+
                 
 
-				<div id="relative" class="flex_column section">
-					<h2>
-						<span class="main_color">#</span>&nbsp;Relative
-					</h2>
-					<p class="para">This will position the element relative to its current position using the helpers properties.
-                        <br/>The relative positioning will not follow the containing block, but will only offset from its static position.
-                    </p>
-			
-					<div class="flex_column card">
-						<div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
-                            <div class="flex_container_example__container_inner flex_container_example_2 position_relative_example_2">
-                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative position_relative_example_1">1</div>
-                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_absolute_example_1 position_relative">1</div>
-                            </div>
-                        </div>
-                        <div class="flex_row justify_center example_values_container">
-                            <div class="Box_Model_margin_desc margin_right_50">
-                                <span></span>
-                                <span class="font_600">Containing block</span>
-                            </div>
-                            <div>
-                                <span class="font_600">1 =>&nbsp;</span>
-                                <span class="font_600">position:</span>
-                                <span class="font_600 main_color">&nbsp;relative</span>
-                                <span class="font_600">&nbsp;| left:</span>
-                                <span class="font_600 main_color">&nbsp;10%</span>
-                                <span class="font_600">&nbsp;| top:</span>
-                                <span class="font_600 main_color">&nbsp;10%</span>
-                            </div>
-                        </div>
-					</div>
-                </div>
-                
 
-				<div id="absolute" class="flex_column section">
-					<h2>
-						<span class="main_color">#</span>&nbsp;Absolute
-					</h2>
-                    <p class="para">The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the <b>html</b> element.
-                        <br/>The absolute positioning will follow the containing block, which is the first parent with position other than static.
-                    </p>
-			
-					<div class="flex_column card">
-						<div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative">
-                            <div class="flex_container_example__container_inner flex_container_example_2 position_relative_example_2">
-                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_absolute position_relative_example_3">1</div>
-                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 position_absolute_example_3 font_600 position_absolute_example_1 position_relative">1</div>
-                            </div>
-                        </div>
-                        <div class="flex_row justify_center example_values_container">
-                            <div class="Box_Model_padding_desc margin_right_50">
-                                <span></span>
-                                <span class="font_600">Containing block</span>
-                            </div>
-                            <div class="Box_Model_margin_desc margin_right_50">
-                                <span></span>
-                                <span class="font_600">Direct Parent</span>
-                            </div>
-                            <div>
-                                <span class="font_600">1 =>&nbsp;</span>
-                                <span class="font_600">position:</span>
-                                <span class="font_600 main_color">&nbsp;absolute</span>
-                                <span class="font_600">&nbsp;| left:</span>
-                                <span class="font_600 main_color">&nbsp;10%</span>
-                                <span class="font_600">&nbsp;| top:</span>
-                                <span class="font_600 main_color">&nbsp;10%</span>
-                            </div>
-                        </div>
-					</div>
-                </div>
-                
-
-				<div id="fixed" class="flex_column section">
-					<h2>
-						<span class="main_color">#</span>&nbsp;Fixed
-					</h2>
-					<p class="para">The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport, except when one of its ancestors has a <b>transform</b>, <b>perspective</b>, or <b>filter</b> property, in which case that ancestor behaves as the containing block.</p>
-					<!-- <div class="flex_column card container_example_3">
-						<div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative container_example_1">
-                            <div class="flex_row container_example_2">
-                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_fixed position_fixed_example_2">1</div>
-                                <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_absolute_example_1">1</div>
-                            </div>
-                        </div>
-                        <div class="flex_row justify_center example_values_container">
-                            <div class="Box_Model_padding_desc margin_right_50">
-                                <span></span>
-                                <span class="font_600">Containing block</span>
-                            </div>
-                            <div>
-                                <span class="font_600">1 =></span>
-                                <span class="font_600">&nbsp;position:</span>
-                                <span class="font_600 main_color">&nbsp;fixed</span>
-                                <span class="font_600">&nbsp; | left:</span>
-                                <span class="font_600 main_color">&nbsp;100px</span>
-                                <span class="font_600">&nbsp; | top:</span>
-                                <span class="font_600 main_color">&nbsp;100px</span>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="flex_column card container_example_3">
-                        <div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative container_example_1 container_example_4">
-                            <div class="flex_row container_example_2">
-                                <div class="flex_container_example__container_inner flex_container_example_2 position_relative position_sticky_example_1">
-                                    <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_fixed position_fixed_example_2">1</div>
-                                    <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative position_fixed_example_1">1</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex_row justify_center example_values_container">
-                            <div class="Box_Model_padding_desc margin_right_50">
-                                <span></span>
-                                <span class="font_600">Containing block</span>
-                            </div>
-                            <div class="Box_Model_margin_desc margin_right_50">
-                                <span></span>
-                                <span class="font_600">Direct Parent</span>
-                            </div>
-                            <div>
-                                <span class="font_600">1 =></span>
-                                <span class="font_600 ">&nbsp;position:</span>
-                                <span class="font_600 main_color">&nbsp;fixed</span>
-                                <span class="font_600 ">&nbsp;| left:</span>
-                                <span class="font_600 main_color">&nbsp;10%</span>
-                                <span class="font_600">&nbsp;| top:</span>
-                                <span class="font_600 main_color">&nbsp;10%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="para"><b>Note:</b> scrolling inside the containing block won't affect the fixed element.</p>
-                </div>
-                
-
-				<div id="sticky" class="flex_column section">
-					<h2>
-						<span class="main_color">#</span>&nbsp;Sticky
-					</h2>
-					<p class="para">Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.</p>
-			
-					<div class="flex_column card container_example_3">
-						<div class="flex_row flex_container_example_1 flex_container_example_1_height position_relative container_example_1 container_example_4">
-                            <div class="flex_row container_example_2">
-                                <div class="flex_container_example__container_inner flex_container_example_2 position_relative position_sticky_example_1">
-                                    <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_sticky position_fixed_example_2 position_sticky_example_2">1</div>
-                                    <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative position_absolute_example_1">1</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex_row justify_center example_values_container">
-                            <div class="Box_Model_padding_desc margin_right_50">
-                                <span></span>
-                                <span class="font_600">Containing block</span>
-                            </div>
-                            <div class="Box_Model_margin_desc margin_right_50">
-                                <span></span>
-                                <span class="font_600">Direct Parent</span>
-                            </div>
-                            <div>
-                                <span class="font_600">1 =></span>
-                                <span class="font_600 ">&nbsp;position:</span>
-                                <span class="font_600 main_color">&nbsp;sticky</span>
-                                <span class="font_600 ">&nbsp;| left:</span>
-                                <span class="font_600 main_color">&nbsp;0px</span>
-                                <span class="font_600">&nbsp;| top:</span>
-                                <span class="font_600 main_color">&nbsp;0px</span>
-                            </div>
-                        </div>
-					</div>
-                </div>
-                
-                
 			</div>
 		</div>
 	</div>

@@ -32,25 +32,23 @@
     padding: 24px 0;
   }
   .Box_Model_margin {
-    padding: 40px;
-    display: inline-block;
-    background: #f3cfa5;
-    font-size: 0;
+    width: 240px;
+    height: 240px;
+    border: 30px solid #f3cfa5;
+    margin: 0 auto;
   }
   .Box_Model_border {
-    padding: 5px;
-    display: inline-block;
-    background: #1e324c;
-    font-size: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #1e324c;
   }
   .Box_Model_padding {
-    padding: 40px;
-    display: inline-block;
-    background: #7de2af;
+    width: 100%;
+    height: 100%;
+    border: 15px solid #7de2af;
   }
   .Box_Model_content {
-    width: 200px;
-    height: 200px;
+    height: 100%;
     background: #fff;
     position: relative;
     display: flex;
@@ -143,10 +141,10 @@
   min-height: 150px;
 }
 .flex_container_example_1_width_x2{
-  min-width: 100px;
+  min-width: 70px;
 }
 .flex_container_example_1_width_x3{
-  min-width: 150px;
+  min-width: 110px;
 }
 .flex_container_example__container_inner{
   flex: 1;
@@ -160,6 +158,7 @@
 }
 .flex_container_example_2 {
   border: 2px solid #f3cfa5;
+  
 }
 .flex_container_example_3 {
   border: 2px solid #1e324c;
@@ -177,23 +176,23 @@
   flex: 1 1 20%;
 }
 .position_relative_example_1 {
-  left: 5%;
+  left: 10%;
   top: 10%;
-  min-width: 50%;
+  min-width: 100px;
   min-height: 100px;
   z-index: 1;
 }
 .position_relative_example_2 {
-  margin: 80px;
+  margin: 15% !important;
   min-height: 200px;
 }
 .position_relative_example_3 {
   min-width: 50%;
   min-height: 100px;
   z-index: 1;
-  max-width: 323px;
-  min-width: 323px;
-  left: 5%;
+  min-width: 100px;
+  min-height: 100px;
+  left: 10%;
   top: 10%;
 }
 .position_relative_example_4 {
@@ -203,7 +202,7 @@
 .position_absolute_example_1 {
   left: 0;
   top: -100px;
-  min-width: 50%;
+  min-width: 100px;
   min-height: 100px;
   border: 2px dashed #1e324c;
   opacity: .5;
@@ -218,10 +217,18 @@
   min-height: 100px;
   z-index: 2;
 }
+.position_fixed_example_1 {
+  left: 0;
+  top: 0;
+  min-width: 100px;
+  min-height: 100px;
+  border: 2px dashed #1e324c;
+  opacity: .5;
+}
 .position_fixed_example_2 {
-  left: 300px;
-  top: 100px;
-  min-width: 50%;
+  left: 10%;
+  top: 10%;
+  min-width: 100px;
   min-height: 100px;
   z-index: 2;
   pointer-events: none;
@@ -243,11 +250,11 @@
 }
 .position_sticky_example_1{
   position: relative;
-  margin: 150px;
+  margin: 15%;
   overflow: unset;
 }
 .position_sticky_example_2{
-  top: 70px;
+  top: 0;
   left: 0;
 }
 .container_example_4 {
@@ -270,8 +277,8 @@
   position: absolute;
   top: 60px;
   bottom: 0;
-  left: 120px;
-  right: 120px;
+  left: 35%;
+  right: 35%;
   background: #7de2af;
   transform: translate3d(0px, 100%, 0px);
 }
@@ -339,7 +346,7 @@
 }
 .grid_container_template_example_9{
   min-height: 360px;
-  grid-template-columns: [first-col] 25% [second-col] 25% [third-col] 25% [fourth-col] 25%;
+  grid-template-columns: [first-col] 50% [second-col] 50%;
   grid-template-rows: [first-row] 120px [second-row] 120px [third-row] 120px;
 }
 .grid_container_template_example_10{
@@ -389,9 +396,9 @@
 }
 .grid_item_example_9{
   grid-column-start: second-col;
-  grid-column-end: fourth-col;
+  grid-column-end: second-col;
   grid-row-start: second-row;
-  grid-row-end: fourth-row;
+  grid-row-end: third-row;
 }
 .grid_col_guide{
   font-size: 12px;

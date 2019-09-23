@@ -1,0 +1,76 @@
+@media only screen and (max-width: 991px) {
+    input[type="checkbox"] ~ .side_nav{
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        overflow: hidden;
+    }
+    
+    input[type="checkbox"]:checked ~ .side_nav{
+        max-height: 1000px;
+        overflow: hidden;
+        transition: max-height .8s ease-in;
+    }
+    .side_nav {
+        position: fixed;
+        right: 0;
+        left: 0;
+        min-width: 100%;
+        z-index: 5;
+    }
+    .mobile_nav_button{
+        display: block;
+        position: fixed;
+        top: 12px;
+        right: 24px;
+        z-index: 5;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 22px !important;
+    }
+    h2 {
+        font-size: 20px !important;
+    }
+    .fact {
+        padding: 24px;
+    }
+    .fact > img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+    .para {
+        font-size: 14px;
+    }
+    .page_inner {
+        padding: 18px;
+    }
+    .two_cards_container {
+        flex-direction: column;
+    }
+    .two_cards_container > .two_cards{
+        max-width: unset;
+    }
+    .section {
+        padding-top: 30px;
+    }
+    .card_bottom_element {
+        position: unset;
+        bottom: unset;
+        left: unset;
+        transform: unset;
+    }
+    .flex_container_example__container_inner {
+        margin-bottom: 12px;
+    }
+    .container_example_4 {
+        min-height: 300px;
+    }
+    .example_values_container, .example_values_container2 {
+        font-size: 13px;
+    }
+}

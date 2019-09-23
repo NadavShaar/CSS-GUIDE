@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/examples.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 
@@ -14,11 +16,13 @@
 	  </div>
 	  <div class="page">
 		<div id="intro" class="page_inner">
+            <input type="checkbox" id="mobileNav" name="mobile-nav-collapse">
+            <label for="mobileNav" class="mobile_nav_button">&#9776;</label>
             <div class="side_nav card">
                 <ul>
                     <li class="nav_item">
                         <input type="radio" id="boxModelNav" name="nav-collapse">
-                        <label for="boxModelNav">Box Model & Box Sizing</label>
+                        <label for="boxModelNav">Box Model</label>
                         <ul>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#intro">Introduction</a></li>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#theBoxModel">The Box Model</a></li>
@@ -120,6 +124,13 @@
                         </ul>
                     </li>
                     <li class="nav_item">
+                        <input type="radio" id="animationNav" name="nav-collapse">
+                        <label for="animationNav">Animation</label>
+                        <ul>
+                            <li class="nav_item"><a href="./Animation.html#intro">Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_item">
                         <input type="radio" id="selectorsNav" name="nav-collapse">
                         <label for="selectorsNav">Selectors</label>
                         <ul>
@@ -208,16 +219,18 @@
                         <li><b class="color_red">ease-in-out:</b> Starts transitioning slowly, speeds up, and then slows down again.</li>
                         <li><b class="color_red">cubic-bezier(p1, p2, p3, p4):</b> User defined curve, where the p1 and p3 values must be in the range of 0 to 1.</li>
                     </ul>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_column flex_container_example_1_container_height_x2">
                                 <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
                                     <div class="transition_example_1 transition_linear_example_1"></div>
                                 </div>
-                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
-                                    <span></span>
-                                    <span class="text_center font_600">transition:</span>
-                                    <span class="text_center color_red font_600"> translate3d 2s linear</span>
+                                <div class="flex_row justify_center example_values_container">
+                                    <div class="Box_Model_padding_desc card_bottom_element width_full">
+                                        <span></span>
+                                        <span class="font_600">transition:</span>
+                                        <span class="color_red font_600"> translate3d 2s linear</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -226,24 +239,28 @@
                                 <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
                                     <div class="transition_example_1 transition_ease_example_1"></div>
                                 </div>
-                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
-                                    <span></span>
-                                    <span class="text_center font_600">transition:</span>
-                                    <span class="text_center color_red font_600"> translate3d 2s ease</span>
+                                <div class="flex_row justify_center example_values_container">
+                                    <div class="Box_Model_padding_desc card_bottom_element width_full">
+                                        <span></span>
+                                        <span class="font_600">transition:</span>
+                                        <span class="color_red font_600"> translate3d 2s ease</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_column flex_container_example_1_container_height_x2">
                                 <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
                                     <div class="transition_example_1 transition_ease_in_example_1"></div>
                                 </div>
-                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
-                                    <span></span>
-                                    <span class="text_center font_600">transition:</span>
-                                    <span class="text_center color_red font_600"> translate3d 2s ease-in</span>
+                                <div class="flex_row justify_center example_values_container">
+                                    <div class="Box_Model_padding_desc card_bottom_element width_full">
+                                        <span></span>
+                                        <span class="font_600">transition:</span>
+                                        <span class="color_red font_600"> translate3d 2s ease-in</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -252,24 +269,28 @@
                                 <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
                                     <div class="transition_example_1 transition_ease_out_example_1"></div>
                                 </div>
-                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
-                                    <span></span>
-                                    <span class="text_center font_600">transition:</span>
-                                    <span class="text_center color_red font_600"> translate3d 2s ease-out</span>
+                                <div class="flex_row justify_center example_values_container">
+                                    <div class="Box_Model_padding_desc card_bottom_element width_full">
+                                        <span></span>
+                                        <span class="font_600">transition:</span>
+                                        <span class="color_red font_600"> translate3d 2s ease-out</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_column flex_container_example_1_container_height_x2">
                                 <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
                                     <div class="transition_example_1 transition_ease_in_out_example_1"></div>
                                 </div>
-                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
-                                    <span></span>
-                                    <span class="text_center font_600">transition:</span>
-                                    <span class="text_center color_red font_600"> translate3d 2s ease-in-out</span>
+                                <div class="flex_row justify_center example_values_container">
+                                    <div class="Box_Model_padding_desc card_bottom_element width_full">
+                                        <span></span>
+                                        <span class="font_600">transition:</span>
+                                        <span class="color_red font_600"> translate3d 2s ease-in-out</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -278,10 +299,12 @@
                                 <div class="flex_row flex_wrap flex_container_example__container_inner flex_container_example_3 align_content_space_around position_relative">
                                     <div class="transition_example_1 transition_cubic_example_1"></div>
                                 </div>
-                                <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
-                                    <span></span>
-                                    <span class="text_center font_600">transition:</span>
-                                    <span class="text_center color_red font_600"> translate3d 2s cubic-bezier(.4, 1.5, .7, -.3)</span>
+                                <div class="flex_row justify_center example_values_container">
+                                    <div class="Box_Model_padding_desc card_bottom_element width_full">
+                                        <span></span>
+                                        <span class="font_600">transition:</span>
+                                        <span class="color_red font_600"> translate3d 2s cubic-bezier(.4, 1.5, .7, -.3)</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

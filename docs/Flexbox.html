@@ -3,8 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/examples.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 
@@ -13,11 +15,13 @@
 	  </div>
 	  <div class="page">
         <div id="intro" class="page_inner">
+            <input type="checkbox" id="mobileNav" name="mobile-nav-collapse">
+            <label for="mobileNav" class="mobile_nav_button">&#9776;</label>
             <div class="side_nav card">
                 <ul>
                     <li class="nav_item">
                         <input type="radio" id="boxModelNav" name="nav-collapse">
-                        <label for="boxModelNav">Box Model & Box Sizing</label>
+                        <label for="boxModelNav">Box Model</label>
                         <ul>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#intro">Introduction</a></li>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#theBoxModel">The Box Model</a></li>
@@ -119,6 +123,13 @@
                         </ul>
                     </li>
                     <li class="nav_item">
+                        <input type="radio" id="animationNav" name="nav-collapse">
+                        <label for="animationNav">Animation</label>
+                        <ul>
+                            <li class="nav_item"><a href="./Animation.html#intro">Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_item">
                         <input type="radio" id="selectorsNav" name="nav-collapse">
                         <label for="selectorsNav">Selectors</label>
                         <ul>
@@ -171,7 +182,7 @@
                 </div>
 
 
-                <br/><br/><br/>
+                <br/><br/>
                 <h1 class="text_center orange_color">Flex container properties</h1>
 
 
@@ -180,7 +191,7 @@
                         <span class="main_color">#</span>&nbsp;Display: Flex / Inline-Flex
                     </h2>
                     <p class="para">This defines a flex container, inline or block depending on the given value. It enables a flex context for all of its direct children.</p>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1">
                                 <div class="flex_child flex_item_example_1 font_600">1</div>
@@ -192,7 +203,7 @@
                                 <div class="flex_child flex_item_example_1 font_600">2</div>
                                 <div class="flex_child flex_item_example_1 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">display:</span>
                                 <span class="text_center color_red font_600"> flex</span>
@@ -209,7 +220,7 @@
                                 <div class="inline_flex_child flex_item_example_1 font_600">2</div>
                                 <div class="inline_flex_child flex_item_example_1 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center card_bottom_element">
+                            <div class="Box_Model_padding_desc card_bottom_element example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">display:</span>
                                 <span class="text_center color_red font_600"> inline-flex</span>
@@ -225,7 +236,7 @@
                         <span class="main_color">#</span>&nbsp;Flex-Direction
                     </h2>
                     <p class="para">This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.</p>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1">
                                 <div class="flex_child flex_item_example_1 font_600">1</div>
@@ -233,7 +244,7 @@
                                 <div class="flex_child flex_item_example_1 font_600">3</div>
                                 <div class="flex_child flex_item_example_1 font_600">4</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">flex-direction:</span>
                                 <span class="text_center color_red font_600"> row</span>
@@ -246,14 +257,14 @@
                                 <div class="flex_child flex_item_example_1 font_600">3</div>
                                 <div class="flex_child flex_item_example_1 font_600">4</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">flex-direction:</span>
                                 <span class="text_center color_red font_600"> row-reverse</span>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1 flex_column">
                                 <div class="flex_child flex_item_example_1 font_600">1</div>
@@ -261,7 +272,7 @@
                                 <div class="flex_child flex_item_example_1 font_600">3</div>
                                 <div class="flex_child flex_item_example_1 font_600">4</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">flex-direction:</span>
                                 <span class="text_center color_red font_600"> column</span>
@@ -274,7 +285,7 @@
                                 <div class="flex_child flex_item_example_1 font_600">3</div>
                                 <div class="flex_child flex_item_example_1 font_600">4</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">flex-direction:</span>
                                 <span class="text_center color_red font_600"> column-reverse</span>
@@ -290,7 +301,7 @@
                         <span class="main_color">#</span>&nbsp;Flex-Wrap
                     </h2>
                     <p class="para">This property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.</p>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1 flex_wrap">
                                 <div class="flex_child flex_item_example_1 font_600">1</div>
@@ -304,7 +315,7 @@
                                 <div class="flex_child flex_item_example_1 font_600">9</div>
                                 <div class="flex_child flex_item_example_1 font_600">10</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">flex-wrap:</span>
                                 <span class="text_center color_red font_600"> wrap</span>
@@ -323,14 +334,14 @@
                                 <div class="flex_child flex_item_example_1 font_600">9</div>
                                 <div class="flex_child flex_item_example_1 font_600">10</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">flex-wrap:</span>
                                 <span class="text_center color_red font_600"> wrap-reverse</span>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1 flex_no_wrap">
                                 <div class="flex_child flex_item_example_1 font_600">1</div>
@@ -344,7 +355,7 @@
                                 <div class="flex_child flex_item_example_1 font_600">9</div>
                                 <div class="flex_child flex_item_example_1 font_600">10</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">flex-wrap:</span>
                                 <span class="text_center color_red font_600"> nowrap</span>
@@ -358,14 +369,14 @@
                         <span class="main_color">#</span>&nbsp;Justify-Content
                     </h2>
                     <p class="para">Defines how the browser distributes space between and around content items along the <b>main-axis</b> of a flex container.</p>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1 justify_start">
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">1</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">justify-content:</span>
                                 <span class="text_center color_red font_600"> flex-start</span>
@@ -377,21 +388,21 @@
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">justify-content:</span>
                                 <span class="text_center color_red font_600"> flex-end</span>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1 justify_center">
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">1</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">justify-content:</span>
                                 <span class="text_center color_red font_600"> center</span>
@@ -403,21 +414,21 @@
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">justify-content:</span>
                                 <span class="text_center color_red font_600"> space-between</span>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1 justify_space_around">
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">1</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">justify-content:</span>
                                 <span class="text_center color_red font_600"> space-around</span>
@@ -429,7 +440,7 @@
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">justify-content:</span>
                                 <span class="text_center color_red font_600"> space-evenly</span>
@@ -445,14 +456,14 @@
                         <span class="main_color">#</span>&nbsp;Align-Items
                     </h2>
                     <p class="para">Defines how to lay out the content items along the <b>cross-axis</b> of a flex container.</p>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1 flex_container_example_1_height align_start">
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">1</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x2 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x3 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">align-items:</span>
                                 <span class="text_center color_red font_600"> flex-start</span>
@@ -464,21 +475,21 @@
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x2 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x3 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">align-items:</span>
                                 <span class="text_center color_red font_600"> flex-end</span>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1 flex_container_example_1_height align_center">
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">1</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x2 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x3 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">align-items:</span>
                                 <span class="text_center color_red font_600"> center</span>
@@ -490,21 +501,21 @@
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x2 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x3 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">align-items:</span>
                                 <span class="text_center color_red font_600"> stretch</span>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_row flex_container_example_1 flex_container_example_1_height align_baseline">
                                 <div class="flex_child flex_child_max_width flex_item_example_1 font_600">1</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x2 font_600">2</div>
                                 <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_height_x3 font_600">3</div>
                             </div>
-                            <div class="Box_Model_padding_desc text_center">
+                            <div class="Box_Model_padding_desc example_values_container">
                                 <span></span>
                                 <span class="text_center font_600">align-items:</span>
                                 <span class="text_center color_red font_600"> baseline</span>
@@ -520,7 +531,7 @@
                         <span class="main_color">#</span>&nbsp;Align-Content
                     </h2>
                     <p class="para">This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.</p>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_column flex_container_example_1_container_height_x2">
                                 <div class="flex_row flex_wrap flex_container_example__container_inner align_content_start">
@@ -539,11 +550,11 @@
                                         <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_width_x3 font_600">8</div>
                                         <div class="flex_child flex_child_max_width flex_item_example_1 font_600">9</div>
                                     </div>
-                                    <div class="Box_Model_padding_desc text_center card_bottom_element">
-                                        <span></span>
-                                        <span class="text_center font_600">align-content:</span>
-                                        <span class="text_center color_red font_600"> flex-start</span>
-                                    </div>
+                                </div>
+                                <div class="Box_Model_padding_desc example_values_container card_bottom_element">
+                                    <span></span>
+                                    <span class="text_center font_600">align-content:</span>
+                                    <span class="text_center color_red font_600"> flex-start</span>
                                 </div>
                             </div>
                         </div>
@@ -565,16 +576,16 @@
                                         <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_width_x3 font_600">8</div>
                                         <div class="flex_child flex_child_max_width flex_item_example_1 font_600">9</div>
                                     </div>
-                                    <div class="Box_Model_padding_desc text_center card_bottom_element">
-                                        <span></span>
-                                        <span class="text_center font_600">align-content:</span>
-                                        <span class="text_center color_red font_600"> flex-end</span>
-                                    </div>
+                                </div>
+                                <div class="Box_Model_padding_desc example_values_container card_bottom_element">
+                                    <span></span>
+                                    <span class="text_center font_600">align-content:</span>
+                                    <span class="text_center color_red font_600"> flex-end</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_column flex_container_example_1_container_height_x2">
                                 <div class="flex_row flex_wrap flex_container_example__container_inner align_content_center">
@@ -593,11 +604,11 @@
                                         <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_width_x3 font_600">8</div>
                                         <div class="flex_child flex_child_max_width flex_item_example_1 font_600">9</div>
                                     </div>
-                                    <div class="Box_Model_padding_desc text_center card_bottom_element">
-                                        <span></span>
-                                        <span class="text_center font_600">align-content:</span>
-                                        <span class="text_center color_red font_600"> center</span>
-                                    </div>
+                                </div>
+                                <div class="Box_Model_padding_desc example_values_container card_bottom_element">
+                                    <span></span>
+                                    <span class="text_center font_600">align-content:</span>
+                                    <span class="text_center color_red font_600"> center</span>
                                 </div>
                             </div>
                         </div>
@@ -619,16 +630,16 @@
                                         <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_width_x3 font_600">8</div>
                                         <div class="flex_child flex_child_max_width flex_item_example_1 font_600">9</div>
                                     </div>
-                                    <div class="Box_Model_padding_desc text_center card_bottom_element">
-                                        <span></span>
-                                        <span class="text_center font_600">align-content:</span>
-                                        <span class="text_center color_red font_600"> stretch</span>
-                                    </div>
+                                </div>
+                                <div class="Box_Model_padding_desc example_values_container card_bottom_element">
+                                    <span></span>
+                                    <span class="text_center font_600">align-content:</span>
+                                    <span class="text_center color_red font_600"> stretch</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards inline_block">
                             <div class="flex_column flex_container_example_1_container_height_x2">
                                 <div class="flex_row flex_wrap flex_container_example__container_inner align_content_space_between">
@@ -647,11 +658,11 @@
                                         <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_width_x3 font_600">8</div>
                                         <div class="flex_child flex_child_max_width flex_item_example_1 font_600">9</div>
                                     </div>
-                                    <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
-                                        <span></span>
-                                        <span class="text_center font_600">align-content:</span>
-                                        <span class="text_center color_red font_600"> space-between</span>
-                                    </div>
+                                </div>
+                                <div class="Box_Model_padding_desc example_values_container card_bottom_element width_full">
+                                    <span></span>
+                                    <span class="text_center font_600">align-content:</span>
+                                    <span class="text_center color_red font_600"> space-between</span>
                                 </div>
                             </div>
                         </div>
@@ -673,11 +684,11 @@
                                         <div class="flex_child flex_child_max_width flex_item_example_1 flex_container_example_1_width_x3 font_600">8</div>
                                         <div class="flex_child flex_child_max_width flex_item_example_1 font_600">9</div>
                                     </div>
-                                    <div class="Box_Model_padding_desc text_center card_bottom_element width_full">
-                                        <span></span>
-                                        <span class="text_center font_600">align-content:</span>
-                                        <span class="text_center color_red font_600"> space-around</span>
-                                    </div>
+                                </div>
+                                <div class="Box_Model_padding_desc example_values_container card_bottom_element width_full">
+                                    <span></span>
+                                    <span class="text_center font_600">align-content:</span>
+                                    <span class="text_center color_red font_600"> space-around</span>
                                 </div>
                             </div>
                         </div>
@@ -694,7 +705,7 @@
                 </div>
 
 
-                <br/><br/><br/>
+                <br/><br/>
                 <h1 class="text_center orange_color">Flex items properties</h1>
 
 
@@ -710,19 +721,21 @@
                             <div class="flex_child flex_item_example_1 flex_item_order_4 font_600">3</div>
                             <div class="flex_child flex_item_example_1 flex_item_order_2 font_600">4</div>
                         </div>
-                        <div class="text_center">
-                            <span class="text_center font_600">order:</span>
-                            <span class="text_center font_600">&nbsp;1 =></span>
-                            <span class="text_center color_red font_600">&nbsp;3</span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;2 =></span>
-                            <span class="text_center color_red font_600">&nbsp;1</span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;3 =></span>
-                            <span class="text_center color_red font_600">&nbsp;4</span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;4 =></span>
-                            <span class="text_center color_red font_600">&nbsp;2</span>
+                        <div class="flex_row justify_center example_values_container">
+                            <div>
+                                <span class="text_center font_600">order:</span>
+                                <span class="text_center font_600">&nbsp;1 =></span>
+                                <span class="text_center color_red font_600">&nbsp;3</span>
+                                <span class="text_center font_600">&nbsp;|</span>
+                                <span class="text_center font_600">&nbsp;2 =></span>
+                                <span class="text_center color_red font_600">&nbsp;1</span>
+                                <span class="text_center font_600">&nbsp;|</span>
+                                <span class="text_center font_600">&nbsp;3 =></span>
+                                <span class="text_center color_red font_600">&nbsp;4</span>
+                                <span class="text_center font_600">&nbsp;|</span>
+                                <span class="text_center font_600">&nbsp;4 =></span>
+                                <span class="text_center color_red font_600">&nbsp;2</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -739,14 +752,16 @@
                             <div class="flex_child flex_item_example_1 flex_grow_2 font_600">2</div>
                             <div class="flex_child flex_item_example_1 flex_grow_1 font_600">1</div>
                         </div>
-                        <div class="text_center">
-                            <span class="text_center font_600">&nbsp;1 =></span>
-                            <span class="text_center font_600">flex-grow:</span>
-                            <span class="text_center color_red font_600"> 1</span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;2 =></span>
-                            <span class="text_center font_600">&nbsp;flex-grow:</span>
-                            <span class="text_center color_red font_600">&nbsp;2</span>
+                        <div class="flex_row justify_center example_values_container">
+                            <div>
+                                <span class="text_center font_600">1 =></span>
+                                <span class="text_center font_600">flex-grow:</span>
+                                <span class="text_center color_red font_600"> 1</span>
+                                <span class="text_center font_600">&nbsp;|</span>
+                                <span class="text_center font_600">&nbsp;2 =></span>
+                                <span class="text_center font_600">&nbsp;flex-grow:</span>
+                                <span class="text_center color_red font_600">&nbsp;2</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -763,14 +778,16 @@
                             <div class="flex_child flex_item_example_1 flex_shrink_2 flex_shrink_example_1 font_600">2</div>
                             <div class="flex_child flex_item_example_1 flex_shrink_1 flex_shrink_example_1 font_600">1</div>
                         </div>
-                        <div class="text_center">
-                            <span class="text_center font_600">&nbsp;1 =></span>
-                            <span class="text_center font_600">flex-shrink:</span>
-                            <span class="text_center color_red font_600"> 1</span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;2 =></span>
-                            <span class="text_center font_600">&nbsp;flex-shrink:</span>
-                            <span class="text_center color_red font_600">&nbsp;2</span>
+                        <div class="flex_row justify_center example_values_container">
+                            <div>
+                                <span class="text_center font_600">1 =></span>
+                                <span class="text_center font_600">flex-shrink:</span>
+                                <span class="text_center color_red font_600"> 1</span>
+                                <span class="text_center font_600">&nbsp;|</span>
+                                <span class="text_center font_600">&nbsp;2 =></span>
+                                <span class="text_center font_600">&nbsp;flex-shrink:</span>
+                                <span class="text_center color_red font_600">&nbsp;2</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -787,17 +804,19 @@
                             <div class="flex_child flex_item_example_1 flex_basis_example_2 font_600">2</div>
                             <div class="flex_child flex_item_example_1 flex_basis_example_3 font_600">3</div>
                         </div>
-                        <div class="text_center">
-                            <span class="text_center font_600">&nbsp;1 => flex-basis:</span>
-                            <span class="text_center color_red font_600">50%</span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;2 =></span>
-                            <span class="text_center font_600">&nbsp;flex-basis:</span>
-                            <span class="text_center color_red font_600">50%</span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;3 =></span>
-                            <span class="text_center font_600">&nbsp;flex-basis:</span>
-                            <span class="text_center color_red font_600"> 20%</span>
+                        <div class="flex_row justify_center example_values_container">
+                            <div>
+                                <span class="text_center font_600">1 => flex-basis:</span>
+                                <span class="text_center color_red font_600">50%</span>
+                                <span class="text_center font_600">&nbsp;|</span>
+                                <span class="text_center font_600">&nbsp;2 =></span>
+                                <span class="text_center font_600">&nbsp;flex-basis:</span>
+                                <span class="text_center color_red font_600">50%</span>
+                                <span class="text_center font_600">&nbsp;|</span>
+                                <span class="text_center font_600">&nbsp;3 =></span>
+                                <span class="text_center font_600">&nbsp;flex-basis:</span>
+                                <span class="text_center color_red font_600"> 20%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -814,24 +833,25 @@
                             <div class="flex_child flex_item_example_1 align_self_center font_600">2</div>
                             <div class="flex_child flex_item_example_1 align_self_end font_600">3</div>
                         </div>
-                        <div class="text_center">
-                            <span class="Box_Model_padding_desc text_center">
+                        <div class="flex_row example_values_container">
+                            <span class="Box_Model_padding_desc">
                                 <span></span>
                                 <span class="text_center font_600">align-items:</span>
                                 <span class="text_center color_red font_600">flex-start</span>
                             </span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;1 =></span>
-                            <span class="text_center font_600">align-self:</span>
-                            <span class="text_center color_red font_600">flex-start</span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;2 =></span>
-                            <span class="text_center font_600">&nbsp;align-self:</span>
-                            <span class="text_center color_red font_600">center</span>
-                            <span class="text_center font_600">&nbsp;|</span>
-                            <span class="text_center font_600">&nbsp;3 =></span>
-                            <span class="text_center font_600">&nbsp;align-self:</span>
-                            <span class="text_center color_red font_600">flex-end</span>
+                            <div>
+                                <span class="text_center font_600">1 =></span>
+                                <span class="text_center font_600">align-self:</span>
+                                <span class="text_center color_red font_600">flex-start</span>
+                                <span class="text_center font_600">&nbsp;|</span>
+                                <span class="text_center font_600">&nbsp;2 =></span>
+                                <span class="text_center font_600">&nbsp;align-self:</span>
+                                <span class="text_center color_red font_600">center</span>
+                                <span class="text_center font_600">&nbsp;|</span>
+                                <span class="text_center font_600">&nbsp;3 =></span>
+                                <span class="text_center font_600">&nbsp;align-self:</span>
+                                <span class="text_center color_red font_600">flex-end</span>
+                            </div>
                         </div>
                     </div>
                     <p class="para"><b>Note:</b> the available values for <b>align-self</b> are the same as in <b>align-items</b> (flex-start | flex-end | center | stretch | baseline).</p>

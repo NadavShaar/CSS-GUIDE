@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/examples.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 
@@ -14,11 +16,13 @@
 	  </div>
 	  <div class="page">
 		<div id="intro" class="page_inner">
+            <input type="checkbox" id="mobileNav" name="mobile-nav-collapse">
+            <label for="mobileNav" class="mobile_nav_button">&#9776;</label>
             <div class="side_nav card">
                 <ul>
                     <li class="nav_item">
                         <input type="radio" id="boxModelNav" name="nav-collapse">
-                        <label for="boxModelNav">Box Model & Box Sizing</label>
+                        <label for="boxModelNav">Box Model</label>
                         <ul>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#intro">Introduction</a></li>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#theBoxModel">The Box Model</a></li>
@@ -120,6 +124,13 @@
                         </ul>
                     </li>
                     <li class="nav_item">
+                        <input type="radio" id="animationNav" name="nav-collapse">
+                        <label for="animationNav">Animation</label>
+                        <ul>
+                            <li class="nav_item"><a href="./Animation.html#intro">Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_item">
                         <input type="radio" id="selectorsNav" name="nav-collapse">
                         <label for="selectorsNav">Selectors</label>
                         <ul>
@@ -183,14 +194,16 @@
                                 <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_scale_example_1">1</div>
                             </div>
                         </div>
-                        <div class="flex_row justify_center">
+                        <div class="flex_row justify_center example_values_container">
                             <div class="Box_Model_margin_desc margin_right_50">
                                 <span></span>
                                 <span class="font_600">Direct Parent</span>
                             </div>
-                            <span class="font_600">1 =>&nbsp;</span>
-                            <span class="font_600">transform:</span>
-                            <span class="font_600 main_color">&nbsp;scale(1.5, 2)</span>
+                            <div>
+                                <span class="font_600">1 =>&nbsp;</span>
+                                <span class="font_600">transform:</span>
+                                <span class="font_600 main_color">&nbsp;scale(1.5, 2)</span>
+                            </div>
                         </div>
                     </div>
                     <p class="para"><b>Hardware Acceleration: </b>You can force the gpu to take control over the process, using the <b>scale3d()</b> function in order to achieve a smooth 60 frames per second animations without jittering or tearing. <b>scale3d(x, y, z).</b></p>
@@ -209,14 +222,16 @@
                                 <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_skew_example_1">1</div>
                             </div>
                         </div>
-                        <div class="flex_row justify_center">
+                        <div class="flex_row justify_center example_values_container">
                             <div class="Box_Model_margin_desc margin_right_50">
                                 <span></span>
                                 <span class="font_600">Direct Parent</span>
                             </div>
-                            <span class="font_600">1 =>&nbsp;</span>
-                            <span class="font_600">transform:</span>
-                            <span class="font_600 main_color">&nbsp;skew(30deg, 20deg)</span>
+                            <div>
+                                <span class="font_600">1 =>&nbsp;</span>
+                                <span class="font_600">transform:</span>
+                                <span class="font_600 main_color">&nbsp;skew(30deg, 20deg)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -233,14 +248,16 @@
                                 <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_translate_example_1">1</div>
                             </div>
                         </div>
-                        <div class="flex_row justify_center">
+                        <div class="flex_row justify_center example_values_container">
                             <div class="Box_Model_margin_desc margin_right_50">
                                 <span></span>
                                 <span class="font_600">Direct Parent</span>
                             </div>
-                            <span class="font_600">1 =>&nbsp;</span>
-                            <span class="font_600">transform:</span>
-                            <span class="font_600 main_color">&nbsp;translate(0, -70%)</span>
+                            <div>
+                                <span class="font_600">1 =>&nbsp;</span>
+                                <span class="font_600">transform:</span>
+                                <span class="font_600 main_color">&nbsp;translate(0, -70%)</span>
+                            </div>
                         </div>
                     </div>
                     <p class="para"><b>Hardware Acceleration: </b>You can force the gpu to take control over the process, using the <b>translate3d()</b> function in order to achieve a smooth 60 frames per second animations without jittering or tearing. <b>translate3d(x, y, z).</b></p>
@@ -258,14 +275,16 @@
                                 <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_rotate_example_1">1</div>
                             </div>
                         </div>
-                        <div class="flex_row justify_center">
+                        <div class="flex_row justify_center example_values_container">
                             <div class="Box_Model_margin_desc margin_right_50">
                                 <span></span>
                                 <span class="font_600">Direct Parent</span>
                             </div>
-                            <span class="font_600">1 =>&nbsp;</span>
-                            <span class="font_600">transform:</span>
-                            <span class="font_600 main_color">&nbsp;rotate(15deg)</span>
+                            <div>
+                                <span class="font_600">1 =>&nbsp;</span>
+                                <span class="font_600">transform:</span>
+                                <span class="font_600 main_color">&nbsp;rotate(30deg)</span>
+                            </div>
                         </div>
                     </div>
                     <p class="para"><b>Hardware Acceleration: </b>You can force the gpu to take control over the process, using the <b>rotate3d()</b> function in order to achieve a smooth 60 frames per second animations without jittering or tearing. <b>rotate3d(x, y, z, a => angle).</b></p>
@@ -283,17 +302,19 @@
                                 <div class="flex_child flex_child_max_width flex_child_max_height flex_item_example_1 font_600 position_relative_example_3 transfrom_rotate_example_1 transform_origin_example_1">1</div>
                             </div>
                         </div>
-                        <div class="flex_row justify_center">
+                        <div class="flex_row justify_center example_values_container">
                             <div class="Box_Model_margin_desc margin_right_50">
                                 <span></span>
                                 <span class="font_600">Direct Parent</span>
                             </div>
-                            <span class="font_600">1 =>&nbsp;</span>
-                            <span class="font_600">transform:</span>
-                            <span class="font_600 main_color">&nbsp;rotate(15deg)</span>
-                            <span class="font_600">&nbsp;|&nbsp;</span>
-                            <span class="font_600">transform-origin:</span>
-                            <span class="font_600 main_color">&nbsp;top left</span>
+                            <div>
+                                <span class="font_600">1 =>&nbsp;</span>
+                                <span class="font_600">transform:</span>
+                                <span class="font_600 main_color">&nbsp;rotate(30deg)</span>
+                                <span class="font_600">&nbsp;|&nbsp;</span>
+                                <span class="font_600">transform-origin:</span>
+                                <span class="font_600 main_color">&nbsp;top left</span>
+                            </div>
                         </div>
                     </div>
                     <p class="para">The property takes up to two values: <b class="color_red font_600">top</b> | <b class="color_red font_600">right</b> | <b class="color_red font_600">bottom</b> | <b class="color_red font_600">left</b> | <b class="color_red font_600">center</b>.</p>

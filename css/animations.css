@@ -16,7 +16,7 @@
 }
 @keyframes rotateLoop1 {
   from {transform: rotate(0deg);}
-  to {transform: rotate(15deg);}
+  to {transform: rotate(30deg);}
 }
 @keyframes floatLoop1 {
 	0% {

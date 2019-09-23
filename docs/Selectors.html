@@ -3,8 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/examples.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 
@@ -13,11 +15,13 @@
 	  </div>
 	  <div class="page selectors">
 		<div id="intro" class="page_inner">
+            <input type="checkbox" id="mobileNav" name="mobile-nav-collapse">
+            <label for="mobileNav" class="mobile_nav_button">&#9776;</label>
             <div class="side_nav card">
                 <ul>
                     <li class="nav_item">
                         <input type="radio" id="boxModelNav" name="nav-collapse">
-                        <label for="boxModelNav">Box Model & Box Sizing</label>
+                        <label for="boxModelNav">Box Model</label>
                         <ul>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#intro">Introduction</a></li>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#theBoxModel">The Box Model</a></li>
@@ -118,6 +122,13 @@
                             <li class="nav_item"><a href="./Transition.html#transitionDelay">Transition-Delay</a></li>
                         </ul>
                     </li>
+                    <li class="nav_item">
+                        <input type="radio" id="animationNav" name="nav-collapse">
+                        <label for="animationNav">Animation</label>
+                        <ul>
+                            <li class="nav_item"><a href="./Animation.html#intro">Introduction</a></li>
+                        </ul>
+                    </li>
                     <li class="nav_item active">
                         <input type="radio" id="selectorsNav" name="nav-collapse">
                         <label for="selectorsNav">Selectors</label>
@@ -170,7 +181,7 @@
                 </div>
 
 
-                <br/><br/><br/>
+                <br/><br/>
                 <h1 class="text_center orange_color">Basic Selectors</h1>
                 
 
@@ -240,7 +251,7 @@ p {
                 </div>
 
 
-                <br/><br/><br/>
+                <br/><br/>
                 <h1 class="text_center orange_color">Child Selectors</h1>
                 
 
@@ -301,7 +312,7 @@ p {
                 </div>
 
 
-                <br/><br/><br/>
+                <br/><br/>
                 <h1 class="text_center orange_color">Sibling Selectors</h1>
 
                 
@@ -359,7 +370,7 @@ h1 + p {
                 </div>
 
 
-                <br/><br/><br/>
+                <br/><br/>
                 <h1 class="text_center orange_color">Attribute Selectors</h1>
 
 
@@ -531,7 +542,7 @@ a[name|="hyphenated"] {
                 </div>
 
 
-                <br/><br/><br/>
+                <br/><br/>
                 <h1 class="text_center orange_color">Pseudo Classes</h1>
 
 
@@ -923,7 +934,7 @@ p:not(.not_example) {
                 </div>
 
 
-                <br/><br/><br/>
+                <br/><br/>
                 <h1 class="text_center orange_color">Pseudo Elements</h1>
 
 

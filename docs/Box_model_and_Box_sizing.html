@@ -3,21 +3,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/examples.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 
 	<div class="header">
-		<h1>CSS - Box Model & Box Sizing</h1>
+		<h1>CSS - Box Model</h1>
 	  </div>
 	  <div class="page">
         <div id="intro" class="page_inner">
+            <input type="checkbox" id="mobileNav" name="mobile-nav-collapse">
+            <label for="mobileNav" class="mobile_nav_button">&#9776;</label>
             <div class="side_nav card">
                 <ul>
                     <li class="nav_item active">
                         <input type="radio" id="boxModelNav" name="nav-collapse">
-                        <label for="boxModelNav">Box Model & Box Sizing</label>
+                        <label for="boxModelNav">Box Model</label>
                         <ul>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#intro">Introduction</a></li>
                             <li class="nav_item"><a href="./Box_model_and_Box_sizing.html#theBoxModel">The Box Model</a></li>
@@ -119,6 +123,13 @@
                         </ul>
                     </li>
                     <li class="nav_item">
+                        <input type="radio" id="animationNav" name="nav-collapse">
+                        <label for="animationNav">Animation</label>
+                        <ul>
+                            <li class="nav_item"><a href="./Animation.html#intro">Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_item">
                         <input type="radio" id="selectorsNav" name="nav-collapse">
                         <label for="selectorsNav">Selectors</label>
                         <ul>
@@ -163,7 +174,7 @@
             <div class="content">
                 <div class="fact">
                     <div>
-                        <h1 class="prop">Box Model & Box Sizing</h1>
+                        <h1 class="prop">Box Model</h1>
                         <h3 class="para">Every box is composed of four parts (or areas), defined by their respective edges: the content edge, padding edge, border edge, and margin edge.</h3>
                     </div>
                     <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
@@ -175,7 +186,7 @@
                     </h2>
                     <p class="para">Each HTML element rendered on the screen is a box, and they come in two flavors: “block” boxes and “inline“ boxes.</p>
                     
-                    <div class="flex_between">
+                    <div class="flex_between two_cards_container">
                         <div class="flex_column card two_cards flex_between">
                             <div>
                                 <div><div class="block_item_example_3"></div></div>
@@ -210,17 +221,19 @@
                     </h2>
                     <div class="flex_column card">
                         <div class="Box_Model">
-                            <div class="Box_Model_margin">
-                                <div class="Box_Model_border">
-                                    <div class="Box_Model_padding">
-                                        <div class="Box_Model_content">
-                                            <span>Content</span>
+                            <div class="card_overflow width_full text_center">
+                                <div class="Box_Model_margin">
+                                    <div class="Box_Model_border">
+                                        <div class="Box_Model_padding">
+                                            <div class="Box_Model_content">
+                                                <span>Content</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex_row box_model_desc">
+                        <div class="flex_row box_model_desc example_values_container2">
                             <div class="Box_Model_padding_desc">
                                 <span></span>
                                 <span>Padding</span>
