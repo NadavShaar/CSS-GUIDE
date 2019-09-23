@@ -393,7 +393,7 @@ html, body {
   z-index: 3;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"]#mobileNav{
   display: none;
 }
 
