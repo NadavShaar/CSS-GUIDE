@@ -415,7 +415,7 @@ input[type="checkbox"]:checked ~ .side_nav{
   transition: max-height .8s ease-in;
 } */
 .mobile_nav_button{
-  display: none;
+  -webkit-tap-highlight-color: transparent!important;
 }
 input[type="radio"]{
   display: none;
@@ -521,6 +521,7 @@ input[type="radio"]:checked ~ ul{
     bottom: 12px;
     right: 4%;
     transform: translatey(0px);
+    -webkit-tap-highlight-color: transparent!important;
   }
   .guide_button_left {
     right: unset;
@@ -531,6 +532,7 @@ input[type="radio"]:checked ~ ul{
   .github_icon_button {
     font-size: 0;
     margin-right: 12px;
+    -webkit-tap-highlight-color: transparent!important;
   }
   .github_icon_button > img {
     width: 31px;
