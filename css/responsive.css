@@ -29,6 +29,9 @@
         color: #fff;
         font-size: 24px;
     }
+    .guide_cover_title{
+        font-size: 80px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -74,5 +77,11 @@
     }
     .example_values_container, .example_values_container2 {
         font-size: 13px;
+    }
+    .guide_cover_title{
+        font-size: 60px;
+    }
+    .guide_button{
+        font-size: 14px;
     }
 }

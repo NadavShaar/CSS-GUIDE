@@ -483,6 +483,20 @@ input[type="radio"]:checked ~ ul{
     height: 100%;
     display: block;
   }
+  .guide_cover_title{
+    position: absolute;
+    top: 4%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 800;
+    color: #ffac4c;
+    text-decoration: underline;
+    background: -webkit-linear-gradient(#ffac4c,#ff3e1f);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
   .guide_button {
     display:inline-block;
     padding:0.7em 1.4em;
@@ -492,15 +506,20 @@ input[type="radio"]:checked ~ ul{
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     text-transform:uppercase;
-    font-weight:400;
+    font-weight:600;
     color:#FFFFFF;
     background-color:#e63e42;
     box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
     text-align:center;
     position: absolute;
     bottom: 12px;
-    right: 48px;
+    right: 4%;
     transform: translatey(0px);
+  }
+  .guide_button_left {
+    right: unset;
+    left: 4%;
+    background: #3e79e6;
   }
 
 .grid {
