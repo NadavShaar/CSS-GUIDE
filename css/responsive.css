@@ -23,15 +23,15 @@
         display: block;
         position: fixed;
         top: 12px;
-        right: 24px;
+        right: 18px;
         z-index: 5;
         cursor: pointer;
         color: #fff;
         font-size: 24px;
     }
-    /* .mobile_nav_button:before { 
-        content:'\2630'; 
-    } */
+    .header {
+        padding: 12px 18px;
+    }
     .guide_cover_title{
         font-size: 80px;
     }
