@@ -396,6 +396,12 @@ html, body {
 input[type="checkbox"]#mobileNav{
   display: none;
 }
+.mobile_nav_button:before { 
+  content:'\2630'; 
+}
+input[type="checkbox"]:checked ~ .mobile_nav_button:before {
+  content:'\2715';
+}
 
 /* input[type="checkbox"] ~ .side_nav{
   max-height: 0;
@@ -520,6 +526,14 @@ input[type="radio"]:checked ~ ul{
     right: unset;
     left: 4%;
     background: #3e79e6;
+  }
+
+  .github_icon_button {
+    font-size: 0;
+    margin-right: 12px;
+  }
+  .github_icon_button > img {
+    width: 31px;
   }
 
 .grid {
