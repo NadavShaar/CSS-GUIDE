@@ -15,7 +15,7 @@
         <a class="github_icon_button" href="https://github.com/NadavShaar/CSS-GUIDE" target="_blank" title="GITHUB">
             <img src="./../resources/github-icon.png" />
         </a>
-		<h1>CSS - Transition</h1>
+		<h1>CSS - Animation</h1>
 	  </div>
 	  <div class="page">
 		<div id="intro" class="page_inner">
@@ -131,6 +131,16 @@
                         <label for="animationNav">Animation</label>
                         <ul>
                             <li class="nav_item"><a href="./Animation.html#intro">Introduction</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animation">Animation</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animationName">Animation-Name</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animationDuration">Animation-Duration</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animationTimingFunction">Animation-Timing-Function</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animationDelay">Animation-Delay</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animationDirection">Animation-Direction</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animationIterationCount">Animation-Iteration-Count</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animationFillMode">Animation-Fill-Mode</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animationPlayState">Animation-Play-State</a></li>
+                            <li class="nav_item"><a href="./Animation.html#animationKeyframes">@Keyframes</a></li>
                         </ul>
                     </li>
                     <li class="nav_item">
@@ -191,12 +201,107 @@
 					<img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
                 </div>
 
+                <div id="animation" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Animation: (shortend property)
+                    </h2>
+                    <p class="para">A shorthand property for setting the following properties in a single declaration: <b class="color_red font_600">animation-name</b> | <b class="color_red font_600">animation-duration</b> | <b class="color_red font_600">animation-timing-function</b> | <b class="color_red font_600">animation-delay</b> | <b class="color_red font_600">animation-direction</b> | <b class="color_red font_600">animation-iteration-count</b> | <b class="color_red font_600">animation-fill-mode</b> | <b class="color_red font_600">animation-play-state</b>.</p>
+                    <div class="code_block code_block_css">
+.example {
+    animation: scale 5s linear 2s infinite alternate;
+}
+                    </div>
+                </div>
 
+                <div id="animationName" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Animation-Name
+                    </h2>
+                    <p class="para">Declares the name of the animation as it was defined in the @keyframes rule.</p>
+                </div>
+
+                <div id="animationDuration" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Animation-Duration
+                    </h2>
+                    <p class="para">The length of time (in seconds or milliseconds) it takes for an animation to complete one cycle.</p>
+                </div>
+
+                <div id="animationTimingFunction" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Animation-Timing-Function
+                    </h2>
+                    <p class="para">Establishes preset acceleration curves such as ease or linear.</p>
+                    <p class="para"><b>Values:</b> <b class="color_red font_600">ease</b> | <b class="color_red font_600">ease-in</b> | <b class="color_red font_600">ease-out</b> | <b class="color_red font_600">ease-in-out</b> | <b class="color_red font_600">linear</b> | <b class="color_red font_600">cubic-bezier(x1, y1, x2, y2)</b>.</p>
+                </div>
+
+                <div id="animationDelay" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Animation-Delay
+                    </h2>
+                    <p class="para">Defines the time (in seconds or milliseconds) that should pass before the animation should start.</p>
+                </div>
                 
+                <div id="animationDirection" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Animation-Direction
+                    </h2>
+                    <p class="para">Sets the direction of the animation after the cycle.</p>
+                    <p class="para"><b>Values:</b> <b class="color_red font_600">normal</b> | <b class="color_red font_600">reverse</b> | <b class="color_red font_600">alternate</b> | <b class="color_red font_600">alternate-reverse</b>.</p>
+                </div>
 
+                <div id="animationIterationCount" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Animation-Iteration-Count
+                    </h2>
+                    <p class="para">The number of times the animation should be performed.</p>
+                </div>
+
+                <div id="animationFillMode" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Animation-Fill-Mode
+                    </h2>
+                    <p class="para">Sets in what state of the keyframes rule the animation should retain after it ended.</p>
+                    <p class="para"><b>Values:</b> <b class="color_red font_600">forwards</b> | <b class="color_red font_600">backwards</b> | <b class="color_red font_600">both</b> | <b class="color_red font_600">none</b>.</p>
+                </div>
+
+                <div id="animationPlayState" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Animation-Play-State
+                    </h2>
+                    <p class="para">Sets in what state of the keyframes rule the animation should retain after it ended.</p>
+                    <p class="para"><b>Values:</b> <b class="color_red font_600">paused</b> | <b class="color_red font_600">running</b>.</p>
+                </div>
+
+                <div id="animationKeyframes" class="flex_column section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;@Keyframes
+                    </h2>
+                    <p class="para">The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.</p>
+                    <p class="para">The Steps can be defined as a <b>percentage</b> or as steps (<b>from</b> / <b>to</b>)</b>.</p>
+                    
+                    <div class="code_block code_block_css">
+// From To
+@keyframes scale {
+    from { transform: scale(1); }
+    to   { transform: scale(5); }
+}
+                    </div>
+                    <div class="code_block code_block_css">
+// Percentage
+@keyframes scale {
+    0% { transform: scale(1); }
+    25% { transform: scale(2); }
+    50% { transform: scale(3); }
+    75% { transform: scale(4); }
+    100% { transform: scale(5); }
+}
+                    </div>
+                </div>
 
 			</div>
 		</div>
-	</div>
+    </div>
+    <script type="text/javascript" src="../resources/highlightingCompiler.js"></script>
 </body>
 </html>

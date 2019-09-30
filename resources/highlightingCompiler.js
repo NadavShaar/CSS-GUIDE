@@ -86,82 +86,94 @@ function compileHTML(html){
 
 function compileCSS(css) {
     let output = '';
-
-    let selector = '';
-    for (let i = 0; i < css.length; i++) {
-        const char = css[i];
-
-        if(char === '{'){
-            output += `<span class="selector_name">${selector}</span>{`;
-            selector = '';
-
-            let closeCharIndex;
-            for (let j = i + 1; j < css.length; j++) {
-                if(css[j] === '}'){
-                    closeCharIndex = j;
-                    break;
-                }
-            }
-            if(!closeCharIndex) return output;
-
-            // inside opening/closing tag
-
-            i++;
-
-            let cssProperties = '';
-            while (i < closeCharIndex){
-
-                // skip spaces
-                while (i < closeCharIndex && css[i] === ' ') {
-                    cssProperties += css[i];
-                    i++;
-                }
-
-                if(i === closeCharIndex) break;
+    let tabLevel = 0;
+    let numberOfRows = 0;
+    let rowsNumbers = '';
+    let isSelector = true;
+    let lines = css.split(/\r\n|\r|\n/g);
+    let spaces = '';
     
-                // get property name
-                let cssPropertyName = '';
-                while (i < closeCharIndex && css[i] !== ':') {
-                    cssPropertyName += css[i]
-                    i++;
+    output += '<br>';
+    lines.forEach((l) => {
+        let part = '';
+        l = l.trim();
+        let line = l;
+        if(!line) return;
+        
+        for (let i = 0; i < l.length; i++) {
+            const char = l[i];
+            if(char === '/' && line[i-1] === '/'){
+                for (let k = 0; k < tabLevel; k++) {
+                    line = "  ".concat(line);
                 }
-
-                cssProperties += `<span class="property_name">${cssPropertyName}</span>`;
-
-                if(i === closeCharIndex) break;
-
-                // skip ":"
-                while (i < closeCharIndex && css[i] === ':') {
-                    cssProperties += css[i];
-                    i++;
-                }
-
-                // get property value
-                let propertyValue = '';
-                while (i < closeCharIndex && css[i] !== ';') {
-                    propertyValue += css[i];
-                    i++;
-                }
-
-                cssProperties += `<span class="property_value">${propertyValue}</span>;`;
-                i++;
+                output += `<div class="code_comment">${line}</div>`;
+                numberOfRows += 1;
+                continue;
             }
-            output += cssProperties + `}`;
-
-            i = closeCharIndex;
-            continue;
+            if(isSelector) {
+                if(char === '{'){
+                    part = line.substring(0, line.indexOf(char)).trim();
+                    line = line.substring(line.indexOf(char), line.length).trim();
+                    output += `<div><span class="selector_name">${part}</span> {</div>`;
+                    tabLevel += 1;
+                    isSelector = false;
+                    numberOfRows += 1;
+                    continue;
+                }
+            } else {
+                if(char === '{'){ 
+                    part = line.substring(0, line.indexOf(char)).trim();
+                    line = line.substring(line.indexOf(char)+2, line.length).trim();
+                    for (let k = 0; k < tabLevel; k++) {
+                        part = "  ".concat(part);
+                    }
+                    output += `<div><span class="selector_name2">${part}</span> {</div>`;
+                    tabLevel += 1;
+                    numberOfRows += 1;
+                    continue;
+                }
+                if(char === ':'){
+                    part = line.substring(0, line.indexOf(char)).trim();
+                    line = line.substring(line.indexOf(char)+2, line.length).trim();
+                    for (let k = 0; k < tabLevel; k++) {
+                        part = "  ".concat(part);
+                    }
+                    output += `<div><span class="property_name">${part}</span>`;
+                    output += char;
+                    continue;
+                }
+                if(char === ';'){
+                    part = line.substring(0, line.indexOf(char)).trim();
+                    line = line.substring(line.indexOf(char), line.length).trim();
+                    output += `<span class="property_value"> ${part}</span>`;
+                    output += char;
+                    output += '</div>';
+                    numberOfRows += 1;
+                    continue;
+                }
+                if(char === '}'){
+                    part = line.substring(0, line.indexOf(char)).trim();
+                    line = line.substring(line.indexOf(char), line.length).trim();
+                    spaces = '';
+                    tabLevel -= 1;
+                    for (let k = 0; k < tabLevel; k++) {
+                        spaces += "  ";
+                    }
+                    output += `<div>${spaces.concat(char)}</div>`;
+                    if(tabLevel === 0) {
+                        output += '<br>'
+                        isSelector = true;
+                    };
+                    numberOfRows += 1;
+                    continue;
+                }
+            }
         }
+    })
 
-        selector += char;
-        if(css.charCodeAt(i) === 10) {
-            output += selector;
-            selector = '';
-        }
+    for (let t = 1; t < numberOfRows + 1; t++) {
+        rowsNumbers += `<span>${t}</span>`;
     }
-
-    output += selector;
-
-    let rowsNumbers = generateRows(css, output);
 
     return `<span class="code_block_title">CSS</span><div class="code_block_row_numbers">${rowsNumbers}</div><pre><code>${output}</code></pre>`;
 };
@@ -175,11 +187,13 @@ function generateHTML(id) {
 };
 
 function generateCSS(id) {
-    let element = document.querySelector(`#${id} .code_block_css`);
-    if(!element) return;
-    let css = element.innerHTML;
-    let compiledCSS = compileCSS(css);
-    document.querySelector(`#${id} .code_block_css`).innerHTML = compiledCSS;
+    let elements = document.querySelectorAll(`#${id} .code_block_css`);
+    if(!elements) return;
+    elements.forEach((el, idx) => {
+        let css = el.innerHTML;
+        let compiledCSS = compileCSS(css);
+        el.innerHTML = compiledCSS;
+    });
 };
 
 function generateRows(html, output) {
@@ -227,7 +241,9 @@ let ids = [
     'selectorPseudoClassNot',
     'selectorPseudoElementBefore',
     'selectorPseudoElementAfter',
-    'selectorPseudoElementSelection'
+    'selectorPseudoElementSelection',
+    'animation',
+    'animationKeyframes'
 ];
 
 ids.forEach(generateHTML);

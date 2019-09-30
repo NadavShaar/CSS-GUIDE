@@ -77,8 +77,14 @@ html, body {
     display: block;
     margin-left: 18px
   }
+  .code_comment {
+    color: rgba(255,255,255,.7);
+  }
   .selector_name {
     color: #ff844a;
+  }
+  .selector_name2 {
+    color: #dac8f7;
   }
   .property_name, .attribute_name {
     color: #7de2af;
@@ -347,7 +353,7 @@ html, body {
       position: sticky;
       min-width: 20%;
       max-width: 250px;
-      top: 60px;
+      top: 36px;
       display: inline-flex;
       flex-direction: column;
       height: fit-content;
@@ -415,6 +421,7 @@ input[type="checkbox"]:checked ~ .side_nav{
   transition: max-height .8s ease-in;
 } */
 .mobile_nav_button{
+  display: none;
   -webkit-tap-highlight-color: transparent!important;
 }
 input[type="radio"]{
@@ -522,6 +529,7 @@ input[type="radio"]:checked ~ ul{
     right: 4%;
     transform: translatey(0px);
     -webkit-tap-highlight-color: transparent!important;
+    font-size: 15px;
   }
   .guide_button_cover {
     display: inline-flex;
