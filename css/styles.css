@@ -52,6 +52,12 @@ html, body {
     min-height: 18px;
     max-height: 18px;
   }
+  code > span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 18px;
+    max-height: 18px;
+  }
   .code_block{
     margin: 18px 0px;
     position: relative;
