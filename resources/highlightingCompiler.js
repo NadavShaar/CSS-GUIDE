@@ -91,7 +91,19 @@ function compileCSS(css) {
     let rowsNumbers = '';
     let isSelector = true;
     let lines = css.split(/\r\n|\r|\n/g);
-    let spaces = '';
+
+    function getPart(line, char) {
+        return line.substring(0, line.indexOf(char)).trim();
+    }
+    function updateLine(line, char) {
+        return line.substring(line.indexOf(char)+2, line.length).trim();
+    }
+    function indent(tabLevel, data) {
+        for (let k = 0; k < tabLevel; k++) {
+            data = "  ".concat(data);
+        }
+        return data;
+    }
     
     output += '<br>';
     lines.forEach((l) => {
@@ -103,17 +115,15 @@ function compileCSS(css) {
         for (let i = 0; i < l.length; i++) {
             const char = l[i];
             if(char === '/' && line[i-1] === '/'){
-                for (let k = 0; k < tabLevel; k++) {
-                    line = "  ".concat(line);
-                }
+                line = indent(tabLevel, line);
                 output += `<div class="code_comment">${line}</div>`;
                 numberOfRows += 1;
                 continue;
             }
             if(isSelector) {
                 if(char === '{'){
-                    part = line.substring(0, line.indexOf(char)).trim();
-                    line = line.substring(line.indexOf(char), line.length).trim();
+                    part = getPart(line, char);
+                    line = updateLine(line, char);
                     output += `<div><span class="selector_name">${part}</span> {</div>`;
                     tabLevel += 1;
                     isSelector = false;
@@ -122,29 +132,25 @@ function compileCSS(css) {
                 }
             } else {
                 if(char === '{'){ 
-                    part = line.substring(0, line.indexOf(char)).trim();
-                    line = line.substring(line.indexOf(char)+2, line.length).trim();
-                    for (let k = 0; k < tabLevel; k++) {
-                        part = "  ".concat(part);
-                    }
+                    part = getPart(line, char);
+                    line = updateLine(line, char);
+                    part = indent(tabLevel, part);
                     output += `<div><span class="selector_name2">${part}</span> {</div>`;
                     tabLevel += 1;
                     numberOfRows += 1;
                     continue;
                 }
                 if(char === ':'){
-                    part = line.substring(0, line.indexOf(char)).trim();
-                    line = line.substring(line.indexOf(char)+2, line.length).trim();
-                    for (let k = 0; k < tabLevel; k++) {
-                        part = "  ".concat(part);
-                    }
+                    part = getPart(line, char);
+                    line = updateLine(line, char);
+                    part = indent(tabLevel, part);
                     output += `<div><span class="property_name">${part}</span>`;
                     output += char;
                     continue;
                 }
                 if(char === ';'){
-                    part = line.substring(0, line.indexOf(char)).trim();
-                    line = line.substring(line.indexOf(char), line.length).trim();
+                    part = getPart(line, char);
+                    line = updateLine(line, char);
                     output += `<span class="property_value"> ${part}</span>`;
                     output += char;
                     output += '</div>';
@@ -152,14 +158,9 @@ function compileCSS(css) {
                     continue;
                 }
                 if(char === '}'){
-                    part = line.substring(0, line.indexOf(char)).trim();
-                    line = line.substring(line.indexOf(char), line.length).trim();
-                    spaces = '';
                     tabLevel -= 1;
-                    for (let k = 0; k < tabLevel; k++) {
-                        spaces += "  ";
-                    }
-                    output += `<div>${spaces.concat(char)}</div>`;
+                    part = indent(tabLevel, char);
+                    output += `<div>${part}</div>`;
                     if(tabLevel === 0) {
                         output += '<br>'
                         isSelector = true;
