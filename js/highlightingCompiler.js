@@ -85,6 +85,7 @@ function compileHTML(html){
 };
 
 function compileCSS(css) {
+
     let output = '';
     let tabLevel = 0;
     let numberOfRows = 0;
@@ -106,7 +107,9 @@ function compileCSS(css) {
     }
     
     output += '<br>';
+
     lines.forEach((l) => {
+        
         let part = '';
         l = l.trim();
         let line = l;
@@ -114,7 +117,9 @@ function compileCSS(css) {
         let lineProcessed = false;
         
         for (let i = 0; i < l.length; i++) {
+
             const char = l[i];
+
             if(char === '/' && line[i-1] === '/'){
                 line = indent(tabLevel, line);
                 output += `<div class="code_comment">${line}</div>`;
