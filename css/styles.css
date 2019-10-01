@@ -45,6 +45,7 @@ html, body {
     display: block;
     padding-right: 28px;
     width: fit-content;
+    line-height: 18px;
   }
   code > div {
     display: flex;
