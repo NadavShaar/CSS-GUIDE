@@ -111,23 +111,26 @@ function compileCSS(css) {
         l = l.trim();
         let line = l;
         if(!line) return;
+        let lineProcessed = false;
         
         for (let i = 0; i < l.length; i++) {
             const char = l[i];
             if(char === '/' && line[i-1] === '/'){
                 line = indent(tabLevel, line);
-                output += `<div class="code_comment">${line}  </div>`;
+                output += `<div class="code_comment">${line}</div>`;
                 numberOfRows += 1;
+                lineProcessed = true;
                 continue;
             }
             if(isSelector) {
                 if(char === '{'){
                     part = getPart(line, char);
                     line = updateLine(line, char);
-                    output += `<div><span class="selector_name">${part}</span> {  </div>`;
+                    output += `<div><span class="selector_name">${part}</span> {</div>`;
                     tabLevel += 1;
                     isSelector = false;
                     numberOfRows += 1;
+                    lineProcessed = true;
                     continue;
                 }
             } else {
@@ -135,39 +138,47 @@ function compileCSS(css) {
                     part = getPart(line, char);
                     line = updateLine(line, char);
                     part = indent(tabLevel, part);
-                    output += `<div><span class="selector_name2">${part}</span> {  </div>`;
+                    output += `<div><span class="selector_name2">${part}</span> {</div>`;
                     tabLevel += 1;
                     numberOfRows += 1;
+                    lineProcessed = true;
                     continue;
                 }
                 if(char === ':'){
                     part = getPart(line, char);
                     line = updateLine(line, char);
                     part = indent(tabLevel, part);
-                    output += `<div><span class="property_name">${part}</span>:  `;
+                    output += `<div><span class="property_name">${part}</span>: `;
+                    lineProcessed = true;
                     continue;
                 }
                 if(char === ';'){
                     part = getPart(line, char);
                     line = updateLine(line, char);
-                    output += `<span class="property_value">${part}</span>;  `;
-                    output += '</div>';
+                    output += `<span class="property_value">${part}</span>;</div>`;
                     numberOfRows += 1;
+                    lineProcessed = true;
                     continue;
                 }
                 if(char === '}'){
                     tabLevel -= 1;
                     part = indent(tabLevel, char);
-                    output += `<div>${part}  </div>`;
+                    output += `<div>${part}</div>`;
                     if(tabLevel === 0) {
                         output += '<br>'
                         isSelector = true;
                     };
                     numberOfRows += 1;
+                    lineProcessed = true;
                     continue;
                 }
             }
         }
+        if(!lineProcessed) {
+            output += `<div>${line}</div>`;
+            numberOfRows += 1;
+            lineProcessed = true;
+        };
     })
 
     for (let t = 1; t < numberOfRows + 1; t++) {

@@ -42,6 +42,15 @@ html, body {
   code{
     font-size: 13px;
     color: #ffffff;
+    display: block;
+    padding-right: 30px;
+    width: fit-content;
+  }
+  code > div {
+    display: flex;
+    align-items: center;
+    min-height: 18px;
+    max-height: 18px;
   }
   .code_block{
     margin: 18px 0px;
