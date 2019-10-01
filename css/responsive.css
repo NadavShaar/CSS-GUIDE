@@ -88,4 +88,7 @@
     .guide_button{
         font-size: 14px;
     }
+    .flex_container_example_1_width_x3{
+        min-width: 110px;
+      }
 }

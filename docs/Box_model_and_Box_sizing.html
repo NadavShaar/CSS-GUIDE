@@ -221,8 +221,8 @@
                             <span class="text_center color_red font_600">Inline Elements</span>
                         </div>
                     </div>
-                    <div class="para">HTML is made up of various elements that act as the building blocks of web pages. For the purpose of styling, elements are divided into two categories: block-level elements and inline elements.
-                            In summary, a <span class="inline_item_example_4"><b>span</b></span> element is used as an inline element and a <div class="block_item_example_4"><b>div</b></div> element as a block level element.
+                    <div class="para">HTML is made up of various elements that act as the building blocks of web pages. For the purpose of styling, elements are divided into two categories: block-level elements and inline elements:
+                            a <span class="inline_item_example_4"><b>span</b></span> element is used as an inline element and a <div class="block_item_example_4"><b>div</b></div> element as a block level element.
                             The difference between the two elements is a commonly misunderstood concept of web design but it does not have to be!
                             Basically, an inline element does not cause a line break (start on a new line) and does not take up the full width of a page, only the space bounded by its opening and closing tag. It is usually used within other HTML elements.
                     </div>
@@ -232,6 +232,7 @@
                     <h2>
                         <span class="main_color">#</span>&nbsp;The Box Model
                     </h2>
+                    <p class="para">Each element is a box consists of 4 parts: content, padding, border and margin.</p>
                     <div class="flex_column card">
                         <div class="Box_Model">
                             <div class="card_overflow width_full text_center">
@@ -247,28 +248,27 @@
                             </div>
                         </div>
                         <div class="flex_row box_model_desc example_values_container2">
-                            <div class="Box_Model_padding_desc">
+                            <div class="Box_Model_margin_desc">
                                 <span></span>
-                                <span>Padding</span>
+                                <span>Margin</span>
                             </div>
                             <div class="Box_Model_border_desc">
                                 <span></span>
                                 <span>Border</span>
                             </div>
-                            <div class="Box_Model_margin_desc">
+                            <div class="Box_Model_padding_desc">
                                 <span></span>
-                                <span>Margin</span>
+                                <span>Padding</span>
                             </div>
                         </div>
                     </div>
-                    <p class="para">By default the box sizing is content-box which means that the element's width and height only includes the "content" area and the padding, border and margin adds up to those values.</p>
                 </div>
                 
                 <div id="boxSizing" class="flex_column section">
                     <h2>
                         <span class="main_color">#</span>&nbsp;Box-sizing
                     </h2>
-                    <p class="para">Defines the box model sizing behavior.</p>
+                    <p class="para">Defines the box model sizing behavior, by default the box sizing is content-box which means that the element's width and height only includes the "content" area and the padding, border and margin adds up to those values.</p>
                     <h3 class="para">Box-sizing: Values</h3>
                     <ul class="square_list">
                         <li><b class="color_red">content-box:</b> Width and height will include only the content area.</li>

@@ -43,7 +43,7 @@ html, body {
     font-size: 13px;
     color: #ffffff;
     display: block;
-    padding-right: 30px;
+    padding-right: 28px;
     width: fit-content;
   }
   code > div {
@@ -62,7 +62,7 @@ html, body {
     margin: 18px 0px;
     position: relative;
     background-color: #1e324c;
-    border: 1px solid #dadada;
+    /* border: 1px solid #dadada; */
     border-radius: 3px;
     overflow: hidden;
   }
@@ -82,6 +82,7 @@ html, body {
     font-size: 13px;
     line-height: 18px;
     color: #333;
+    height: 18px;
   }
   .code_block_title{
     font-size: 12px;
