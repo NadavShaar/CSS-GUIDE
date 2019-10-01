@@ -74,7 +74,7 @@ html, body {
     top: 0;
     right: calc(100% - 36px);
     background: #dadada;
-    padding: 40px 0 18px;
+    padding: 39px 0 18px;
   }
   .code_block_row_numbers > span{
     display: flex;
