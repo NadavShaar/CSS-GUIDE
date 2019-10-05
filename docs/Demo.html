@@ -207,7 +207,7 @@
                     <h2>
                         <span class="main_color">#</span>&nbsp;Box-Loader
                     </h2>
-                    <div class="flex_column card boxLoader blueprint flex_container_example_1_container_height_x2 position_relative code_block_example">
+                    <div class="flex_column card boxLoader blueprint code_block_example">
 <div class="loader">
     <span class="box box_1"></span>
     <span class="box box_2"></span>
@@ -219,12 +219,10 @@
                     <h4>Styling</h4>
                     <div class="code_block code_block_css">
 .loader {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
 }
     
 .box {
@@ -233,8 +231,8 @@
     left: 0;
     right: 50%;
     bottom: 50%;
-    margin: 5px;
-    border: 15px solid #fff;
+    margin: 4px;
+    border: 12px solid #fff;
     border-radius: 3px;
     opacity: 0;
     box-shadow: inset 2px 2px 2px 0px #00000057, 1px 1px 2px 0px #00000057;
