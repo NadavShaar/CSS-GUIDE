@@ -207,7 +207,7 @@
                     <h2>
                         <span class="main_color">#</span>&nbsp;Box-Loader
                     </h2>
-                    <div class="flex_column card boxLoader blueprint code_block_example">
+                    <div class="flex_column card boxLoader blueprint flex_container_example_1_height position_relative code_block_example">
 <div class="loader">
     <span class="box box_1"></span>
     <span class="box box_2"></span>
@@ -221,8 +221,10 @@
 .loader {
     width: 80px;
     height: 80px;
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
     
 .box {
@@ -268,7 +270,6 @@
 }
 
 @keyframes animateBoxLoaderPosition {
-    
     0% {
         top: 0;
         left: 0;

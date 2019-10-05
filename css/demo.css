@@ -1,8 +1,10 @@
 .boxLoader .loader {
     width: 80px;
     height: 80px;
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .boxLoader .box {
@@ -46,7 +48,6 @@
 }
 
 @keyframes animateBoxLoaderPosition {
-  
     0% {
       top: 0;
       left: 0;
