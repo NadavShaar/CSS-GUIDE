@@ -772,7 +772,30 @@ input[type="radio"]:checked ~ ul{
 }
 /* .checkbox_plus_toggle_button:before {
   content: '<'
-}
-.checkbox_plus_toggle_button:after {
-  content: ' />'
 } */
+.checkbox_plus + .checkbox_plus_toggle_button {
+  background-color: #e63e42;
+}
+.checkbox_plus:checked + .checkbox_plus_toggle_button {
+  background-color: #3e79e6;
+}
+.checkbox_plus + .checkbox_plus_toggle_button:before {
+  content: 'Show me how'
+}
+.checkbox_plus:checked + .checkbox_plus_toggle_button:before {
+  content: 'ok, got it'
+}
+.checkbox_plus + .checkbox_plus_toggle_button:after {
+  content: '\0025BC';
+  font-size: 9px;
+  position: relative;
+  top: 0px;
+  margin-left: 6px;
+}
+.checkbox_plus:checked + .checkbox_plus_toggle_button:after {
+  content: '\0025B2';
+  font-size: 9px;
+  position: relative;
+  top: -3px;
+  margin-left: 6px;
+}
