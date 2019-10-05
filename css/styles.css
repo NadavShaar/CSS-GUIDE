@@ -5,6 +5,7 @@ html, body {
     font-weight: 400;
     background: #eee;
     overflow: hidden;
+    /* font-family: 'Roboto',sans-serif; */
   }
   *{
     box-sizing: border-box;
@@ -95,6 +96,9 @@ html, body {
     display: block;
     margin-left: 18px;
     user-select: none;
+  }
+  .code_block_label {
+    font-weight: 600;
   }
   .code_comment {
     color: rgba(255,255,255,.7);
@@ -539,7 +543,7 @@ input[type="radio"]:checked ~ ul{
     border-radius:0.15em;
     box-sizing: border-box;
     text-decoration:none;
-    font-family:'Roboto',sans-serif;
+    /* font-family:'Roboto',sans-serif; */
     text-transform:uppercase;
     font-weight:600;
     color:#FFFFFF;
@@ -692,11 +696,11 @@ input[type="radio"]:checked ~ ul{
 .checkbox_hide {
   display: none;
 }
-.checkbox_plus_toggle {
+/* .checkbox_plus_toggle {
   position: relative;
   color: #ffffff;
   cursor: pointer;
-  /* top: 1px; */
+  top: 1px;
   width: 14px;
   height: 14px;
   display: inline-flex;
@@ -707,7 +711,7 @@ input[type="radio"]:checked ~ ul{
   border-radius: 3px;
   overflow: hidden;
   user-select: none;
-}
+} */
 /* .checkbox_plus + .checkbox_plus_toggle:after {
   content: '\002B';
   position: absolute;
@@ -728,34 +732,47 @@ input[type="radio"]:checked ~ ul{
   right: 0;
   bottom: 0;
 } */
-.checkbox_plus + .checkbox_plus_toggle > .plus_sign {
+/* .checkbox_plus + .checkbox_plus_toggle > .plus_sign {
   display: block;
   line-height: 12px;
-  font-weight: bold;
+  font-weight: bold; */
   /* position: relative;
   left: -1px;
   top: -2px; */
-  user-select: none;
-}
-.checkbox_plus + .checkbox_plus_toggle > .minus_sign {
+  /* user-select: none; */
+/* } */
+/* .checkbox_plus + .checkbox_plus_toggle > .minus_sign {
   display: none;
 }
 .checkbox_plus:checked + .checkbox_plus_toggle > .plus_sign {
   display: none;
-}
-.checkbox_plus:checked + .checkbox_plus_toggle > .minus_sign {
+} */
+/* .checkbox_plus:checked + .checkbox_plus_toggle > .minus_sign {
   display: block;
   line-height: 12px;
-  font-weight: bold;
+  font-weight: bold; */
   /* position: relative; */
   /* left: -1px;
   top: -2px; */
-  user-select: none;
-}
-.checkbox_plus ~ .code_block {
+  /* user-select: none;
+} */
+.checkbox_plus ~ .code_show_hide_container {
   height: 0;
   overflow: hidden;
 }
-.checkbox_plus:checked ~ .code_block {
+.checkbox_plus:checked ~ .code_show_hide_container {
   height: auto;
 } 
+.checkbox_plus_toggle_button {
+  position: unset;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+/* .checkbox_plus_toggle_button:before {
+  content: '<'
+}
+.checkbox_plus_toggle_button:after {
+  content: ' />'
+} */

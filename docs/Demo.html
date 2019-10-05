@@ -214,125 +214,127 @@
     <span class="box box_3"></span>
 </div>
                     </div>
-                    <b>CODE</b>
                     <input type="checkbox" class="checkbox_hide checkbox_plus" id="boxLoaderMarkupToggle" />
-                    <label for="boxLoaderMarkupToggle" class="checkbox_plus_toggle">
-                        <i class="plus_sign">+</i>
-                        <i class="minus_sign">-</i>
-                    </label>
-                    <div class="code_block code_block_html"></div>
-                    <div class="code_block code_block_css">
-.loader {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-    
-.box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 50%;
-    bottom: 50%;
-    margin: 4px;
-    border: 12px solid #fff;
-    border-radius: 3px;
-    opacity: 0;
-    box-shadow: inset 2px 2px 2px 0px #00000057, 1px 1px 2px 0px #00000057;
-}
-    
-.box_1 {
-    border-color: #ff844a;
-    z-index: 3;
-    animation: animateBoxLoaderPosition 4.5s ease-in-out infinite, animateBoxLoaderOpacity .25s ease-in-out forwards;
-}
-    
-.box_2 {
-    border-color: #ffdf62;
-    z-index: 2;
-    animation: animateBoxLoaderPosition 4.5s ease-in-out 1.5s infinite, animateBoxLoaderOpacity 1s ease-in-out .25s forwards;
-}
-    
-.box_3 {
-    border-color: #7de2af;
-    z-index: 1;
-    animation: animateBoxLoaderPosition 4.5s ease-in-out 3s infinite, animateBoxLoaderOpacity 1s ease-in-out 1.75s forwards;
-}
-                    </div>
-                    <div class="code_block code_block_css">
-@keyframes animateBoxLoaderOpacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+                    <label for="boxLoaderMarkupToggle" class="guide_button checkbox_plus_toggle_button">Show me how</label>
+                    <div class="code_show_hide_container">
 
-@keyframes animateBoxLoaderPosition {
-    0% {
-        top: 0;
-        left: 0;
-        right: 50%;
-        bottom: 50%;
-    }
-    6.25% {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 50%;
-    }
-    12.5%, 18.75%, 25% {
-        top: 0;
-        left: 50%;
-        right: 0;
-        bottom: 50%;
-    }
-    31.25% {
-        top: 0;
-        left: 50%;
-        right: 0;
-        bottom: 0;
-    }
-    37.5%, 43.75%, 50% {
-        top: 50%;
-        left: 50%;
-        right: 0;
-        bottom: 0;
-        opacity: 1;
-    }
-    56.25% {
-        top: 50%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 1;
-    }
-    62.5%, 68.75%, 75% {
-        top: 50%;
-        left: 0;
-        right: 50%;
-        bottom: 0;
-        opacity: 1;
-    }
-    81.25% {
-        top: 0;
-        left: 0;
-        right: 50%;
-        bottom: 0;
-        opacity: 1;
-    }
-    87.5%, 93.75%, 100% {
-        top: 0;
-        left: 0;
-        right: 50%;
-        bottom: 50%;
-        opacity: 1;
-    }
-    }
+                        <span class="code_block_label">The Markup</span>
+                        <div class="code_block code_block_html"></div>
+                        <span class="code_block_label">styling</span>
+                        <div class="code_block code_block_css">
+                            .loader {
+                                width: 80px;
+                                height: 80px;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                                
+                            .box {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 50%;
+                                bottom: 50%;
+                                margin: 4px;
+                                border: 12px solid #fff;
+                                border-radius: 3px;
+                                opacity: 0;
+                                box-shadow: inset 2px 2px 2px 0px #00000057, 1px 1px 2px 0px #00000057;
+                            }
+                                
+                            .box_1 {
+                                border-color: #ff844a;
+                                z-index: 3;
+                                animation: animateBoxLoaderPosition 4.5s ease-in-out infinite, animateBoxLoaderOpacity .25s ease-in-out forwards;
+                            }
+                                
+                            .box_2 {
+                                border-color: #ffdf62;
+                                z-index: 2;
+                                animation: animateBoxLoaderPosition 4.5s ease-in-out 1.5s infinite, animateBoxLoaderOpacity 1s ease-in-out .25s forwards;
+                            }
+                                
+                            .box_3 {
+                                border-color: #7de2af;
+                                z-index: 1;
+                                animation: animateBoxLoaderPosition 4.5s ease-in-out 3s infinite, animateBoxLoaderOpacity 1s ease-in-out 1.75s forwards;
+                            }
+                        </div>
+                        <span class="code_block_label">Animation Rules</span>
+                        <div class="code_block code_block_css">
+                            @keyframes animateBoxLoaderOpacity {
+                                0% {
+                                    opacity: 0;
+                                }
+                                100% {
+                                    opacity: 1;
+                                }
+                            }
+                            
+                            @keyframes animateBoxLoaderPosition {
+                                0% {
+                                    top: 0;
+                                    left: 0;
+                                    right: 50%;
+                                    bottom: 50%;
+                                }
+                                6.25% {
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 50%;
+                                }
+                                12.5%, 18.75%, 25% {
+                                    top: 0;
+                                    left: 50%;
+                                    right: 0;
+                                    bottom: 50%;
+                                }
+                                31.25% {
+                                    top: 0;
+                                    left: 50%;
+                                    right: 0;
+                                    bottom: 0;
+                                }
+                                37.5%, 43.75%, 50% {
+                                    top: 50%;
+                                    left: 50%;
+                                    right: 0;
+                                    bottom: 0;
+                                    opacity: 1;
+                                }
+                                56.25% {
+                                    top: 50%;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    opacity: 1;
+                                }
+                                62.5%, 68.75%, 75% {
+                                    top: 50%;
+                                    left: 0;
+                                    right: 50%;
+                                    bottom: 0;
+                                    opacity: 1;
+                                }
+                                81.25% {
+                                    top: 0;
+                                    left: 0;
+                                    right: 50%;
+                                    bottom: 0;
+                                    opacity: 1;
+                                }
+                                87.5%, 93.75%, 100% {
+                                    top: 0;
+                                    left: 0;
+                                    right: 50%;
+                                    bottom: 50%;
+                                    opacity: 1;
+                                }
+                            }
+                        </div>
                     </div>
                 </div>
 
