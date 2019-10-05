@@ -203,7 +203,7 @@
 					<img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1561734253/monday-200x200_yt84sn.png" alt="monday logo"/>
                 </div>
 
-                <div id="boxLoader" class="flex_column section">
+                <div id="boxLoader" class="section">
                     <h2>
                         <span class="main_color">#</span>&nbsp;Box-Loader
                     </h2>
@@ -214,9 +214,10 @@
     <span class="box box_3"></span>
 </div>
                     </div>
-                    <h4>The Markup</h4>
+                    <b>CODE</b>
+                    <input type="checkbox" class="checkbox_hide checkbox_plus" id="boxLoaderMarkupToggle" />
+                    <label for="boxLoaderMarkupToggle" class="checkbox_plus_toggle"></label>
                     <div class="code_block code_block_html"></div>
-                    <h4>Styles</h4>
                     <div class="code_block code_block_css">
 .loader {
     width: 80px;
@@ -258,7 +259,6 @@
     animation: animateBoxLoaderPosition 4.5s ease-in-out 3s infinite, animateBoxLoaderOpacity 1s ease-in-out 1.75s forwards;
 }
                     </div>
-                    <h4>Animation Rules</h4>
                     <div class="code_block code_block_css">
 @keyframes animateBoxLoaderOpacity {
     0% {

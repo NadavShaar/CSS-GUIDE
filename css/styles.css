@@ -689,3 +689,48 @@ input[type="radio"]:checked ~ ul{
 .fixed_container {
   transform: translate(0);
 }
+.checkbox_hide {
+  display: none;
+}
+.checkbox_plus_toggle {
+  position: relative;
+  color: #ffffff;
+  cursor: pointer;
+  top: 2px;
+  width: 15px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e63e42;
+  border: 1px solid #1e324c;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.checkbox_plus + .checkbox_plus_toggle:after {
+  content: '\002B';
+  position: absolute;
+  top: -7px;
+  font-size: 16px;
+  font-weight: bold;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.checkbox_plus:checked + .checkbox_plus_toggle:after {
+  content: '\2212';
+  position: absolute;
+  top: -7px;
+  font-size: 16px;
+  font-weight: bold;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.checkbox_plus ~ .code_block {
+  height: 0;
+  overflow: hidden;
+}
+.checkbox_plus:checked ~ .code_block {
+  height: auto;
+} 
