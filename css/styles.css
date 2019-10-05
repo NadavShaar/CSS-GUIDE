@@ -696,7 +696,7 @@ input[type="radio"]:checked ~ ul{
   position: relative;
   color: #ffffff;
   cursor: pointer;
-  top: 1px;
+  /* top: 1px; */
   width: 14px;
   height: 14px;
   display: inline-flex;
@@ -732,9 +732,9 @@ input[type="radio"]:checked ~ ul{
   display: block;
   line-height: 12px;
   font-weight: bold;
-  position: relative;
+  /* position: relative;
   left: -1px;
-  top: -2px;
+  top: -2px; */
   user-select: none;
 }
 .checkbox_plus + .checkbox_plus_toggle > .minus_sign {
@@ -747,9 +747,9 @@ input[type="radio"]:checked ~ ul{
   display: block;
   line-height: 12px;
   font-weight: bold;
-  position: relative;
-  left: -1px;
-  top: -2px;
+  /* position: relative; */
+  /* left: -1px;
+  top: -2px; */
   user-select: none;
 }
 .checkbox_plus ~ .code_block {
