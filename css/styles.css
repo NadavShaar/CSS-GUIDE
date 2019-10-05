@@ -47,12 +47,12 @@ html, body {
     width: fit-content;
     line-height: 18px;
   }
-  code > div {
+  /* code > div {
     display: flex;
     align-items: center;
     min-height: 18px;
     max-height: 18px;
-  }
+  } */
   code > span {
     display: inline-flex;
     align-items: center;
@@ -84,6 +84,7 @@ html, body {
     line-height: 18px;
     color: #333;
     height: 18px;
+    user-select: none;
   }
   .code_block_title{
     font-size: 12px;
@@ -92,7 +93,8 @@ html, body {
     background: #9ba6b5;
     padding: 3px 32px;
     display: block;
-    margin-left: 18px
+    margin-left: 18px;
+    user-select: none;
   }
   .code_comment {
     color: rgba(255,255,255,.7);
@@ -108,6 +110,9 @@ html, body {
   }
   .property_value, .attribute_value {
     color: #ffdf62;
+  }
+  .blueprint {
+    background: url(../resources/Blueprint2.jpg) no-repeat center center fixed;
   }
   .html_tag {
     color: #ff844a;

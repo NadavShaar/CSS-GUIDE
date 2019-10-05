@@ -109,7 +109,6 @@ function compileCSS(css) {
     output += '<br>';
 
     lines.forEach((l) => {
-        
         let part = '';
         l = l.trim();
         let line = l;
@@ -122,20 +121,28 @@ function compileCSS(css) {
 
             if(char === '/' && line[i-1] === '/'){
                 line = indent(tabLevel, line);
-                output += `<div class="code_comment">${line}</div>`;
+                output += `<span class="code_comment">${line}</span><br>`;
                 numberOfRows += 1;
                 lineProcessed = true;
                 continue;
             }
             if(isSelector) {
-                if(char === '{'){
+                if(char === '{') {
                     part = getPart(line, char);
                     line = updateLine(line, char);
-                    output += `<div><span class="selector_name">${part}</span> {</div>`;
+                    output += `<span class="selector_name">${part}</span> {<br>`;
                     tabLevel += 1;
                     isSelector = false;
                     numberOfRows += 1;
                     lineProcessed = true;
+                    continue;
+                }
+                if(char === ',') {
+                    part = getPart(line, char);
+                    line = updateLine(line, char);
+                    output += `<span class="selector_name">${part}</span>, `;
+                    lineProcessed = true;
+                    numberOfRows += 1;
                     continue;
                 }
             } else {
@@ -143,7 +150,7 @@ function compileCSS(css) {
                     part = getPart(line, char);
                     line = updateLine(line, char);
                     part = indent(tabLevel, part);
-                    output += `<div><span class="selector_name2">${part}</span> {</div>`;
+                    output += `<span class="selector_name2">${part}</span> {<br>`;
                     tabLevel += 1;
                     numberOfRows += 1;
                     lineProcessed = true;
@@ -153,24 +160,32 @@ function compileCSS(css) {
                     part = getPart(line, char);
                     line = updateLine(line, char);
                     part = indent(tabLevel, part);
-                    output += `<div><span class="property_name">${part}</span>: `;
+                    output += `<span class="property_name">${part}</span>: `;
                     lineProcessed = true;
                     continue;
                 }
                 if(char === ';'){
                     part = getPart(line, char);
                     line = updateLine(line, char);
-                    output += `<span class="property_value">${part}</span>;</div>`;
+                    output += `<span class="property_value">${part}</span>;<br>`;
                     numberOfRows += 1;
+                    lineProcessed = true;
+                    continue;
+                }
+                if(char === ','){
+                    part = getPart(line, char);
+                    line = updateLine(line, char);
+                    output += `<span class="property_value">${part}</span>, `;
                     lineProcessed = true;
                     continue;
                 }
                 if(char === '}'){
                     tabLevel -= 1;
                     part = indent(tabLevel, char);
-                    output += `<div>${part}</div>`;
+                    output += `<span>${part}</span><br>`;
                     if(tabLevel === 0) {
                         output += '<br>'
+                        numberOfRows += 1;
                         isSelector = true;
                     };
                     numberOfRows += 1;
@@ -180,13 +195,13 @@ function compileCSS(css) {
             }
         }
         if(!lineProcessed) {
-            output += `<div>${line}</div>`;
+            output += `<span>${line}</span><br>`;
             numberOfRows += 1;
             lineProcessed = true;
         };
     })
 
-    for (let t = 1; t < numberOfRows + 1; t++) {
+    for (let t = 1; t < numberOfRows; t++) {
         rowsNumbers += `<span>${t}</span>`;
     }
 
@@ -258,7 +273,8 @@ let ids = [
     'selectorPseudoElementAfter',
     'selectorPseudoElementSelection',
     'animation',
-    'animationKeyframes'
+    'animationKeyframes',
+    'boxLoader'
 ];
 
 ids.forEach(generateHTML);
