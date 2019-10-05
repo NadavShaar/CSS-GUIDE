@@ -696,8 +696,8 @@ input[type="radio"]:checked ~ ul{
   position: relative;
   color: #ffffff;
   cursor: pointer;
-  top: 2px;
-  width: 15px;
+  top: 1px;
+  width: 14px;
   height: 14px;
   display: inline-flex;
   align-items: center;
@@ -706,8 +706,9 @@ input[type="radio"]:checked ~ ul{
   border: 1px solid #1e324c;
   border-radius: 3px;
   overflow: hidden;
+  user-select: none;
 }
-.checkbox_plus + .checkbox_plus_toggle:after {
+/* .checkbox_plus + .checkbox_plus_toggle:after {
   content: '\002B';
   position: absolute;
   top: -7px;
@@ -726,6 +727,30 @@ input[type="radio"]:checked ~ ul{
   left: 0;
   right: 0;
   bottom: 0;
+} */
+.checkbox_plus + .checkbox_plus_toggle > .plus_sign {
+  display: block;
+  line-height: 12px;
+  font-weight: bold;
+  position: relative;
+  left: -1px;
+  top: -2px;
+  user-select: none;
+}
+.checkbox_plus + .checkbox_plus_toggle > .minus_sign {
+  display: none;
+}
+.checkbox_plus:checked + .checkbox_plus_toggle > .plus_sign {
+  display: none;
+}
+.checkbox_plus:checked + .checkbox_plus_toggle > .minus_sign {
+  display: block;
+  line-height: 12px;
+  font-weight: bold;
+  position: relative;
+  left: -1px;
+  top: -2px;
+  user-select: none;
 }
 .checkbox_plus ~ .code_block {
   height: 0;
