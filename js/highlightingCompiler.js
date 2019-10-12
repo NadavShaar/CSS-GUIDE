@@ -171,6 +171,15 @@ function compileCSS(css) {
                     lineProcessed = true;
                     continue;
                 }
+                // Do tests for variables
+                // if(char === '-' && l[i-1] === '-'){
+                //     part = getPart(line, ':');
+                //     if(!part) continue;
+                //     line = updateLine(line, ':');
+                //     if(!this.indented) part = indent(tabLevel, part);
+                //     output += `<span class="css_variable">${part}</span>`;
+                //     continue;
+                // }
                 if(char === ';'){
                     part = getPart(line, char);
                     line = updateLine(line, char);
@@ -195,8 +204,6 @@ function compileCSS(css) {
                     if(!this.indented) part = indent(tabLevel, char);
                     output += `<span>${part}</span><br>`;
                     if(tabLevel === 0) {
-                        // output += '<br>'
-                        // numberOfRows += 1;
                         isSelector = true;
                     };
                     numberOfRows += 1;
@@ -280,6 +287,7 @@ let ids = [
     'selectorPseudoClassNTHLastOfType',
     'selectorPseudoClassTarget',
     'selectorPseudoClassNot',
+    'selectorPseudoClassRoot',
     'selectorPseudoElementBefore',
     'selectorPseudoElementAfter',
     'selectorPseudoElementSelection',

@@ -115,6 +115,9 @@ html, body {
   .property_value, .attribute_value {
     color: #ffdf62;
   }
+  .css_variable {
+    color: #e63e42;
+  }
   .blueprint {
     background: url(../resources/Blueprint2.jpg) no-repeat center center fixed;
   }
