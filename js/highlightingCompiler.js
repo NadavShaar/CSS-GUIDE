@@ -147,7 +147,7 @@ function compileCSS(css) {
                 if(char === ',') {
                     part = getPart(line, char);
                     line = updateLine(line, char);
-                    output += `<span class="selector_name">${part}</span>, `;
+                    output += `<span class="selector_name">${part}</span>, <br>`;
                     lineProcessed = true;
                     numberOfRows += 1;
                     continue;
