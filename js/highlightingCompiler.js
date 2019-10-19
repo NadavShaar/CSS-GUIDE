@@ -287,6 +287,7 @@ let ids = [
     'boxLoader',
     'liquidButton',
     'cardClipPath',
+    'shiningText',
 ];
 
 ids.forEach(generateHTML);

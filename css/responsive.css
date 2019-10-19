@@ -36,6 +36,9 @@
     .guide_cover_title{
         font-size: 80px;
     }
+    .shiningText .shining_text {
+        font-size: 22px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -90,5 +93,8 @@
     }
     .flex_container_example_1_width_x3{
         min-width: 110px;
-      }
+    }
+    .shiningText .shining_text {
+        font-size: 16px;
+    }
 }
