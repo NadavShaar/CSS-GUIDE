@@ -203,7 +203,7 @@ CARD CLIP-PATH
   transition: clip-path .4s;
   overflow: hidden;
   background: #fff;
-  clip-path: circle(26% at 50% 30%);
+  clip-path: circle(30% at 50% 30%);
 }
 
 .cardClipPath .imageWrapper:hover {
