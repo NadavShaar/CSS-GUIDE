@@ -171,15 +171,6 @@ function compileCSS(css) {
                     lineProcessed = true;
                     continue;
                 }
-                // Do tests for variables
-                // if(char === '-' && l[i-1] === '-'){
-                //     part = getPart(line, ':');
-                //     if(!part) continue;
-                //     line = updateLine(line, ':');
-                //     if(!this.indented) part = indent(tabLevel, part);
-                //     output += `<span class="css_variable">${part}</span>`;
-                //     continue;
-                // }
                 if(char === ';'){
                     part = getPart(line, char);
                     line = updateLine(line, char);
@@ -293,7 +284,9 @@ let ids = [
     'selectorPseudoElementSelection',
     'animation',
     'animationKeyframes',
-    'boxLoader'
+    'boxLoader',
+    'liquidButton',
+    'cardClipPath',
 ];
 
 ids.forEach(generateHTML);

@@ -208,7 +208,7 @@
                     <h2>
                         <span class="main_color">#</span>&nbsp;Box-Loader
                     </h2>
-                    <div class="flex_column card boxLoader blueprint flex_container_example_1_height position_relative code_block_example">
+                    <div class="flex_column card boxLoader justify_center align_center flex_container_example_1_height position_relative code_block_example">
 <div class="loader">
     <span class="box box_1"></span>
     <span class="box box_2"></span>
@@ -226,10 +226,7 @@
                             .loader {
                                 width: 80px;
                                 height: 80px;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
+                                position: relative;
                             }
                                 
                             .box {
@@ -333,6 +330,185 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div id="liquidButton" class="section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Liquid-Button
+                    </h2>
+                    <p class="para">With hover effect.</p>
+                    <div class="flex_column card dark_bg liquidButton justify_center align_center flex_container_example_1_height position_relative code_block_example">
+<a href='#' class='liquid_button'>
+    <span>BUTTON</span>
+    <div class='liquid'></div>
+</a>
+                    </div>
+                    <input type="checkbox" class="checkbox_hide checkbox_plus" id="liquidButtonMarkupToggle" />
+                    <label for="liquidButtonMarkupToggle" class="guide_button checkbox_plus_toggle_button"></label>
+                    <div class="code_show_hide_container">
+
+                        <span class="code_block_label">The Markup</span>
+                        <div class="code_block code_block_html"></div>
+                        <span class="code_block_label">styling</span>
+                        <div class="code_block code_block_css">
+                            .liquid_button {
+                                position: relative;
+                                padding: 20px 40px;
+                                display: block;
+                                text-decoration: none;
+                                width: 200px;
+                                overflow: hidden;
+                                border-radius: 3px;
+                                font-weight: 600;
+                              }
+                              
+                              .liquid_button > span {
+                                position: relative;
+                                z-index: 1;
+                                color: #fff;
+                                font-size: 20px;
+                                letter-spacing: 8px;
+                              }
+                              
+                              .liquid_button > .liquid {
+                                position: absolute;
+                                left: 0px;
+                                top: -80px;
+                                width: 200px;
+                                height: 200px;
+                                background: #4973ff;
+                                box-shadow: inset 0px 0px 50px rgba(0, 0, 0, .5);
+                                transition: .5s;
+                              }
+                              
+                              .liquid_button:hover .liquid {
+                                  top: -120px;
+                              }
+                              
+                              .liquid_button > .liquid:before,
+                              .liquid_button > .liquid:after {
+                                content: '';
+                                position: absolute;
+                                width: 200%;
+                                height: 200%;
+                                top: 0;
+                                left: 50%;
+                                transform: translate(-50%, -75%);
+                              }
+                              
+                              .liquid_button > .liquid:before {
+                                border-radius: 45%;
+                                background: rgba(0, 0, 0, 1);
+                                animation: liquidButton 5s linear infinite;
+                              }
+                              
+                              .liquid_button > .liquid:after {
+                                border-radius: 40%;
+                                background: rgba(0, 0, 0, .4);
+                                animation: liquidButton 10s linear infinite;
+                              }
+                        </div>
+                        <span class="code_block_label">Animation Rules</span>
+                        <div class="code_block code_block_css">
+                            @keyframes animateLiquidButton {
+                                0% {
+                                  transform: translate(-50%, -75%) rotate(0deg);
+                                }
+                                100% {
+                                  transform: translate(-50%, -75%) rotate(360deg);
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="cardClipPath" class="section">
+                    <h2>
+                        <span class="main_color">#</span>&nbsp;Image Clip-Path
+                    </h2>
+                    <p class="para">With hover effect.</p>
+                    <div class="flex_column card grey_bg cardClipPath justify_center align_center flex_container_example_1_height position_relative code_block_example">
+<div class="card">
+    <div class="imageWrapper">
+        <img src='https://cdn.dribbble.com/users/1577449/screenshots/6705702/vector_art_2-02.png' alt="" />
+    </div>
+    <div class="content">
+        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry, remaining essentially unchanged.</div>
+        <button>click me</button>
+    </div>
+</div>
+                    </div>
+                    <input type="checkbox" class="checkbox_hide checkbox_plus" id="cardClipPathMarkupToggle" />
+                    <label for="cardClipPathMarkupToggle" class="guide_button checkbox_plus_toggle_button"></label>
+                    <div class="code_show_hide_container">
+
+                        <span class="code_block_label">The Markup</span>
+                        <div class="code_block code_block_html"></div>
+                        <span class="code_block_label">styling</span>
+                        <div class="code_block code_block_css">
+                                .card {
+                                    position: relative;
+                                    padding: 200px 24px 24px;
+                                    background: #fff;
+                                    box-sizing: border-box;
+                                    box-shadow: 0 1px 3px rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .25);
+                                    overflow: hidden;
+                                    font-size: 14px;
+                                    border-radius: 3px;
+                                    width: 230px;
+                                    height: 350px;
+                                }
+                                
+                                .imageWrapper {
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    transition: clip-path .4s;
+                                    overflow: hidden;
+                                    background: #fff;
+                                    clip-path: circle(26% at 50% 30%);
+                                }
+                                
+                                .imageWrapper:hover {
+                                    clip-path: circle(75% at 50% 50%);
+                                }
+                                
+                                .content {
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    text-align: center;
+                                }
+                                
+                                img {
+                                    height: 100%;
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translate(-50%, 0);
+                                    pointer-events: none;
+                                    user-select: none;
+                                }
+                                
+                                button {
+                                    width: 100%;
+                                    margin-top: 12px;
+                                    background: #491e5f;
+                                    box-shadow: 0px 0px 0px 0px #000;
+                                    font-weight: 600;
+                                    border: none;
+                                    padding: 4px 12px;
+                                    color: #fff;
+                                    border-radius: 3px;
+                                    font-family: inherit;
+                                }
+                        </div>
+                    </div>
+                </div>
+
 
 			</div>
 		</div>

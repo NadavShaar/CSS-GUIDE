@@ -118,9 +118,7 @@ html, body {
   .css_variable {
     color: #e63e42;
   }
-  .blueprint {
-    background: url(../resources/Blueprint2.jpg) no-repeat center center fixed;
-  }
+
   .html_tag {
     color: #ff844a;
   }
@@ -344,6 +342,14 @@ html, body {
     border-radius: 3px;
     background: #fff;
     margin: 18px 0;
+  }
+
+  .dark_bg{
+    background: #000;
+  }
+
+  .grey_bg{
+    background: #c7c7c7;
   }
 
   .card_overflow {
