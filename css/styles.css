@@ -777,7 +777,7 @@ input[type="radio"]:checked ~ ul{
   cursor: pointer;
   font-size: 12px;
   font-weight: 700;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 /* .checkbox_plus_toggle_button:before {
   content: '<'
@@ -787,6 +787,7 @@ input[type="radio"]:checked ~ ul{
 }
 .checkbox_plus:checked + .checkbox_plus_toggle_button {
   background-color: #3e79e6;
+  margin-bottom: 30px;
 }
 .checkbox_plus + .checkbox_plus_toggle_button:before {
   content: 'Show me how'
