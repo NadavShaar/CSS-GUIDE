@@ -4,4 +4,4 @@
 
 All the basics that every web-developer should know with real examples in one (mobile-friendly) guide.
 
-Live [here](https://nadavshaar.github.io/CSS-GUIDE/)
+Live Demo [here](https://nadavshaar.github.io/CSS-GUIDE/)
